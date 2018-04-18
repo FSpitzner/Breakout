@@ -13,7 +13,7 @@ public class CameraPointing : MonoBehaviour {
 		Quaternion targetRotation = Quaternion.LookRotation (player.position - transform.position);
 		float quatY = Mathf.Clamp(targetRotation.y, -0.05f, 0.05f);
 
-		Debug.Log (quatY);
+		//Debug.Log (quatY);
 		targetRotation = new Quaternion (targetRotation.x, quatY, targetRotation.z, targetRotation.w);
 		//Debug.Log (targetRotation.y);
 		transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, smoothTurnSpeed * Time.deltaTime);

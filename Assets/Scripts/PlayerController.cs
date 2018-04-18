@@ -19,9 +19,11 @@ public class PlayerController : MonoBehaviour {
 	public float maxCrouchSpeed;
 	public float jumpPower;
 	public float maxRunSpeed;
+	public int fear;
 
 	private int moveState = 1;
 	private Rigidbody rb;
+	private bool jumping = false;
 
 	// Controllerbelegung
 
@@ -47,12 +49,13 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update(){
-		CheckKeyInput ();
+		//CheckKeyInput ();
 		cameraDummy.position = Vector3.SmoothDamp (transform.position, new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, transform.position.z), ref camCurVelocity, camSmoothSpeed);
 
 		if(Input.GetKeyDown(interactKey)){
 			LevelController.instance.UseTriggerObject ();
 		}
+
 	}
 
 	void FixedUpdate(){
@@ -69,6 +72,13 @@ public class PlayerController : MonoBehaviour {
 				moveState = 1;
 			Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
 		}
+		if (Input.GetKeyDown (jumpKey)) {
+			if (!jumping) {
+				jumping = true;
+				Jumper ();
+			}
+		}
+
 
 		switch (moveState) {
 		case 0:
@@ -103,6 +113,10 @@ public class PlayerController : MonoBehaviour {
 			rb.velocity = rb.velocity.normalized * (moveState == 0 ? maxCrouchSpeed : (moveState == 1 ? maxMoveSpeed : maxRunSpeed));
 	}
 
+	private void Jumper(){
+		rb.AddForce (Vector3.up * jumpPower, ForceMode.Impulse);
+	}
+
 	void CheckKeyInput(){
 		foreach(KeyCode kcode in Enum.GetValues(typeof(KeyCode))){
 			if (Input.GetKeyDown(kcode)){
@@ -111,5 +125,17 @@ public class PlayerController : MonoBehaviour {
 		}
 		//Debug.Log ("Horizontal: " + Input.GetAxis ("ControllerPOVVertical"));
 		//Debug.Log ("Vertical: " + Input.GetAxis ("ControllerPOVHorizontal"));
+	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		if(collision.contacts.Length > 0)
+		{
+			ContactPoint contact = collision.contacts[0];
+			if(Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+			{
+				jumping = false;
+			}
+		}
 	}
 }
