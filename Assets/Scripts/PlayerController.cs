@@ -7,12 +7,6 @@ using System;
 [RequireComponent(typeof(Rigidbody))]
 
 public class PlayerController : MonoBehaviour {
-	/*
-	 * TODO
-	 * Variablen in Gruppen einteilen + Unterteiler im Unity Inspector
-	 * Variablen für alle Input-Tasten, damit diese in Optionen geändert werden können
-	 */
-
 	[Header("Player Statistics")]
 
 	public float maxMoveSpeed;
@@ -100,8 +94,9 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void MovementControl(int forcePower){
-		float walking = Input.GetAxis ("Horizontal");
-		rb.AddForce (new Vector3 (walking, 0f, 0f) * forcePower, ForceMode.Force);
+		float walkingHorizontal = Input.GetAxis ("Horizontal");
+		float walkingVertical = Input.GetAxis ("Vertical");
+		rb.AddForce (new Vector3 (walkingHorizontal, 0f, walkingVertical) * forcePower, ForceMode.Force);
 		/*
 		if (Input.GetKey (KeyCode.A)) {
 			rb.AddForce (Vector3.left * forcePower, ForceMode.Force);
