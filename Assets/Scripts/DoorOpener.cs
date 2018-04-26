@@ -10,8 +10,9 @@ public class DoorOpener : MonoBehaviour {
 	private bool opened = false, tweening = false;
 
 	void OnDrawGizmos(){
+		
 		Gizmos.color = Color.blue;
-		Gizmos.DrawWireCube (new Vector3(transform.position.x + targetPosOffset.x, transform.position.y + targetPosOffset.y, transform.position.z + targetPosOffset.z), transform.localScale);
+		Gizmos.DrawWireCube (new Vector3(transform.position.x + targetPosOffset.x, transform.position.y + targetPosOffset.y, transform.position.z + targetPosOffset.z), transform.lossyScale);
 	}
 
 	void Start(){

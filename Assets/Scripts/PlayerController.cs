@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour {
 	public float camSmoothSpeed = 0.2f;
 	private Vector3 camCurVelocity;
 
+
+
 	void Start(){
 		rb = this.GetComponent<Rigidbody> ();
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
@@ -48,7 +50,6 @@ public class PlayerController : MonoBehaviour {
 			new Vector3(transform.position.x, transform.position.y, cameraDummy.transform.position.z),
 			new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z),
 			ref camCurVelocity, camSmoothSpeed);
-		Debug.Log (cameraDummy.position);
 		if(Input.GetKeyDown(interactKey)){
 			LevelController.instance.UseTriggerObject ();
 		}
@@ -135,5 +136,9 @@ public class PlayerController : MonoBehaviour {
 				jumping = false;
 			}
 		}
+	}
+
+	public void CollectItem(ItemController item){
+		Debug.Log (item + " collected");
 	}
 }

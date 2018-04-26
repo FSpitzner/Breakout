@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
 	[Header("General Settings")]
+	public PlayerController player;
 	public float fearMeterCheckInterval = 2;
 	public static LevelController instance;
 	private List<Trigger> interactTrigger;
@@ -98,5 +99,9 @@ public class LevelController : MonoBehaviour {
 
 	public void IncreaseFear(int amount){
 		fear += amount;
+	}
+
+	public bool GetDreamworldTriggered(){
+		return dreamworldTriggered;
 	}
 }
