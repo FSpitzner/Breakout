@@ -44,8 +44,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Update(){
 		//CheckKeyInput ();
-		cameraDummy.position = Vector3.SmoothDamp (transform.position, new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, transform.position.z), ref camCurVelocity, camSmoothSpeed);
-
+		cameraDummy.position = Vector3.SmoothDamp (
+			new Vector3(transform.position.x, transform.position.y, cameraDummy.transform.position.z),
+			new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z),
+			ref camCurVelocity, camSmoothSpeed);
+		Debug.Log (cameraDummy.position);
 		if(Input.GetKeyDown(interactKey)){
 			LevelController.instance.UseTriggerObject ();
 		}
