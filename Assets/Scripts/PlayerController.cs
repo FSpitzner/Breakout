@@ -37,11 +37,17 @@ public class PlayerController : MonoBehaviour {
 	public float camSmoothSpeed = 0.2f;
 	private Vector3 camCurVelocity;
 
+	//LevelSettings
+	//[HideInInspector]
+	public StageController stage;
+    private bool controlsLocked = false;
 
 
 	void Start(){
 		rb = this.GetComponent<Rigidbody> ();
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
+        Debug.Log("Player: " + this);
+        Debug.Log("Stage Registered: " + stage);
 	}
 
 	void Update(){
@@ -57,44 +63,52 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-		if (Input.GetKey (runKey)&&moveState!=0) {
-			moveState = 2;
-		}
-		if (Input.GetKeyUp (runKey)&&moveState!=0) {
-			moveState = 1;
-		}
-		if (Input.GetKeyDown (crouchKey)) {
-			if (moveState != 0)
-				moveState = 0;
-			else
-				moveState = 1;
-			Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
-		}
-		if (Input.GetKeyDown (jumpKey)) {
-			if (!jumping) {
-				jumping = true;
-				Jumper ();
-			}
-		}
+        if (!controlsLocked)
+        {
+            if (Input.GetKey(runKey) && moveState != 0)
+            {
+                moveState = 2;
+            }
+            if (Input.GetKeyUp(runKey) && moveState != 0)
+            {
+                moveState = 1;
+            }
+            if (Input.GetKeyDown(crouchKey))
+            {
+                if (moveState != 0)
+                    moveState = 0;
+                else
+                    moveState = 1;
+                Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
+            }
+            if (Input.GetKeyDown(jumpKey))
+            {
+                if (!jumping)
+                {
+                    jumping = true;
+                    Jumper();
+                }
+            }
 
-
-		switch (moveState) {
-		case 0:
-			MovementControl (50);
-			break;
-		case 1:
-			MovementControl (100);
-			break;
-		case 2:
-			MovementControl (150);
-			break;
-		case 3:
-			//kein Movement (zb beim Springen)
-			break;
-		default:
-			MovementControl (100);
-			break;
-		}
+            switch (moveState)
+            {
+                case 0:
+                    MovementControl(50);
+                    break;
+                case 1:
+                    MovementControl(100);
+                    break;
+                case 2:
+                    MovementControl(150);
+                    break;
+                case 3:
+                    //kein Movement (zb beim Springen)
+                    break;
+                default:
+                    MovementControl(100);
+                    break;
+            }
+        }
 	}
 
 	private void MovementControl(int forcePower){
@@ -141,4 +155,9 @@ public class PlayerController : MonoBehaviour {
 	public void CollectItem(ItemController item){
 		Debug.Log (item + " collected");
 	}
+
+    public void SetLockInputs(bool isLocked)
+    {
+        controlsLocked = isLocked;
+    }
 }

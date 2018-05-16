@@ -7,7 +7,9 @@ public class DoorOpener : MonoBehaviour {
 	public Vector3 targetPosOffset;
 	public float openTime = 3;
 	private Vector3 defaultPosition;
-	private bool opened = false, tweening = false;
+	private bool opened = false;
+	[HideInInspector]
+	public bool tweening = false;
 
 	void OnDrawGizmos(){
 		
