@@ -21,6 +21,10 @@ public class LevelController : MonoBehaviour {
 	[Header("Dreamworld Settings")]
 	public DreamworldObject[] dreamworld;
 
+
+    [Header("PlayerSoundSystem")]
+    public playerSounds_control playerSoundSystem;
+
 	void Awake(){
 		instance = this;
 	}
@@ -91,7 +95,27 @@ public class LevelController : MonoBehaviour {
 			dreamworldTriggered = false;
 		}
 		Debug.Log ("Fear now at: " + fear);
+	
+     //SOUND - checkingFEAR
+        if(fear > 0){
+            playerSoundSystem.hasfear();
+        }else{
+            playerSoundSystem.hasNOfear();
+        }
+
+        if (fear > 0 && fear <=10)
+        {
+            playerSoundSystem.fearLevelLow();
+        }
+        else if (fear > 10 && fear <= 20){
+            playerSoundSystem.fearLevelMedium();
+        }else if (fear > 20)
+        {
+            playerSoundSystem.fearLevelHigh();
+        }
 	}
+    
+    
 
 	public void ChangeFearBy(int amount){
 		fear += amount;
