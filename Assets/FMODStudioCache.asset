@@ -25,7 +25,7 @@ MonoBehaviour:
   - {fileID: 114242167991229794}
   MasterBankRef: {fileID: 114651688242430854}
   StringsBankRef: {fileID: 114335684857903260}
-  stringsBankWriteTime: 636621625155421177
+  stringsBankWriteTime: 636632879819086655
   cacheVersion: 2
 --- !u!114 &114145762345367610
 MonoBehaviour:
@@ -49,6 +49,36 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
+--- !u!114 &114166550336301014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114200470623155940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114238209087436646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +98,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114355799616839876}
+  - {fileID: 114200470623155940}
   MinDistance: 0
   MaxDistance: 0
   Length: 78496
@@ -91,10 +121,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114801684220635616}
-  - {fileID: 114698728320879760}
-  - {fileID: 114427230834175136}
-  - {fileID: 114958818394190838}
+  - {fileID: 114257154901708026}
+  - {fileID: 114166550336301014}
+  - {fileID: 114975633012525006}
+  - {fileID: 114446253204159220}
   MinDistance: 0
   MaxDistance: 0
   Length: 2640
@@ -110,12 +140,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\HeartBeat.bank
-  lastModified: 636621625234945725
+  lastModified: 636632879820186712
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 714368
   Exists: 1
+--- !u!114 &114257154901708026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114335684857903260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636621625155421177
+  lastModified: 636632879819086655
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -164,6 +209,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114446253204159220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114533098650490248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\windsfx.bank
-  lastModified: 636621625205214025
+  lastModified: 636632879819896696
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -194,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\FearLocation_2d.bank
-  lastModified: 636621625169902005
+  lastModified: 636632879819566677
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -212,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\Master Bank.bank
-  lastModified: 636621625155391175
+  lastModified: 636632879819086655
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -245,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\___COLLAB_UNITIY_GIT___\fmodProjects\Breakout\Build\Desktop\FearLocation.bank
-  lastModified: 636621625169401976
+  lastModified: 636632879819356665
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -280,6 +340,21 @@ MonoBehaviour:
   Name: FearOnOff
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114975633012525006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114989375106202110
 MonoBehaviour:
