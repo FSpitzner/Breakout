@@ -41,11 +41,14 @@ public class ChangeStage : InteractTrigger {
 
 			if (player.stage == room1) {
 				SwitchRooms (2, player);
+                CameraToStagePosition(2);
 			} else {
 				SwitchRooms (1, player);
+                CameraToStagePosition(1);
 			}
-		}
-	}
+            
+        }
+    }
 
 	private void SwitchRooms(int nextRoom, PlayerController player){
         player.SetLockInputs(true);
@@ -56,16 +59,39 @@ public class ChangeStage : InteractTrigger {
             if (nextRoom == 1)
             {
                 room2.gameObject.SetActive(false);
+                player.stage = room1;
             }
             else
             {
                 room1.gameObject.SetActive(false);
+                player.stage = room2;
             }
-        }
-        );
+            door.Close();
+        });
 	}
 
-	private void CameraToStagePosition(){
-		
+	private void CameraToStagePosition(int nextRoom){
+        Vector3 nextpos = nextRoom == 1 ? room1CameraPos : room2CameraPos;
+        switch (room2PosFromRoom1.GetState())
+        {
+            case 0:
+                LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z), moveTime);
+                break;
+            case 1:
+                LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z), moveTime);
+                break;
+            case 2:
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                break;
+            case 3:
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                break;
+            case 4:
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                break;
+            case 5:
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                break;
+        }
 	}
 }

@@ -8,6 +8,7 @@ public class DoorOpener : MonoBehaviour {
 	public float openTime = 3;
 	private Vector3 defaultPosition;
 	private bool opened = false;
+    private bool shouldClose = false;
 	[HideInInspector]
 	public bool tweening = false;
 
@@ -36,4 +37,14 @@ public class DoorOpener : MonoBehaviour {
 				});
 		}
 	}
+
+    public void Close()
+    {
+        tweening = true;
+        LeanTween.move(gameObject, defaultPosition, openTime).setOnComplete(() =>
+        {
+            opened = false;
+            tweening = false;
+        });
+    }
 }

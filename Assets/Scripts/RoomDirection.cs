@@ -26,6 +26,21 @@ public class RoomDirection : MonoBehaviour{
 		this.aboth = aboth;
 		this.below = below;
 	}
+    public int GetState()
+    {
+        if (left)
+            return 0;
+        if (right)
+            return 1;
+        if (infront)
+            return 2;
+        if (behind)
+            return 3;
+        if (aboth)
+            return 4;
+        else
+            return 5;
+    }
 }
 
 [CustomEditor(typeof(RoomDirection))]
@@ -34,8 +49,15 @@ public class RoomDirectionEditor : Editor{
 	RoomDirection script;
 	public override void OnInspectorGUI ()
 	{
-		DrawDefaultInspector ();
+        DrawDefaultInspector ();
 		script = (RoomDirection)target;
+
+        left = script.left;
+        right = script.right;
+        infront = script.infront;
+        behind = script.behind;
+        aboth = script.aboth;
+        below = script.below;
 
 		EditorGUILayout.LabelField ("Room 2's direction from Room 1:");
 

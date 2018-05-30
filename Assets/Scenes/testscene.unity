@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 392134064}
   m_Layer: 0
   m_Name: RoomSwitcher
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,10 +428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cb3c1a3636e024291f5723e327eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 1
+  left: 0
   right: 0
   infront: 0
-  behind: 0
+  behind: 1
   aboth: 0
   below: 0
 --- !u!114 &392134065
@@ -446,13 +446,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   room1: {fileID: 1457843861}
-  room1StartPoint: {x: -7, y: 0.5, z: 2.5}
+  room1StartPoint: {x: -7, y: 0.5, z: 3}
   room2: {fileID: 2125058118}
-  room2StartPoint: {x: -7, y: 0.5, z: 5}
+  room2StartPoint: {x: -7, y: 0.5, z: 6}
   door: {fileID: 2136025926}
   playerRoomSwitchSpeed: 2
-  stageCameraPos: {x: 0, y: 0, z: 0}
-  moveTime: 0
+  room1CameraPos: {x: 0, y: 0, z: 0}
+  room2CameraPos: {x: 0, y: 0, z: 7.5}
+  moveTime: 2
   dummy: {fileID: 2008677461}
 --- !u!65 &392134066
 BoxCollider:
@@ -641,7 +642,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1457843860}
     m_Modifications:
     - target: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
       propertyPath: m_LocalPosition.x
@@ -653,11 +654,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.78
+      value: 1.78
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
       propertyPath: m_LocalRotation.y
@@ -673,7 +674,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
@@ -1139,7 +1140,7 @@ Transform:
   - {fileID: 1827819642}
   - {fileID: 855303215}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1146981261
 Rigidbody:
@@ -1189,7 +1190,7 @@ Transform:
   - {fileID: 2136025925}
   - {fileID: 392134063}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1201073526
 MonoBehaviour:
@@ -1561,6 +1562,7 @@ Transform:
   - {fileID: 19679673}
   - {fileID: 1030464109}
   - {fileID: 767365440}
+  - {fileID: 1976060173}
   m_Father: {fileID: 1201073525}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1710,7 +1712,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4986436045602070, guid: 46d637638a0470b48bc42e885d26c8d0, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d637638a0470b48bc42e885d26c8d0, type: 2}
@@ -1824,7 +1826,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 30.555002, y: -21.914001, z: 12.3}
 --- !u!4 &1827819642 stripped
 Transform:
@@ -1860,6 +1862,10 @@ Transform:
   m_Father: {fileID: 1201073525}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1976060173 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400002, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
+  m_PrefabInternal: {fileID: 698322890}
 --- !u!1 &2008677460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,7 +2128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosOffset: {x: 0, y: 3, z: 0}
-  openTime: 3
+  openTime: 2
   tweening: 0
 --- !u!23 &2136025927
 MeshRenderer:
