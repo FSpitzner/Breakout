@@ -5,21 +5,29 @@ using UnityEngine;
 public class LevelController : MonoBehaviour {
 
 	[Header("General Settings")]
+    [Tooltip("Insert Player-GameObject here")]
 	public PlayerController player;
+    [Tooltip("Interval in which changes to the Fear-Value are made in Seconds")]
 	public float fearMeterCheckInterval = 2;
 	public static LevelController instance;
 	private List<Trigger> interactTrigger;
 	private List<Trigger> environmentTrigger;
 
 	[Header("Fear Settings")]
-	public int fearDreamworldTrigger;
+    [Tooltip("Fear-Value at which Dreamworld gets Triggered")]
+    public int fearDreamworldTrigger;
+    [Tooltip("Amount of Fear that gets added when Dreamworld gets Triggered (Maybe Obsolete)")] //TODO: Check ob noch gebraucht
 	public int fearTriggerIncrease;
+    [Tooltip("Amount of Fear-decrease per Interval-Check when Dreamworld is Triggered")]
 	public int fearTriggeredDecrease;
 	private bool dreamworldTriggered = false;
 	private int fear;
 
 	[Header("Dreamworld Settings")]
+    [Tooltip("Put in every Dreamworld-Object of the Level here. They get Activated when the Dreamworld gets Triggered")]
 	public DreamworldObject[] dreamworld;
+    [Tooltip("Put in Amy's Companion here")]
+    public CompanionController companion;
 
 
     [Header("PlayerSoundSystem")]
@@ -87,10 +95,12 @@ public class LevelController : MonoBehaviour {
 			foreach (DreamworldObject obj in dreamworld) {
 				obj.Activate ();
 			}
+            companion.SetActive(true);
 		} else if(fear < 0 && dreamworldTriggered){
 			foreach (DreamworldObject obj in dreamworld) {
 				obj.Deactivate ();
 			}
+            companion.SetActive(false);
 			fear = 0;
 			dreamworldTriggered = false;
 		}

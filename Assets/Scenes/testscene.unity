@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.701
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38169977, g: 0.42443857, b: 0.4863147, a: 0.701}
+  m_IndirectSpecularColor: {r: 0.38170025, g: 0.42443922, b: 0.48631573, a: 0.701}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -448,6 +448,34 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 47b44b0c777c7664dad565201d48541d, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &366645425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 366645426}
+  m_Layer: 0
+  m_Name: CompanionTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &366645426
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 366645425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 1.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1146981260}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &392134062
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,10 +518,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71cb3c1a3636e024291f5723e327eb90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left: 1
+  left: 0
   right: 0
   infront: 0
-  behind: 0
+  behind: 1
   aboth: 0
   below: 0
 --- !u!114 &392134065
@@ -514,8 +542,8 @@ MonoBehaviour:
   door: {fileID: 2136025926}
   playerRoomSwitchSpeed: 2
   room1CameraPos: {x: 0, y: 0, z: 0}
-  room2CameraPos: {x: 0, y: 0, z: 0}
-  moveTime: 0
+  room2CameraPos: {x: 0, y: 0, z: 7.5}
+  moveTime: 2
   dummy: {fileID: 2008677461}
 --- !u!65 &392134066
 BoxCollider:
@@ -868,7 +896,7 @@ GameObject:
   - component: {fileID: 855303216}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1324,6 +1352,7 @@ Transform:
   m_Children:
   - {fileID: 1827819642}
   - {fileID: 855303215}
+  - {fileID: 366645426}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1433,6 +1462,7 @@ MonoBehaviour:
   - {fileID: 1503742254}
   - {fileID: 1128697702}
   - {fileID: 968159331}
+  companion: {fileID: 0}
   playerSoundSystem: {fileID: 2117446916}
 --- !u!1 &1259780929
 GameObject:
@@ -2070,7 +2100,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 713177ef9511c764d82a868f651731c0, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 713177ef9511c764d82a868f651731c0, type: 3}
