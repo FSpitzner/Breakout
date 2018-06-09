@@ -11,8 +11,9 @@ using UnityEngine;
 public class CompanionController : MonoBehaviour {
 
     [Header("Companion Settings")]
-    [Tooltip("The speed at which the Companion travels")]
-    public float movingSpeed = 2.0f;
+    [Tooltip("The max speed at which the Companion travels")]
+    public float maxMovingSpeed = 2.0f;
+    private float movingSpeed;
     [Tooltip("The max. Distance at which Items can be spotted")]
     public float itemScanRadius = 5.0f;
     [Tooltip("Max. Distance between Amy and her Companion")]
@@ -33,6 +34,7 @@ public class CompanionController : MonoBehaviour {
 
     private void Start()
     {
+        movingSpeed = maxMovingSpeed;
         rb = GetComponent<Rigidbody>();
         defaultDrag = rb.drag;
         activeTarget = companionTargetAmy;
@@ -47,7 +49,10 @@ public class CompanionController : MonoBehaviour {
     private void FixedUpdate()
     {
         activeTarget = ScanForTargets();
-        if (Vector3.Distance(activeTarget.position, transform.position) < minDistance)
+        float distance = Vector3.Distance(activeTarget.position, transform.position);
+        movingSpeed = maxMovingSpeed - (maxMovingSpeed/2 - );
+
+        /*if (Vector3.Distance(activeTarget.position, transform.position) < minDistance)
         {
             if (rb.velocity.magnitude > 0.01f)
             {
@@ -58,7 +63,7 @@ public class CompanionController : MonoBehaviour {
         {
             rb.drag += .5f;
         }
-        else
+        else */
         {
             rb.drag = defaultDrag;
             if (rb.velocity.magnitude <= movingSpeed)
