@@ -10,7 +10,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000000066130688 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000000065B0E368 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -30,159 +30,54 @@
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E2A5388 : node = 000000000E35D370
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E2A5388
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35E720
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/windsfx.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 748576
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2368
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D488
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E838
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000000003E9FCBF8 : node = 000000000E35E9C0
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     setdata soundi = 000000003E2A56E8 : node = 000000000E35E330
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000005D52C6E8.  list count = 0
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000005D52DDA8.  list count = 0
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='windsfx', format=2, channels=2, frequency=48000, lengthbytes=747840, lengthpcm=3767808, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.997284.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E2A5388
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E2A56E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E448
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E2A56E8
-[LOG] SoundI::getSubSound                      : sound 000000003E2A5388.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 000000003E2A56E8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E2A56E8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DAB8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FCBF8 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FCBF8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35EAD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FCBF8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
 [LOG] SoundI::getSubSound                      : sound 000000003E9FCBF8.  Subsound index 0 / 1
 [LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FCBF8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DAB8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C3F8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35DB50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35DC68
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D5301B8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDCD8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DF98)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35E720
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E838
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F998)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FE398 : node = 000000000E35E330
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FE398
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E448
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FE398
-[LOG] SoundI::getSubSound                      : sound 000000003E9FE398.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C8D8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FCBF8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FE038 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FE038 : node = 000000000E35E9C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FE038
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35EAD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
@@ -191,34 +86,76 @@
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FE038
 [LOG] SoundI::getSubSound                      : sound 000000003E9FE038.  Subsound index 0 / 1
 [LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F4B8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52FB38)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDB28 : node = 000000000E35E720
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDB28
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FCBF8 : node = 000000000E35E9C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FCBF8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E838
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35EAD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDB28
-[LOG] SoundI::getSubSound                      : sound 000000003E9FDB28.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FCBF8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FCBF8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FCBF8)
 [LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C3F8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDE88)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDE88 : node = 000000000E35DF40
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDE88
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FE398 : node = 000000000E35D760
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FE398
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FE398
+[LOG] SoundI::getSubSound                      : sound 000000003E9FE398.  Subsound index 0 / 1
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DF98)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
+[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35E9C0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35EAD8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C8D8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
+[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDB28 : node = 000000000E35DF40
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDB28
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
@@ -230,183 +167,57 @@
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDE88
-[LOG] SoundI::getSubSound                      : sound 000000003E9FDE88.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDE88)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C8D8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDCD8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDE88 : node = 000000000E35E720
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDE88
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E838
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDE88
-[LOG] SoundI::getSubSound                      : sound 000000003E9FDE88.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDE88)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F658)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDCD8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FCBF8 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FCBF8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FCBF8
-[LOG] SoundI::getSubSound                      : sound 000000003E9FCBF8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FCBF8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DAB8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DF98)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DAB8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDE88)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDE88 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDE88
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDE88
-[LOG] SoundI::getSubSound                      : sound 000000003E9FDE88.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDE88)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F4B8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDB28 : node = 000000000E35DB50
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDB28
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35DC68
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDB28
 [LOG] SoundI::getSubSound                      : sound 000000003E9FDB28.  Subsound index 0 / 1
 [LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52CC18)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDCD8)
-[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD108 : node = 000000000E35E720
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD108
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E838
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD108
-[LOG] SoundI::getSubSound                      : sound 000000003E9FD108.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F7F8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C3F8)
 [LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FCBF8)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FE398 : node = 000000000E35E330
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FE398
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35DF40
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E448
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35E058
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FE398
-[LOG] SoundI::getSubSound                      : sound 000000003E9FE398.  Subsound index 0 / 1
-[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D5301B8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
+[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35EB10
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35EC28
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
 [LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52FB38)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FD108)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSound                     : setdata soundi = 000000003E9FDCD8 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FDCD8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
@@ -422,12 +233,12 @@
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FDCD8
 [LOG] SoundI::getSubSound                      : sound 000000003E9FDCD8.  Subsound index 0 / 1
 [LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FDCD8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52F4B8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52DF98)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35D760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52DDA8.  list count = 0
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
 [LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
@@ -442,12 +253,33 @@
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
 [LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
 [LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
-[LOG] SoundI::release                          : windsfx (000000003E2A5388)
-[LOG] SoundI::release                          :     windsfx (000000005D52FE78)
-[LOG] SoundI::release                          :     windsfx (000000003E2A5898)
 [LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52C8D8)
-[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FDB28)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D52CA78)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE398)
+[LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/HeartBeat.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000000003E9FD7C8 : node = 000000000E35D760
+[LOG] SystemI::createSound                     : add node to async list : head = 000000005D52C6E8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/HeartBeat.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 709920
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4448
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000E35D878
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 57260
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='freeSFX-co-uk__normalHeartbeat', format=2, channels=2, frequency=48000, lengthbytes=709312, lengthpcm=2850063, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.464172.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000003E9FD7C8
+[LOG] SoundI::getSubSound                      : sound 000000003E9FD7C8.  Subsound index 0 / 1
+[LOG] SoundI::release                          : windsfx (000000003E9FD108)
+[LOG] SoundI::release                          :     windsfx (000000005D52D0F8)
+[LOG] SoundI::release                          :     windsfx (000000003E9FDE88)
+[LOG] SoundI::release                          : freeSFX-co-uk__normalHeartbeat (000000003E9FD7C8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000005D5301B8)
+[LOG] SoundI::release                          :     freeSFX-co-uk__normalHeartbeat (000000003E9FE038)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
