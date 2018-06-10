@@ -247,6 +247,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 120867979}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &144446498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 144446499}
+  m_Layer: 0
+  m_Name: CompanionTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &144446499
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144446498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1269148135}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &266692842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1577,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1259780929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1269148135 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4986436045602070, guid: 46d637638a0470b48bc42e885d26c8d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1560975858}
 --- !u!1 &1284350540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1758,7 +1791,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1341599322}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -2052,6 +2085,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1868410945308532, guid: 46d637638a0470b48bc42e885d26c8d0, type: 2}
+      propertyPath: m_TagString
+      value: Item
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 46d637638a0470b48bc42e885d26c8d0, type: 2}
   m_IsPrefabParent: 0
@@ -2149,7 +2186,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1757484489
 MonoBehaviour:
@@ -2162,9 +2199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1d2ce1cc7947043862e5ccbfcb8506, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxMovingSpeed: 6
   movingSpeed: 2
   itemScanRadius: 5
+  maxDistance: 6
+  minDistance: 0.1
+  breakDistance: 0.3
+  forcePower: 1
   companionTargetAmy: {fileID: 366645426}
+  activeTarget: {fileID: 0}
+  targetVector: {x: 0, y: 0, z: 0}
 --- !u!1 &1759784691
 GameObject:
   m_ObjectHideFlags: 0

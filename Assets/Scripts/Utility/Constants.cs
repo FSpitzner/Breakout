@@ -16,7 +16,7 @@ public class Constants{
     #endregion
 
     #region GameObject Names
-
+    public static readonly string NAME_COMPANION_TARGET = "CompanionTarget";
     #endregion
 }
 
