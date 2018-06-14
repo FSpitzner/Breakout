@@ -29,6 +29,8 @@ public class LevelController : MonoBehaviour {
     [Tooltip("Put in Amy's Companion here")]
     public CompanionController companion;
 
+    private float pulseSpeed = 0f;
+
 
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
@@ -111,22 +113,24 @@ public class LevelController : MonoBehaviour {
             playerSoundSystem.hasfear();
         }else{
             playerSoundSystem.hasNOfear();
+            pulseSpeed = 0f;
         }
 
         if (fear > 0 && fear <=10)
         {
             playerSoundSystem.fearLevelLow();
+            pulseSpeed = 1.3f;
         }
         else if (fear > 10 && fear <= 20){
             playerSoundSystem.fearLevelMedium();
+            pulseSpeed = 0.75f;
         }else if (fear > 20)
         {
             playerSoundSystem.fearLevelHigh();
+            pulseSpeed = 0.48f;
         }
 	}
     
-    
-
 	public void ChangeFearBy(int amount){
 		fear += amount;
 	}
@@ -138,4 +142,14 @@ public class LevelController : MonoBehaviour {
 	public bool GetDreamworldTriggered(){
 		return dreamworldTriggered;
 	}
+
+    public bool IsDreamworldTriggered()
+    {
+        return dreamworldTriggered;
+    }
+
+    public float getPulseSpeed()
+    {
+        return pulseSpeed;
+    }
 }
