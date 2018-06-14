@@ -20,11 +20,13 @@ public class ChangeStage : InteractTrigger {
 	public float moveTime;
 	public CameraMover dummy;
 
-	void OnDrawGizmos(){
+	//TODO: Überarbeiten um Eingangspunkte für die Türen darzustellen
+    void OnDrawGizmos(){
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireSphere (room1StartPoint, 0.5f);
 		Gizmos.DrawWireSphere (room2StartPoint, 0.5f);
 	}
+    
 
 	void Start(){
         triggerType = "Interact";
@@ -34,11 +36,11 @@ public class ChangeStage : InteractTrigger {
 	public override void Interact(){
         Debug.Log("Interacting");
 		if (!door.tweening) {
-			PlayerController player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
+            PlayerController player = PlayerController.instance;
             room1.gameObject.SetActive(true);
             room2.gameObject.SetActive(true);
 			door.Open ();
-
+            Debug.Log("Player: " + player);
 			if (player.stage == room1) {
 				SwitchRooms (2, player);
                 CameraToStagePosition(2);
@@ -68,29 +70,37 @@ public class ChangeStage : InteractTrigger {
             }
             door.Close();
         });
+        CameraToStagePosition(nextRoom);
 	}
 
 	private void CameraToStagePosition(int nextRoom){
+        Debug.Log("Moving Camera!");
         Vector3 nextpos = nextRoom == 1 ? room1CameraPos : room2CameraPos;
         switch (room2PosFromRoom1.GetState())
         {
             case 0:
                 LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z));
                 break;
             case 1:
                 LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(nextpos.x, dummy.transform.position.y, dummy.transform.position.z));
                 break;
             case 2:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z));
                 break;
             case 3:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z));
                 break;
             case 4:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z));
                 break;
             case 5:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z), moveTime);
+                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z));
                 break;
         }
 	}

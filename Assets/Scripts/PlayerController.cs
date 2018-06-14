@@ -7,6 +7,8 @@ using System;
 [RequireComponent(typeof(Rigidbody))]
 
 public class PlayerController : MonoBehaviour {
+    public static PlayerController instance;
+
 	[Header("Player Statistics")]
 
 	public float maxMoveSpeed;
@@ -42,8 +44,11 @@ public class PlayerController : MonoBehaviour {
 	public StageController stage;
     private bool controlsLocked = false;
 
-
-	void Start(){
+    private void Awake()
+    {
+        instance = this;
+    }
+    void Start(){
 		rb = this.GetComponent<Rigidbody> ();
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
         Debug.Log("Player: " + this);
