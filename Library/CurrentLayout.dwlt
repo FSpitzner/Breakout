@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 983
+  controlID: 52
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Default
+  m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 984
+  controlID: 53
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 985
+  controlID: 54
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,20 +323,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Models/Warden Office
+    - Assets/Prefabs/Amys_Room
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Models/Warden Office
+  - Assets/Prefabs/Amys_Room
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\UnityProjekte\GameDev\Breakout
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 441}
-    m_SelectedIDs: 123a0000
-    m_LastClickedID: 14866
-    m_ExpandedIDs: 00000000c4350000f8350000a437000092390000423d000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 383}
+    m_SelectedIDs: 76310000
+    m_LastClickedID: 12662
+    m_ExpandedIDs: 00000000b82c0000f42c0000d02e0000e63000003635000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c4350000a4370000423d000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b82c0000f42c0000d02e0000e630000036350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -479,10 +479,10 @@ MonoBehaviour:
     height: 421
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 348}
-    m_SelectedIDs: 0629ffff
-    m_LastClickedID: -55034
-    m_ExpandedIDs: 42baffff000000003e3e0000563e0000843e0000803f0000744100001e43000034430000424300008a4300004e4500008645000088460000a0460000f24600004c4800008a480000
+    scrollPos: {x: 0, y: 460}
+    m_SelectedIDs: d62e0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 6029feff6429feff9a4cfeffde4cfeffec4cfeff8676feff6a81feffd88cfeffa897feff7ae9fffff4f8ffff0000000094360000d03600005e38000058390000203a0000243a0000423a00009e3b0000d63b0000e83b0000ec3b0000423c0000fe3c0000143d0000383d00005c3d0000c23e0000643f0000743f0000943f0000284100004441000066410000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
   - blockbuilding
@@ -537,9 +537,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -27.445068, y: 7.5558343, z: 8.351462}
+    m_Target: {x: -12.788777, y: 7.6276855, z: 6.0478687}
     speed: 2
-    m_Value: {x: -27.445068, y: 7.5558343, z: 8.351462}
+    m_Value: {x: -12.788777, y: 7.6276855, z: 6.0478687}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -567,13 +567,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.36656544, y: -0.0022321648, z: 0.0008916295, w: -0.930409}
+    m_Target: {x: -0.4011472, y: -0.01349819, z: 0.0058750845, w: -0.9159122}
     speed: 2
-    m_Value: {x: -0.36655867, y: -0.0022321236, z: 0.000891613, w: -0.93039185}
+    m_Value: {x: -0.40114096, y: -0.01349798, z: 0.0058749933, w: -0.915898}
   m_Size:
-    m_Target: 7.911307
+    m_Target: 43.534416
     speed: 2
-    m_Value: 7.911307
+    m_Value: 43.534416
   m_Ortho:
     m_Target: 0
     speed: 2
