@@ -2687,8 +2687,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!4 &188663360 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4275028205616348, guid: 32174e4d8762c154ebb358a4246a25e7,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 188663359}
 --- !u!1001 &191338475
 Prefab:
@@ -4275,11 +4274,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400002, guid: c4400d881d22b334e9b462969e809589, type: 3}
   m_PrefabInternal: {fileID: 261311893}
---- !u!4 &261725150 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4275028205616348, guid: 32174e4d8762c154ebb358a4246a25e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1636444964}
 --- !u!1001 &262934412
 Prefab:
   m_ObjectHideFlags: 0
@@ -4334,6 +4328,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32174e4d8762c154ebb358a4246a25e7, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &262934413 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 262934412}
 --- !u!1001 &268926397
 Prefab:
   m_ObjectHideFlags: 0
@@ -14868,11 +14866,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4175479076958648, guid: 2871471fbce2b7748a2dfc963b96f73a,
     type: 2}
   m_PrefabInternal: {fileID: 1128472519}
---- !u!4 &1050206196 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4275028205616348, guid: 32174e4d8762c154ebb358a4246a25e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 262934412}
 --- !u!4 &1052933128 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4529684548241316, guid: 0cc02f2ae837dc6478ecf670beb9b480,
@@ -23565,6 +23558,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32174e4d8762c154ebb358a4246a25e7, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1636444965 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1636444964}
 --- !u!1001 &1647953872
 Prefab:
   m_ObjectHideFlags: 0
@@ -23640,12 +23637,12 @@ Transform:
   m_LocalPosition: {x: -13.538471, y: -13.427179, z: -4.9688396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1050206196}
+  - {fileID: 262934413}
   - {fileID: 353642169}
   - {fileID: 1997077177}
   - {fileID: 484615020}
   - {fileID: 218648940}
-  - {fileID: 261725150}
+  - {fileID: 1636444965}
   - {fileID: 954197938}
   - {fileID: 2110547568}
   - {fileID: 1667595928}
@@ -30467,6 +30464,7 @@ MonoBehaviour:
   dreamworld:
   - {fileID: 0}
   - {fileID: 0}
+  companion: {fileID: 0}
   playerSoundSystem: {fileID: 0}
 --- !u!4 &2142323995
 Transform:
