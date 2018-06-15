@@ -1,15 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CameraPointing : MonoBehaviour {
 
 	public Transform player;
 	public float smoothTurnSpeed = 0.2f;
 	private float turnRef;
+    public AnimationCurve pulse;
+    public PostProcessVolume volume;
+    private bool isTweening = false;
+    private float timer;
 
 	void Update () {
-
+        if (LevelController.instance.IsDreamworldTriggered())
+        {
+            if (!isTweening) {
+                timer = 0;
+                isTweening = true;
+            }
+            else
+            {
+                timer += Time.deltaTime;
+            }
+            volume.weight = pulse.Evaluate(timer);
+            
+            /*Debug.Log("TRIGGERED!!!");
+            isTweening = true;
+            LeanTween.value(volume.weight, volume.weight, pulse.length).setEase(pulse).setOnComplete(() => {
+                isTweening = false;
+            });*/
+        }
 		Quaternion targetRotation = Quaternion.LookRotation (player.position - transform.position);
 		float quatY = Mathf.Clamp(targetRotation.y, -0.05f, 0.05f);
 
