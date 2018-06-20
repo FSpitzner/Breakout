@@ -1,25 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
-
+    
 	[Header("General Settings")]
     [Tooltip("Insert Player-GameObject here")]
-	public PlayerController player;
+    public PlayerController player;
     [Tooltip("Interval in which changes to the Fear-Value are made in Seconds")]
-	public float fearMeterCheckInterval = 2;
-	public static LevelController instance;
-	private List<Trigger> interactTrigger;
-	private List<Trigger> environmentTrigger;
-
+    public float fearMeterCheckInterval = 2;
+    public static LevelController instance;
+    private List<Trigger> interactTrigger;
+    private List<Trigger> environmentTrigger;
+    private bool gameOver = false;
+    
 	[Header("Fear Settings")]
     [Tooltip("Fear-Value at which Dreamworld gets Triggered")]
     public int fearDreamworldTrigger;
-    [Tooltip("Amount of Fear that gets added when Dreamworld gets Triggered (Maybe Obsolete)")] //TODO: Check ob noch gebraucht
-	public int fearTriggerIncrease;
     [Tooltip("Amount of Fear-decrease per Interval-Check when Dreamworld is Triggered")]
 	public int fearTriggeredDecrease;
+    [Tooltip("The Amount of Fear needed for the panic attack (Game Over)")]
+    public int panicFearLevel;
 	private bool dreamworldTriggered = false;
 	private int fear;
 
@@ -42,23 +44,43 @@ public class LevelController : MonoBehaviour {
 	void Start(){
 		interactTrigger = new List<Trigger> ();
 		environmentTrigger = new List<Trigger> ();
-		Invoke ("FearMeter", 1);
+		Invoke ("FearIntervalCheck", 1);
 	}
 
-	private void FearMeter(){
-		if (environmentTrigger.Count != 0) {
+	private void FearIntervalCheck(){
+        fear -= fearTriggeredDecrease;
+        if (environmentTrigger.Count != 0) {
 			foreach (EnvironmentTrigger t in environmentTrigger) {
 				fear += t.fearPower;
 			}
 		}
-		if (dreamworldTriggered) {
-			fear -= fearTriggeredDecrease;
-		}
+        if(fear >= panicFearLevel)
+        {
+            Debug.Log("Game Over!");
+            gameOver = true;
+            // Trigger Game Over Screen
+        }
+        if(fear < 0)
+        {
+            fear = 0;
+        }
 		CheckDreamworld ();
-		Invoke ("FearMeter", fearMeterCheckInterval);
+		Invoke ("FearIntervalCheck", fearMeterCheckInterval);
 	}
 
-	public void RegisterTrigger(Trigger trigger){
+    private void Update()
+    {
+        if (gameOver)
+        {
+            if(Input.GetKey("joystick button 0"))
+            {
+                gameOver = false;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+    }
+
+    public void RegisterTrigger(Trigger trigger){
 		Debug.Log ("Trigger entered: " + trigger + " | Triggertyp: " + trigger.GetTriggerType());
 		if (trigger.GetTriggerType().CompareTo ("Interact") == 0) {
 			this.interactTrigger.Add (trigger);
@@ -92,18 +114,17 @@ public class LevelController : MonoBehaviour {
 
 	private void CheckDreamworld(){
 		if (fear >= fearDreamworldTrigger && !dreamworldTriggered) {
-			fear += fearTriggerIncrease;
 			dreamworldTriggered = true;
+            companion.transform.position = companion.companionTargetAmy.transform.position;
 			foreach (DreamworldObject obj in dreamworld) {
 				obj.Activate ();
 			}
             companion.SetActive(true);
-		} else if(fear < 0 && dreamworldTriggered){
+		} else if(fear <= 0 && dreamworldTriggered){
 			foreach (DreamworldObject obj in dreamworld) {
 				obj.Deactivate ();
 			}
             companion.SetActive(false);
-			fear = 0;
 			dreamworldTriggered = false;
 		}
 		Debug.Log ("Fear now at: " + fear);
