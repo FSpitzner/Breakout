@@ -13,19 +13,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114335684857903260}
-  - {fileID: 114459806435987504}
-  - {fileID: 114854096802820462}
-  - {fileID: 114696132579505138}
-  - {fileID: 114178395163658522}
-  - {fileID: 114793485882938482}
+  - {fileID: 114119459923615452}
+  - {fileID: 114780560216040350}
+  - {fileID: 114187999499833824}
+  - {fileID: 114095550581010810}
+  - {fileID: 114545005650183170}
   EditorEvents:
   - {fileID: 114238209087436646}
   - {fileID: 114989375106202110}
   - {fileID: 114145762345367610}
   - {fileID: 114242167991229794}
-  MasterBankRef: {fileID: 114459806435987504}
+  MasterBankRef: {fileID: 114119459923615452}
   StringsBankRef: {fileID: 114335684857903260}
-  stringsBankWriteTime: 636645811545691850
+  stringsBankWriteTime: 636658878577685910
   cacheVersion: 2
 --- !u!114 &114026880011469766
 MonoBehaviour:
@@ -123,6 +123,43 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114095550581010810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\UnityProjekte\GameDev\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation_2d.bank
+  lastModified: 636658878576748608
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278048
+  Exists: 1
+--- !u!114 &114119459923615452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\UnityProjekte\GameDev\Breakout\FMOD_Project\breakout\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636658878577685910
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
 --- !u!114 &114123495983218110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +189,7 @@ MonoBehaviour:
   Path: event:/FearLocation_2d
   guid: 59be3ebe5b0ad84fa75c3a4713042b53
   Banks:
-  - {fileID: 114178395163658522}
+  - {fileID: 114095550581010810}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -222,7 +259,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 278048
-  Exists: 1
+  Exists: 0
 --- !u!114 &114180751177947422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +275,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114187999499833824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\UnityProjekte\GameDev\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation.bank
+  lastModified: 636658878576748608
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278336
+  Exists: 1
 --- !u!114 &114189462817306968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +356,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 750944
   Exists: 1
+--- !u!114 &114234513458754584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114238209087436646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,12 +385,12 @@ MonoBehaviour:
   Path: event:/windsfx
   guid: b0bc4930fb001a46bad7c2392c7a63ca
   Banks:
-  - {fileID: 114854096802820462}
+  - {fileID: 114780560216040350}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114174575692826586}
+  - {fileID: 114704411724512050}
   MinDistance: 0
   MaxDistance: 0
   Length: 78496
@@ -338,15 +408,15 @@ MonoBehaviour:
   Path: event:/playerSounds/heartbeat
   guid: 23d6c18a0378864d905095f7ccf9d4ee
   Banks:
-  - {fileID: 114793485882938482}
+  - {fileID: 114545005650183170}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114300173678620062}
-  - {fileID: 114123495983218110}
-  - {fileID: 114080344302271012}
-  - {fileID: 114520739223420332}
+  - {fileID: 114234513458754584}
+  - {fileID: 114483003373623830}
+  - {fileID: 114407025234578080}
+  - {fileID: 114337866663756628}
   MinDistance: 0
   MaxDistance: 0
   Length: 2640
@@ -524,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Project\breakout\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636645811545691850
+  lastModified: 636658878577685910
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -542,6 +612,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114337866663756628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
   Min: 0
   Max: 1
   Default: 0
@@ -674,6 +759,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114407025234578080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114422379244338144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,7 +889,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 12474
-  Exists: 1
+  Exists: 0
 --- !u!114 &114477844844125154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,6 +927,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114483003373623830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114489292234415158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -971,6 +1086,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114545005650183170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\UnityProjekte\GameDev\Breakout\FMOD_Project\breakout\Build\Desktop\HeartBeat.bank
+  lastModified: 636658878577685910
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 714368
+  Exists: 1
 --- !u!114 &114558069377982138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,7 +1310,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 278336
-  Exists: 1
+  Exists: 0
 --- !u!114 &114698728320879760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,6 +1356,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114704411724512050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
   Min: 0
   Max: 1
   Default: 0
@@ -1307,6 +1455,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114780560216040350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\UnityProjekte\GameDev\Breakout\FMOD_Project\breakout\Build\Desktop\windsfx.bank
+  lastModified: 636658878577842142
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 750944
+  Exists: 1
 --- !u!114 &114786576040800512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,7 +1508,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 714368
-  Exists: 1
+  Exists: 0
 --- !u!114 &114801684220635616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,7 +1604,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 750944
-  Exists: 1
+  Exists: 0
 --- !u!114 &114861435620081538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,7 +1796,7 @@ MonoBehaviour:
   Path: event:/FearLocation_3d
   guid: 3b5407729215cd498fb2f4d71a0897f7
   Banks:
-  - {fileID: 114696132579505138}
+  - {fileID: 114187999499833824}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
