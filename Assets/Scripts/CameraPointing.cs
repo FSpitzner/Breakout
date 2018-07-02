@@ -12,40 +12,47 @@ public class CameraPointing : MonoBehaviour {
     public PostProcessVolume volume;
     private bool isTweening = false;
     private float timer;
+    private bool cameraOnPos = false;
 
-	void Update () {
-        if (LevelController.instance.IsDreamworldTriggered())
-        {
-            if (!isTweening) {
-                timer = 0;
-                isTweening = true;
-            }
-            else
+    void Update() {
+        if (cameraOnPos) {
+            if (LevelController.instance.IsDreamworldTriggered())
             {
-                timer += Time.deltaTime;
+                if (!isTweening) {
+                    timer = 0;
+                    isTweening = true;
+                }
+                else
+                {
+                    timer += Time.deltaTime;
+                }
+                volume.weight = pulse.Evaluate(timer);
+
+                /*Debug.Log("TRIGGERED!!!");
+                isTweening = true;
+                LeanTween.value(volume.weight, volume.weight, pulse.length).setEase(pulse).setOnComplete(() => {
+                    isTweening = false;
+                });*/
             }
-            volume.weight = pulse.Evaluate(timer);
-            
-            /*Debug.Log("TRIGGERED!!!");
-            isTweening = true;
-            LeanTween.value(volume.weight, volume.weight, pulse.length).setEase(pulse).setOnComplete(() => {
-                isTweening = false;
-            });*/
+            Quaternion targetRotation = Quaternion.LookRotation(player.position - transform.position);
+            float quatY = Mathf.Clamp(targetRotation.y, -0.05f, 0.05f);
+
+            //Debug.Log (quatY);
+            targetRotation = new Quaternion(targetRotation.x, quatY, targetRotation.z, targetRotation.w);
+            //Debug.Log (targetRotation.y);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, smoothTurnSpeed * Time.deltaTime);
+
+            //Debug.Log (transform.rotation.y);
+
+            //float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, Vector3.Angle(transform.position, player.position), ref turnRef, smoothTurnSpeed);
+            //Debug.Log (angle);
+            //transform.eulerAngles = new Vector3 (transform.eulerAngles.x, transform.eulerAngles.y + angle, transform.eulerAngles.z);
+            //transform.LookAt(player);
         }
-		Quaternion targetRotation = Quaternion.LookRotation (player.position - transform.position);
-		float quatY = Mathf.Clamp(targetRotation.y, -0.05f, 0.05f);
-
-		//Debug.Log (quatY);
-		targetRotation = new Quaternion (targetRotation.x, quatY, targetRotation.z, targetRotation.w);
-		//Debug.Log (targetRotation.y);
-		transform.rotation = Quaternion.Slerp (transform.rotation, targetRotation, smoothTurnSpeed * Time.deltaTime);
-
-		//Debug.Log (transform.rotation.y);
-
-		//float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, Vector3.Angle(transform.position, player.position), ref turnRef, smoothTurnSpeed);
-		//Debug.Log (angle);
-		//transform.eulerAngles = new Vector3 (transform.eulerAngles.x, transform.eulerAngles.y + angle, transform.eulerAngles.z);
-		//transform.LookAt(player);
-
 	}
+
+    public void CameraOnPos()
+    {
+        cameraOnPos = true;
+    }
 }
