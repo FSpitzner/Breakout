@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 	//[HideInInspector]
 	public StageController stage;
     private bool controlsLocked = false;
+    private bool gameStarted = false;
+    private bool cameraOnPos = false;
 
     private void Awake()
     {
@@ -56,62 +58,68 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void Update(){
-		//CheckKeyInput ();
-		cameraDummy.position = Vector3.SmoothDamp (
-			new Vector3(transform.position.x, transform.position.y, cameraDummy.transform.position.z),
-			new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z),
-			ref camCurVelocity, camSmoothSpeed);
-		if(Input.GetKeyDown(interactKey)){
-			LevelController.instance.UseTriggerObject ();
-		}
-
+        if (gameStarted && cameraOnPos)
+        {
+            //CheckKeyInput ();
+            cameraDummy.position = Vector3.SmoothDamp(
+                new Vector3(transform.position.x, transform.position.y, cameraDummy.transform.position.z),
+                new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z),
+                ref camCurVelocity, camSmoothSpeed);
+            if (Input.GetKeyDown(interactKey))
+            {
+                LevelController.instance.UseTriggerObject();
+            }
+        }
 	}
 
 	void FixedUpdate(){
-        if (!controlsLocked)
+        if (gameStarted)
         {
-            if (Input.GetKey(runKey) && moveState != 0)
+            if (!controlsLocked)
             {
-                moveState = 2;
-            }
-            if (Input.GetKeyUp(runKey) && moveState != 0)
-            {
-                moveState = 1;
-            }
-            if (Input.GetKeyDown(crouchKey))
-            {
-                if (moveState != 0)
-                    moveState = 0;
-                else
-                    moveState = 1;
-                Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
-            }
-            if (Input.GetKeyDown(jumpKey))
-            {
-                if (!jumping)
+                if (Input.GetKey(runKey) && moveState != 0)
                 {
-                    jumping = true;
-                    Jumper();
+                    moveState = 2;
                 }
-            }
+                if (Input.GetKeyUp(runKey) && moveState != 0)
+                {
+                    moveState = 1;
+                }
+                if (Input.GetKeyDown(crouchKey))
+                {
+                    if (moveState != 0)
+                        moveState = 0;
+                    else
+                        moveState = 1;
+                    Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
+                }
+                if (Input.GetKeyDown(jumpKey))
+                {
+                    if (!jumping)
+                    {
+                        jumping = true;
+                        Jumper();
+                    }
+                }
 
-            switch (moveState)
-            {
-                case 0:
-                    MovementControl(50);
-                    break;
-                case 1:
-                    MovementControl(100);
-                    break;
-                case 2:
-                    MovementControl(150);
-                    break;
-                case 3:
-                    //kein Movement (zb beim Springen)
-                    break;
-                default:
-                    MovementControl(100);
-                    break;
+                switch (moveState)
+                {
+                    case 0:
+                        MovementControl(50);
+                        break;
+                    case 1:
+                        MovementControl(100);
+                        break;
+                    case 2:
+                        MovementControl(150);
+                        break;
+                    case 3:
+                        //kein Movement (zb beim Springen)
+                        break;
+                    default:
+                        MovementControl(100);
+                        break;
+                }
             }
         }
 	}
@@ -164,5 +172,51 @@ public class PlayerController : MonoBehaviour {
     public void SetLockInputs(bool isLocked)
     {
         controlsLocked = isLocked;
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
+        LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0,3,-10), 1f).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.rotate(GameObject.FindGameObjectWithTag("MainCamera"), Quaternion.LookRotation(transform.position - new Vector3(cameraDummy.position.x, cameraDummy.position.y+3, cameraDummy.position.z-10)).eulerAngles, 1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
+            cameraOnPos = true;
+            LevelController.instance.InformCameraPointing();
+        });
+
+       /* Vector3 startpoint = LevelController.instance.GetGameMenuController().cameraMenuPos;
+        Vector3 endpoint = new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z);
+        LeanTween.moveSpline(cameraDummy.gameObject, new Vector3[]
+        {
+            //Points to move along
+            //Amy moves around 1.2f to the left!
+            startpoint,
+            GetPoint(startpoint, endpoint, 0.25f),
+            GetPoint(startpoint, endpoint, 0.5f),
+            GetPoint(startpoint, endpoint, 0.75f),
+            endpoint,
+            endpoint
+        }, 1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(()=>
+        {
+            cameraOnPos = true;
+        }); */
+    }
+
+    private Vector3 GetPoint(Vector3 start, Vector3 end, float posOnPath)
+    {
+        Vector3 endpoint;
+        endpoint = Vector3.Lerp(start, end, posOnPath);
+        if(posOnPath <= 0.25f)
+        {
+            endpoint.x += 0.75f;
+        }
+        else if(posOnPath <= 0.5f)
+        {
+            endpoint.x += 0.5f;
+        }
+        else if(posOnPath <= 0.75f)
+        {
+            endpoint.x += 0.25f;
+        }
+        return endpoint;
     }
 }
