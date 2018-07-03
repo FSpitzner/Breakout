@@ -13,20 +13,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114335684857903260}
-  - {fileID: 114119459923615452}
-  - {fileID: 114780560216040350}
-  - {fileID: 114187999499833824}
-  - {fileID: 114095550581010810}
-  - {fileID: 114545005650183170}
+  - {fileID: 114839333866065632}
+  - {fileID: 114918540510484208}
+  - {fileID: 114493333807579226}
+  - {fileID: 114181896094828248}
+  - {fileID: 114191167141102124}
+  - {fileID: 114153730635495048}
   EditorEvents:
   - {fileID: 114238209087436646}
   - {fileID: 114989375106202110}
   - {fileID: 114145762345367610}
   - {fileID: 114242167991229794}
-  MasterBankRef: {fileID: 114119459923615452}
+  - {fileID: 114342015132033980}
+  - {fileID: 114609063288306290}
+  - {fileID: 114205976941338822}
+  - {fileID: 114784405456562658}
+  - {fileID: 114270599951272634}
+  - {fileID: 114566010971081738}
+  - {fileID: 114261609025963994}
+  MasterBankRef: {fileID: 114839333866065632}
   StringsBankRef: {fileID: 114335684857903260}
-  stringsBankWriteTime: 636658878577685910
+  stringsBankWriteTime: 636661577899339498
   cacheVersion: 2
+--- !u!114 &114014519785085462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\HeartBeat.bank
+  lastModified: 636645810022584296
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 714368
+  Exists: 1
 --- !u!114 &114026880011469766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,6 +134,51 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114056931213389702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114070762998511644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114070824899381018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114080344302271012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,6 +212,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278048
   Exists: 1
+--- !u!114 &114110703313214282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114119459923615452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +261,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114125359089776524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114145762345367610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +290,7 @@ MonoBehaviour:
   Path: event:/FearLocation_2d
   guid: 59be3ebe5b0ad84fa75c3a4713042b53
   Banks:
-  - {fileID: 114095550581010810}
+  - {fileID: 114181896094828248}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -197,6 +298,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
+--- !u!114 &114152363654795976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114153580406822006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +328,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114153730635495048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\Bank_heartbeatSystem.bank
+  lastModified: 636661577900949590
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 719648
+  Exists: 1
 --- !u!114 &114166550336301014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,7 +394,55 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278048
   Exists: 0
+--- !u!114 &114178763689644020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114180751177947422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114181896094828248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation_2d.bank
+  lastModified: 636661577899829526
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278048
+  Exists: 1
+--- !u!114 &114183107425487212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -308,6 +490,39 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114190992573310070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &114191167141102124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\HeartBeat_old.bank
+  lastModified: 636661577900329554
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 714368
+  Exists: 1
 --- !u!114 &114200470623155940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +553,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114205976941338822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/lowmedium
+  guid: 976fc9ee7f364f41b2c265683134eb53
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &114218064934263596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,6 +608,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114235530920047004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114238209087436646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,12 +637,12 @@ MonoBehaviour:
   Path: event:/windsfx
   guid: b0bc4930fb001a46bad7c2392c7a63ca
   Banks:
-  - {fileID: 114780560216040350}
+  - {fileID: 114918540510484208}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114704411724512050}
+  - {fileID: 114125359089776524}
   MinDistance: 0
   MaxDistance: 0
   Length: 78496
@@ -408,15 +660,15 @@ MonoBehaviour:
   Path: event:/playerSounds/heartbeat
   guid: 23d6c18a0378864d905095f7ccf9d4ee
   Banks:
-  - {fileID: 114545005650183170}
+  - {fileID: 114191167141102124}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114234513458754584}
-  - {fileID: 114483003373623830}
-  - {fileID: 114407025234578080}
-  - {fileID: 114337866663756628}
+  - {fileID: 114183107425487212}
+  - {fileID: 114752314693384692}
+  - {fileID: 114235530920047004}
+  - {fileID: 114550309827695540}
   MinDistance: 0
   MaxDistance: 0
   Length: 2640
@@ -456,6 +708,36 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 0
+--- !u!114 &114251211391772116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114256388227507096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: has fear
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114257154901708026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,6 +753,31 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114261609025963994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/heartbeatsSystem_Event
+  guid: e0e5c4cde1d5bc4182fb4c26e8fe328a
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 114446066535446078}
+  - {fileID: 114968912872095414}
+  - {fileID: 114733369523550572}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2700
 --- !u!114 &114269106151081566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,6 +793,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114270599951272634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/low
+  guid: bfa00754dd81454695adbc94fc037a6f
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &114272825623977078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +848,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714368
   Exists: 0
+--- !u!114 &114292804429965502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114300173678620062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -582,6 +926,36 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114329852108690668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &114334118009014176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114335684857903260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,11 +968,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Project\breakout\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636658878577685910
+  lastModified: 636661577899339498
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1052
+    Value: 1432
   Exists: 1
 --- !u!114 &114335830231184102
 MonoBehaviour:
@@ -630,6 +1004,43 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114341441834153386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114342015132033980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/highmedium
+  guid: 47c3b66c10a91c4797c682e11f196287
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &114347318137436504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +1068,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114359775545435216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
   Min: 0
   Max: 1
   Default: 0
@@ -759,6 +1185,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114399966051086792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114407025234578080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,6 +1214,21 @@ MonoBehaviour:
   Name: Fear
   Min: 0
   Max: 2
+  Default: 0
+--- !u!114 &114414480933057738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
   Default: 0
 --- !u!114 &114422379244338144
 MonoBehaviour:
@@ -823,6 +1279,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114427356908835858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114435000065554790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -856,6 +1327,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714368
   Exists: 1
+--- !u!114 &114446066535446078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: hasfear
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114446253204159220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,6 +1458,39 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114493333807579226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation.bank
+  lastModified: 636661577899609513
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278336
+  Exists: 1
+--- !u!114 &114497454998936274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114500544519406852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1005,6 +1524,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278336
   Exists: 1
+--- !u!114 &114519096229181710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114520739223420332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1017,6 +1551,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114525754310448914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
   Min: 0
   Max: 1
   Default: 0
@@ -1086,6 +1635,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114544160543200958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114545005650183170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1104,6 +1668,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714368
   Exists: 1
+--- !u!114 &114550309827695540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114558069377982138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1119,6 +1698,46 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114566010971081738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/medium
+  guid: f9976e030903f84cb308b4e82c02e092
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &114575877663379564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\heartbeatSystem.bank
+  lastModified: 636661558690594529
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 6254
+  Exists: 0
 --- !u!114 &114591999233459922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1756,73 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278048
   Exists: 1
+--- !u!114 &114597847679361962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114608845638295202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: hasfear
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114609063288306290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/high
+  guid: 55d9f0744b59194eb2bf6ed8bde9276a
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &114618156163274220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114624918221777902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1169,6 +1855,21 @@ MonoBehaviour:
   Name: volume
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114637956264130222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114649957598673460
 MonoBehaviour:
@@ -1293,6 +1994,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114675825682536838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114696132579505138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1392,6 +2108,42 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278048
   Exists: 0
+--- !u!114 &114733369523550572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114735570559692848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/vlow
+  guid: e0e5c4cde1d5bc4182fb4c26e8fe328a
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &114737861205915186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1440,6 +2192,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114752314693384692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114774328548055514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1454,6 +2221,21 @@ MonoBehaviour:
   Name: FearHigh
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114778962493508966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114780560216040350
 MonoBehaviour:
@@ -1473,6 +2255,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 750944
   Exists: 1
+--- !u!114 &114784405456562658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/heartbeats/vhigh
+  guid: be3ef367c04f484bab88e56f79eeaf70
+  Banks:
+  - {fileID: 114153730635495048}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &114786576040800512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1509,6 +2313,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714368
   Exists: 0
+--- !u!114 &114795784862291758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
+  Default: 0
 --- !u!114 &114801684220635616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +2358,25 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114839333866065632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636661577899229497
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
 --- !u!114 &114841780976955382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,6 +2457,36 @@ MonoBehaviour:
   Name: FearOnOff
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114869658233943948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114871114895653276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Fear
+  Min: 0
+  Max: 2
   Default: 0
 --- !u!114 &114876798609538760
 MonoBehaviour:
@@ -1707,6 +2575,39 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114913434585801108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114918540510484208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\___COLLAB_UNITIY_GIT___\Breakout\FMOD_Project\breakout\Build\Desktop\windsfx.bank
+  lastModified: 636661577900079540
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 750944
+  Exists: 1
 --- !u!114 &114927806997905058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1737,6 +2638,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114960200366238282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearHigh
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114961293441534028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,6 +2667,21 @@ MonoBehaviour:
   Name: FearOnOff
   Min: 0
   Max: 1
+  Default: 0
+--- !u!114 &114968912872095414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: pitch
+  Min: 0
+  Max: 4
   Default: 0
 --- !u!114 &114975633012525006
 MonoBehaviour:
@@ -1767,6 +2698,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114977106109729116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114983073778651712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,6 +2728,21 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
+--- !u!114 &114983421088996228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: FearOnOff
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114989375106202110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1796,7 +2757,7 @@ MonoBehaviour:
   Path: event:/FearLocation_3d
   guid: 3b5407729215cd498fb2f4d71a0897f7
   Banks:
-  - {fileID: 114187999499833824}
+  - {fileID: 114493333807579226}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1816,6 +2777,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: FearMedium
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114992687364383386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: volume
   Min: 0
   Max: 1
   Default: 0

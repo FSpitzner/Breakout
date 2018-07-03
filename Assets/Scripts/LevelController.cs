@@ -58,6 +58,7 @@ public class LevelController : MonoBehaviour {
         {
             Debug.Log("Game Over!");
             gameOver = true;
+            playerSoundSystem.hasNOfear();
             // Trigger Game Over Screen
         }
         if(fear < 0)
@@ -132,23 +133,35 @@ public class LevelController : MonoBehaviour {
      //SOUND - checkingFEAR
         if(fear > 0){
             playerSoundSystem.hasfear();
-        }else{
+        }
+        else if (fear == 0 && playerSoundSystem.heartBeatOn==true)
+        {
             playerSoundSystem.hasNOfear();
-            pulseSpeed = 0f;
+            //pulseSpeed = 0f;
         }
 
-        if (fear > 0 && fear <=10)
+        if (fear >= 5 && fear <10)
         {
-            playerSoundSystem.fearLevelLow();
-            pulseSpeed = 1.3f;
+            playerSoundSystem.heartSpeed("low");
+            //pulseSpeed = 1.3f;
         }
-        else if (fear > 10 && fear <= 20){
-            playerSoundSystem.fearLevelMedium();
-            pulseSpeed = 0.75f;
-        }else if (fear > 20)
+        else if (fear >= 10 && fear < 15){
+            playerSoundSystem.heartSpeed("lmedium");
+            //pulseSpeed = 0.75f;
+        }else if (fear >= 20 && fear < 25)
         {
-            playerSoundSystem.fearLevelHigh();
-            pulseSpeed = 0.48f;
+            playerSoundSystem.heartSpeed("hmedium");
+            //pulseSpeed = 0.48f;
+        }
+        else if (fear >= 25 && fear < 30)
+        {
+            playerSoundSystem.heartSpeed("high");
+            //pulseSpeed = 0.48f;
+        }
+        else if (fear >= 30)
+        {
+            playerSoundSystem.heartSpeed("vhigh");
+            //pulseSpeed = 0.48f;
         }
 	}
     
