@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
-        if (gameStarted)
+        if (gameStarted && cameraOnPos)
         {
             if (!controlsLocked)
             {
@@ -177,46 +177,11 @@ public class PlayerController : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
-        LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0,3,-10), 1f).setEase(LeanTweenType.easeInOutSine);
-        LeanTween.rotate(GameObject.FindGameObjectWithTag("MainCamera"), Quaternion.LookRotation(transform.position - new Vector3(cameraDummy.position.x, cameraDummy.position.y+3, cameraDummy.position.z-10)).eulerAngles, 1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
-            cameraOnPos = true;
-            LevelController.instance.InformCameraPointing();
-        });
-
-       /* Vector3 startpoint = LevelController.instance.GetGameMenuController().cameraMenuPos;
-        Vector3 endpoint = new Vector3(cameraDummy.transform.position.x, cameraDummy.transform.position.y, cameraDummy.transform.position.z);
-        LeanTween.moveSpline(cameraDummy.gameObject, new Vector3[]
-        {
-            //Points to move along
-            //Amy moves around 1.2f to the left!
-            startpoint,
-            GetPoint(startpoint, endpoint, 0.25f),
-            GetPoint(startpoint, endpoint, 0.5f),
-            GetPoint(startpoint, endpoint, 0.75f),
-            endpoint,
-            endpoint
-        }, 1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(()=>
-        {
-            cameraOnPos = true;
-        }); */
+        cameraDummy.GetComponent<CameraMover>().StartGame();
     }
 
-    private Vector3 GetPoint(Vector3 start, Vector3 end, float posOnPath)
+    public void CameraOnPosition(bool isOnPos)
     {
-        Vector3 endpoint;
-        endpoint = Vector3.Lerp(start, end, posOnPath);
-        if(posOnPath <= 0.25f)
-        {
-            endpoint.x += 0.75f;
-        }
-        else if(posOnPath <= 0.5f)
-        {
-            endpoint.x += 0.5f;
-        }
-        else if(posOnPath <= 0.75f)
-        {
-            endpoint.x += 0.25f;
-        }
-        return endpoint;
+        cameraOnPos = isOnPos;
     }
 }

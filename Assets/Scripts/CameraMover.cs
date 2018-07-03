@@ -6,16 +6,23 @@ using UnityEngine;
 
 public class CameraMover : MonoBehaviour {
 
-	private bool isMoving = false;
+    [Header("Camera Settings")]
+    [Tooltip("Time it takes to move the Camera to its position after starting the game")]
+    public float cameraMoveTime = 2f;
 
-	public bool MoveCameraToPos(Vector3 stagePos, float moveTime){
-		if (!isMoving) {
-			isMoving = true;
-			LeanTween.move (gameObject, stagePos, moveTime).setOnComplete(() => {
-				isMoving = false;
-				}
-			);
-		}
-		return !isMoving;
-	}
+	public void StartGame()
+    {
+        LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0, 3, -10), 2f).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.rotate(
+            GameObject.FindGameObjectWithTag("MainCamera"),
+            Quaternion.LookRotation(transform.position - new Vector3(
+                transform.position.x,
+                transform.position.y + 3,
+                transform.position.z - 10)).eulerAngles,
+            2f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
+            PlayerController.instance.CameraOnPosition(true);
+            LevelController.instance.InformCameraPointing();
+        });
+    }
+	
 }

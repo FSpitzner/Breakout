@@ -8,8 +8,11 @@ public class ChangeStage : InteractTrigger {
 	[Header("Room Settings")]
 	public StageController room1;
 	public Vector3 room1StartPoint;
+    public GameObject[] room1Objects;
 	public StageController room2;
 	public Vector3 room2StartPoint;
+    public GameObject[] room2Objects;
+    public GameObject[] sharedObjects;
 	private RoomDirection room2PosFromRoom1;
 	public DoorOpener door;
     public float playerRoomSwitchSpeed = 2f;
@@ -60,12 +63,18 @@ public class ChangeStage : InteractTrigger {
             player.SetLockInputs(false);
             if (nextRoom == 1)
             {
-                room2.gameObject.SetActive(false);
+                foreach(GameObject go in room1Objects)
+                {
+                    go.SetActive(false);
+                }
                 player.stage = room1;
             }
             else
             {
-                room1.gameObject.SetActive(false);
+                foreach(GameObject go in room2Objects)
+                {
+                    go.SetActive(false);
+                }
                 player.stage = room2;
             }
             door.Close();
