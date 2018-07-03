@@ -14,6 +14,8 @@ public class LevelController : MonoBehaviour {
     private List<Trigger> interactTrigger;
     private List<Trigger> environmentTrigger;
     private bool gameOver = false;
+    public GameMenuController menuController;
+    public CameraPointing cameraPointingSkript;
     
 	[Header("Fear Settings")]
     [Tooltip("Fear-Value at which Dreamworld gets Triggered")]
@@ -32,6 +34,7 @@ public class LevelController : MonoBehaviour {
     public CompanionController companion;
 
     private float pulseSpeed = 0f;
+    private bool gameStarted = false;
 
 
     [Header("PlayerSoundSystem")]
@@ -71,12 +74,14 @@ public class LevelController : MonoBehaviour {
 
     private void Update()
     {
-        if (gameOver)
-        {
-            if(Input.GetKey("joystick button 0"))
+        if (gameStarted) { 
+            if (gameOver)
             {
-                gameOver = false;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                if(Input.GetKey("joystick button 0"))
+                {
+                    gameOver = false;
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
             }
         }
     }
@@ -185,5 +190,21 @@ public class LevelController : MonoBehaviour {
     public float getPulseSpeed()
     {
         return pulseSpeed;
+    }
+
+    public void StartGame()
+    {
+        gameStarted = true;
+        player.StartGame();
+    }
+
+    public GameMenuController GetGameMenuController()
+    {
+        return menuController;
+    }
+
+    public void InformCameraPointing()
+    {
+        cameraPointingSkript.CameraOnPos();
     }
 }
