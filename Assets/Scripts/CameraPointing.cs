@@ -12,6 +12,7 @@ public class CameraPointing : MonoBehaviour {
     public PostProcessVolume volume;
     private bool isTweening = false;
     private float timer;
+    private float timerPosition;
     private bool cameraOnPos = false;
 
     void Update() {
@@ -25,8 +26,23 @@ public class CameraPointing : MonoBehaviour {
                 else
                 {
                     timer += Time.deltaTime;
+                    if (timerPosition >= 1)
+                    {
+                        timerPosition = 0;
+                    }
+                    else
+                    {
+                        while (timerPosition < 1)
+                        {
+                            timerPosition += Time.deltaTime;
+                        }
+                    }
+                    
                 }
                 volume.weight = pulse.Evaluate(timer);
+                pulse.Evaluate(timerPosition);
+                Debug.Log(timerPosition);
+                //if (timerPosition >= 0.2 && timerPosition <= 0.3) { LevelController.instance.playHeartbeat(); }
 
                 /*Debug.Log("TRIGGERED!!!");
                 isTweening = true;

@@ -40,8 +40,11 @@ public class LevelController : MonoBehaviour {
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
 
+    public FMODUnity.StudioEventEmitter eventEmitterRefHeartBeat;
+
 	void Awake(){
 		instance = this;
+        eventEmitterRefHeartBeat = GetComponent<FMODUnity.StudioEventEmitter>();
 	}
 
 	void Start(){
@@ -118,57 +121,84 @@ public class LevelController : MonoBehaviour {
 			}
 	}
 
-	private void CheckDreamworld(){
-		if (fear >= fearDreamworldTrigger && !dreamworldTriggered) {
-			dreamworldTriggered = true;
+    private void CheckDreamworld()
+    {
+        if (fear >= fearDreamworldTrigger && !dreamworldTriggered)
+        {
+            dreamworldTriggered = true;
             companion.transform.position = companion.companionTargetAmy.transform.position;
-			foreach (DreamworldObject obj in dreamworld) {
-				obj.Activate ();
-			}
+            foreach (DreamworldObject obj in dreamworld)
+            {
+                obj.Activate();
+            }
             companion.SetActive(true);
-		} else if(fear <= 0 && dreamworldTriggered){
-			foreach (DreamworldObject obj in dreamworld) {
-				obj.Deactivate ();
-			}
+        }
+        else if (fear <= 0 && dreamworldTriggered)
+        {
+            foreach (DreamworldObject obj in dreamworld)
+            {
+                obj.Deactivate();
+            }
             companion.SetActive(false);
-			dreamworldTriggered = false;
-		}
-		Debug.Log ("Fear now at: " + fear);
-	
-     //SOUND - checkingFEAR
-        if(fear > 0){
-            playerSoundSystem.hasfear();
+            dreamworldTriggered = false;
         }
-        else if (fear == 0 && playerSoundSystem.heartBeatOn==true)
-        {
-            playerSoundSystem.hasNOfear();
-            //pulseSpeed = 0f;
-        }
+        Debug.Log("Fear now at: " + fear);
 
-        if (fear >= 5 && fear <10)
-        {
-            playerSoundSystem.heartSpeed("low");
-            //pulseSpeed = 1.3f;
+
+        /*''''####'''''''####'''''###''###'''####'''''###'''#########'''''
+         '''###''###'''###''###'''###''###'''#####''''###'''###''''###''''
+         ''''###'''''''###''###'''###''###'''###'##'''###'''###'''''###'''
+         ''''''###'''''###''###'''###''###'''###''##''###'''###'''''###'''
+         ''''''''###'''###''###'''###''###'''###'''##'###'''###'''''###'''
+         '''###''###'''###''###'''###''###'''###''''#####'''###''''###''''
+         '''''####'''''''####'''''''####'''''###'''''####'''#########'''''
+         */
+        
+        
+        //SOUND - checkingFEAR
+        if (fear > 0){
+            //vorerst calls when checked. When called from curve remove this!
+            //playHeartbeat();
+
+            //check for Fearlevel and adjust heartbeat sound in pitch and / or speed
+            /*
+            if (fear > 0 && fear < 5){
+                playerSoundSystem.heartSpeed("vlow");
+            }else if (fear >= 5 && fear <10)
+                 {
+                     playerSoundSystem.heartSpeed("low");
+                     //pulseSpeed = 1.3f;
+                 }
+                 else if (fear >= 10 && fear < 15){
+                     playerSoundSystem.heartSpeed("lmedium");
+                     //pulseSpeed = 0.75f;
+                 }
+                 else if (fear >= 15 && fear < 20)
+                 {
+                     playerSoundSystem.heartSpeed("medium");
+                     //pulseSpeed = 0.48f;
+                 }
+                 else if (fear >= 20 && fear < 25)
+                 {
+                     playerSoundSystem.heartSpeed("hmedium");
+                     //pulseSpeed = 0.48f;
+                 }
+                 else if (fear >= 25 && fear < 30)
+                 {
+                     playerSoundSystem.heartSpeed("high");
+                     //pulseSpeed = 0.48f;
+                 }
+                 else if (fear >= 30)
+                 {
+                     playerSoundSystem.heartSpeed("vhigh");
+                     //pulseSpeed = 0.48f;
+                 }*/
         }
-        else if (fear >= 10 && fear < 15){
-            playerSoundSystem.heartSpeed("lmedium");
-            //pulseSpeed = 0.75f;
-        }else if (fear >= 20 && fear < 25)
-        {
-            playerSoundSystem.heartSpeed("hmedium");
-            //pulseSpeed = 0.48f;
-        }
-        else if (fear >= 25 && fear < 30)
-        {
-            playerSoundSystem.heartSpeed("high");
-            //pulseSpeed = 0.48f;
-        }
-        else if (fear >= 30)
-        {
-            playerSoundSystem.heartSpeed("vhigh");
-            //pulseSpeed = 0.48f;
-        }
-	}
+    }
+    public void playHeartbeat()
+    {
+        eventEmitterRefHeartBeat.Play();
+    }
     
 	public void ChangeFearBy(int amount){
 		fear += amount;
