@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 492}
   m_MaxSize: {x: 16012, y: 14042}
   vertical: 0
-  controlID: 112
+  controlID: 145
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 311
     height: 731
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -114,8 +114,8 @@ MonoBehaviour:
     y: 0
     width: 303
     height: 460
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 492}
   m_MaxSize: {x: 12010, y: 14042}
   vertical: 1
-  controlID: 113
+  controlID: 77
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_MinSize: {x: 610, y: 221}
   m_MaxSize: {x: 12010, y: 4021}
   vertical: 0
-  controlID: 114
+  controlID: 78
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,20 +348,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/VFX Package/Effects
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/VFX Package/Effects
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\chris\Documents\GitHub\Breakout
+  m_LastProjectPath: D:\UnityProjekte\GameDev\Breakout
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 327}
-    m_SelectedIDs: 28160000
-    m_LastClickedID: 5672
-    m_ExpandedIDs: 00000000320f0000ca0f00001e1300009a16000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: b4440000
+    m_LastClickedID: 17588
+    m_ExpandedIDs: 00000000b444000018480000944a0000564d000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000320f0000ca0f00001e1300009a160000
+    m_ExpandedIDs: 00000000b444000018480000944a0000564d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,7 +417,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300000000000076480000
+    m_ExpandedInstanceIDs: c62300007648000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,29 +504,29 @@ MonoBehaviour:
     height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 9cf7bffffe16d0ff627eebff9ce6fffff0fbffff00000000a6240000e0240000
+    scrollPos: {x: 0, y: 138}
+    m_SelectedIDs: f261ffff
+    m_LastClickedID: -40462
+    m_ExpandedIDs: 6084ffffea91ffff00000000fe570000365800008c580000805a00009a5a0000445c0000a05f000062640000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Bonbons2
-      m_OriginalName: Bonbons2
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -3139842
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - VFXTest
+  - blockbuilding
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -557,14 +557,14 @@ MonoBehaviour:
     height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 5951.758424745452
+  lastFramingTime: 69.41741011192522
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.1321609, y: -4.659146, z: -4.2994747}
+    m_Target: {x: 27.181496, y: 14.414053, z: 1.6162741}
     speed: 2
-    m_Value: {x: 0.1321609, y: -4.659146, z: -4.2994747}
+    m_Value: {x: 27.181496, y: 14.414053, z: 1.6162741}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -592,13 +592,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.009607373, y: -0.9718415, z: 0.23197342, w: -0.04025083}
+    m_Target: {x: -0.47109348, y: -0.028572656, z: 0.015270311, w: -0.88148934}
     speed: 2
-    m_Value: {x: -0.009607373, y: -0.9718415, z: 0.23197342, w: -0.04025083}
+    m_Value: {x: -0.47109303, y: -0.028572628, z: 0.0152702965, w: -0.8814885}
   m_Size:
-    m_Target: 24.06451
+    m_Target: 3.2312124
     speed: 2
-    m_Value: 24.06451
+    m_Value: 3.2312124
   m_Ortho:
     m_Target: 0
     speed: 2
