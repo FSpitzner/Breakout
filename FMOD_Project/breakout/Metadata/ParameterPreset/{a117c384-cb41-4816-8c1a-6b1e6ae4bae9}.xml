@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{a117c384-cb41-4816-8c1a-6b1e6ae4bae9}">
+        <property name="name">
+            <value>hasfear</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2cc0e62d-d1a2-4914-95ac-cbff31815172}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{f67aace1-ab79-4a0a-a208-1ec6292e79d6}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{f67aace1-ab79-4a0a-a208-1ec6292e79d6}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
