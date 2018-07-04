@@ -53,6 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4185090305859672}
+  - component: {fileID: 65451558335796864}
   m_Layer: 0
   m_Name: 'Bread_Tin '
   m_TagString: Untagged
@@ -185,3 +186,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931225069495476}
   m_Mesh: {fileID: 4300002, guid: 639498c38126bc6458c67af75372d6c0, type: 3}
+--- !u!65 &65451558335796864
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1976278600514056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.32, z: 0.79}
+  m_Center: {x: -0.22, y: -0.06, z: 0.01}

@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 4195871845324730}
   - component: {fileID: 33133068507778074}
   - component: {fileID: 23231373677278422}
+  - component: {fileID: 114801149644999698}
   m_Layer: 0
   m_Name: Tuer_o
   m_TagString: Untagged
@@ -172,6 +173,7 @@ GameObject:
   - component: {fileID: 4444837611523032}
   - component: {fileID: 33865537002764824}
   - component: {fileID: 23918753661270904}
+  - component: {fileID: 114593078601685792}
   m_Layer: 0
   m_Name: Tuer_u
   m_TagString: Untagged
@@ -307,8 +309,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252481416428046}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 67, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4224281029578124}
@@ -318,7 +320,7 @@ Transform:
   - {fileID: 4279690338692488}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!23 &23231373677278422
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -697,3 +699,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1958801974338136}
   m_Mesh: {fileID: 4300010, guid: 68fe02f0f37a8434bb4f0f9fd245c577, type: 3}
+--- !u!114 &114593078601685792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1958801974338136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e94eaebf33d28848a65b90e3ce1d173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosOffset: {x: 0, y: 0, z: 0}
+  openTime: 4
+  tweening: 0
+--- !u!114 &114801149644999698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676460595335570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e94eaebf33d28848a65b90e3ce1d173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosOffset: {x: 0, y: 0, z: 0}
+  openTime: 4
+  tweening: 0

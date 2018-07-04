@@ -19,6 +19,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4082229557988614}
+  - component: {fileID: 65547451189714542}
+  - component: {fileID: 136980598590760946}
+  - component: {fileID: 136357648938938042}
+  - component: {fileID: 136739297683880938}
+  - component: {fileID: 136989199686513896}
   m_Layer: 0
   m_Name: Cupboard_small_Corridor
   m_TagString: Untagged
@@ -112,3 +117,67 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1863737697796448}
   m_Mesh: {fileID: 4300000, guid: cb588eb16b672254ea74367c545fab81, type: 3}
+--- !u!65 &65547451189714542
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163631640052318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 0.64, z: 0.9}
+  m_Center: {x: -0.64, y: 1.205, z: 0}
+--- !u!136 &136357648938938042
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163631640052318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.27, y: 0.4, z: -0.38}
+--- !u!136 &136739297683880938
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163631640052318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -1.05, y: 0.4, z: -0.38}
+--- !u!136 &136980598590760946
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163631640052318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.27, y: 0.4, z: 0.38}
+--- !u!136 &136989199686513896
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1163631640052318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.05
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -1.05, y: 0.4, z: 0.38}

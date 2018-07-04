@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4497191169349154}
+  - component: {fileID: 65807494541794508}
   m_Layer: 0
   m_Name: Bookshelf_Warden_Office
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1744986869853000}
   m_Mesh: {fileID: 4300002, guid: 90353930f622cac46a2067b60e602402, type: 3}
+--- !u!65 &65807494541794508
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1050018394552208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.12, y: 4.1, z: 4.3}
+  m_Center: {x: -0.51, y: 2.04, z: -1.93}

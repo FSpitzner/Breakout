@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4236779509726714}
+  - component: {fileID: 65789183239049336}
   m_Layer: 0
   m_Name: Cupboard
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1651746303145026}
   m_Mesh: {fileID: 4300000, guid: 31482039060167a4f8bccd0aba1adc63, type: 3}
+--- !u!65 &65789183239049336
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1816497764051872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.38, y: 4, z: 2.2}
+  m_Center: {x: -0.62, y: 2, z: -1}

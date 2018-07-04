@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4973342492093676}
+  - component: {fileID: 65015506101830876}
   m_Layer: 0
   m_Name: Kitchen_Sink
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1059234704197532}
   m_Mesh: {fileID: 4300000, guid: 252992ca03be7ae4db5c5a0d6b8d5035, type: 3}
+--- !u!65 &65015506101830876
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1891825627237148}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.32, y: 2.4, z: 2.25}
+  m_Center: {x: -0.62, y: 1.2, z: -1.1}

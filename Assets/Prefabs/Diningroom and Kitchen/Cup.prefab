@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4862814796876508}
+  - component: {fileID: 65525545699905562}
   m_Layer: 0
   m_Name: Cup
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1463275514009356}
   m_Mesh: {fileID: 4300000, guid: 36319f804f549e14f95dc6f71cc2bfc6, type: 3}
+--- !u!65 &65525545699905562
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1808510068089284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.23, y: 0.2, z: 0.2}
+  m_Center: {x: -0.02, y: 0.1, z: -0}
