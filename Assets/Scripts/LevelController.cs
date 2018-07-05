@@ -48,6 +48,10 @@ public class LevelController : MonoBehaviour {
 	}
 
 	void Start(){
+        if(menuController != null)
+        {
+            menuController.gameObject.SetActive(true);
+        }
 		interactTrigger = new List<Trigger> ();
 		environmentTrigger = new List<Trigger> ();
 		Invoke ("FearIntervalCheck", 1);

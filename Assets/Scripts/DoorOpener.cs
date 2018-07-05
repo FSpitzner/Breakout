@@ -20,7 +20,7 @@ public class DoorOpener : MonoBehaviour {
 	}
     */
 	void Start(){
-		defaultRotation = door.transform.localEulerAngles;
+		defaultRotation = door != null ? door.transform.localEulerAngles : transform.localEulerAngles;
 	}
 
 	public void Open(){
