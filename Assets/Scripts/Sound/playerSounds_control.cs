@@ -2,42 +2,66 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+
 public class playerSounds_control : MonoBehaviour
 {
-
-    [FMODUnity.EventRef]
-    
-
-
-
-
-    //findet das Event in FMOD
-    public string heartbeat = "event:/heartbeats/heartbeatsSystem_Event";
-
-    FMOD.Studio.EventInstance heartEv;
-    public bool heartBeatOn = false;
-    int timelineposition;
+    //[FMODUnity.EventRef]
+    public StudioEventEmitter eventEmitterRefHeartBeatNEW;
+    private int fearamount;
 
     // Use this for initialization
     void Start()
     {
-        heartEv = FMODUnity.RuntimeManager.CreateInstance(heartbeat);
-
-        startHeartEv();
 
     }
 
-    public void startHeartEv()
+    void awake()
     {
-        heartEv.start();
+        eventEmitterRefHeartBeatNEW = GetComponent<StudioEventEmitter>();
+        fearamount = LevelController.instance.fear;
     }
+
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
+    public void playHeartSFX(/*int amountfear*/)
+    {/*
+        if (amountfear > 0 && amountfear < 5)
+        {
+            heartSpeed("vlow");
+        }
+        else if (amountfear >= 5 && amountfear < 10)
+        {
+            heartSpeed("low");
+        }
+        else if (amountfear >= 10 && amountfear < 15)
+        {
+            heartSpeed("lmedium");
+        }
+        else if (amountfear >= 15 && amountfear < 20)
+        {
+            heartSpeed("medium");
+        }
+        else if (amountfear >= 20 && amountfear < 25)
+        {
+            heartSpeed("hmedium");
+        }
+        else if (amountfear >= 25 && amountfear < 30)
+        {
+            heartSpeed("high");
+        }
+        else if (amountfear >= 30)
+        {
+            heartSpeed("vhigh");
+        }*/
+        eventEmitterRefHeartBeatNEW.Play();
+
+    }
 
     /*
      * vlow
@@ -49,68 +73,35 @@ public class playerSounds_control : MonoBehaviour
      * vhigh
      * */
 
-
-    //player has fear
-    public void hasfear()
-    {
-        //startHeartEv();
-        heartEv.getTimelinePosition(out timelineposition);
-       /* if ( timelineposition > 450){
-        heartEv.setTimelinePosition(0);
-        }*/
-        heartEv.setParameterValue("hasfear", 1f);
-        heartBeatOn = true;
-    }
-    
-
-    public void heartSpeed(string speed)
-    {
-        heartEv.getTimelinePosition(out timelineposition);
-        if (timelineposition > 450)
-        {
-            heartEv.setTimelinePosition(0);
-        }
+    public void heartSpeed(string speed){
         if (speed == "vlow") {
-                heartEv.setParameterValue("pitch", 0);
-                heartEv.setParameterValue("speed", 0f);
-                Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 0);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 0f);
+            Debug.Log("heartbeat Speed VLOW");
         }else if (speed == "low") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
-            Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 1);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 0f);
+            Debug.Log("heartbeat Speed LOW");
         }else if (speed == "lmedium") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
-            Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 2);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 0f);
+            Debug.Log("heartbeat Speed LMEDIUM");
         }else if (speed == "medium") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
-            Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 0);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 1f);
+            Debug.Log("heartbeat Speed MEDIUM");
         }else if (speed == "hmedium") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
-            Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 1);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 1f);
+            Debug.Log("heartbeat Speed HMEDIUM");
         }else if (speed == "high") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
-            Debug.Log("heartbeat Speed VHIGH");
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 2);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 1f);
+            Debug.Log("heartbeat Speed HIGH");
         }else if (speed == "vhigh") {
-            heartEv.setParameterValue("pitch", 0);
-            heartEv.setParameterValue("speed", 0f);
+            eventEmitterRefHeartBeatNEW.SetParameter("pitch", 3);
+            eventEmitterRefHeartBeatNEW.SetParameter("speed", 1f);
             Debug.Log("heartbeat Speed VHIGH");
         }
     }
-
-    //player has fear
-    public void hasNOfear()
-    {
-        heartEv.setParameterValue("hasfear", 0f);
-        heartEv.setParameterValue("pitch", 0);
-        heartEv.setParameterValue("speed", 0f);
-        //heartEv.setTimelinePosition(0);
-        //heartEv.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        heartBeatOn = false;
-    }
-
-
 }

@@ -25,7 +25,8 @@ public class LevelController : MonoBehaviour {
     [Tooltip("The Amount of Fear needed for the panic attack (Game Over)")]
     public int panicFearLevel;
 	private bool dreamworldTriggered = false;
-	private int fear;
+	//private int fear;
+    public int fear;
 
 	[Header("Dreamworld Settings")]
     [Tooltip("Put in every Dreamworld-Object of the Level here. They get Activated when the Dreamworld gets Triggered")]
@@ -40,11 +41,11 @@ public class LevelController : MonoBehaviour {
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
 
-    public FMODUnity.StudioEventEmitter eventEmitterRefHeartBeat;
+    //public FMODUnity.StudioEventEmitter eventEmitterRefHeartBeat;
 
 	void Awake(){
 		instance = this;
-        eventEmitterRefHeartBeat = GetComponent<FMODUnity.StudioEventEmitter>();
+        //eventEmitterRefHeartBeat = GetComponent<FMODUnity.StudioEventEmitter>();
 	}
 
 	void Start(){
@@ -64,9 +65,8 @@ public class LevelController : MonoBehaviour {
         {
             Debug.Log("Game Over!");
             gameOver = true;
-            playerSoundSystem.hasNOfear();
-            // Trigger Game Over Screen
         }
+
         if(fear < 0)
         {
             fear = 0;
@@ -157,12 +157,10 @@ public class LevelController : MonoBehaviour {
         
         
         //SOUND - checkingFEAR
-        if (fear > 0){
-            //vorerst calls when checked. When called from curve remove this!
-            //playHeartbeat();
-
+     /*   if (fear > 0){
+            
             //check for Fearlevel and adjust heartbeat sound in pitch and / or speed
-            /*
+            
             if (fear > 0 && fear < 5){
                 playerSoundSystem.heartSpeed("vlow");
             }else if (fear >= 5 && fear <10)
@@ -193,13 +191,21 @@ public class LevelController : MonoBehaviour {
                  {
                      playerSoundSystem.heartSpeed("vhigh");
                      //pulseSpeed = 0.48f;
-                 }*/
-        }
+                 }
+        }*/
     }
-    public void playHeartbeat()
+    
+    /*public int returnfear()
     {
+        return fear;
+    }*/
+    /*public void playHeartbeat(int amountfear)
+    {
+        if (amountfear > 10) { eventEmitterRefHeartBeat.SetParameter("speed", 1f); }
+
         eventEmitterRefHeartBeat.Play();
-    }
+
+    }*/
     
 	public void ChangeFearBy(int amount){
 		fear += amount;
