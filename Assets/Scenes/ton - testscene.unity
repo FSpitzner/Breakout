@@ -565,8 +565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   room1: {fileID: 1457843861}
   room1StartPoint: {x: -7, y: 0.5, z: 2.5}
+  room1Objects: []
   room2: {fileID: 2125058118}
   room2StartPoint: {x: -7, y: 0.5, z: 5}
+  room2Objects: []
+  sharedObjects: []
   door: {fileID: 2136025926}
   playerRoomSwitchSpeed: 2
   room1CameraPos: {x: 0, y: 0, z: 0}
@@ -1312,6 +1315,7 @@ MonoBehaviour:
     m_PostInfinity: 1
     m_RotationOrder: 4
   volume: {fileID: 897956445}
+  playerSoundSystem: {fileID: 2117446916}
 --- !u!114 &897956445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,13 +1821,13 @@ MonoBehaviour:
   fearDreamworldTrigger: 20
   fearTriggeredDecrease: 2
   panicFearLevel: 35
+  fear: 0
   dreamworld:
   - {fileID: 1503742254}
   - {fileID: 1128697702}
   - {fileID: 968159331}
   companion: {fileID: 1757484489}
   playerSoundSystem: {fileID: 2117446916}
-  eventEmitterRefHeartBeat: {fileID: 0}
 --- !u!114 &1201073527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2826,6 +2830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a207f9d4dd24147a7402d7a98d37f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraMoveTime: 2
 --- !u!4 &2008677462
 Transform:
   m_ObjectHideFlags: 0
@@ -2983,6 +2988,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2117446915}
   - component: {fileID: 2117446916}
+  - component: {fileID: 2117446917}
   m_Layer: 0
   m_Name: PlayerSoundSystem
   m_TagString: Untagged
@@ -3014,8 +3020,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f809c58b7333a0e4fa999a0e5adbe840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartbeat: event:/playerSounds/heartbeat
-  heartBeatOn: 0
+  eventEmitterRefHeartBeatNEW: {fileID: 2117446917}
+--- !u!114 &2117446917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2117446914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/heartbeats/heartbeatsSystem_Event
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: hasfear
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &2125058116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,7 +3131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e94eaebf33d28848a65b90e3ce1d173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosOffset: {x: 0, y: 3, z: 0}
+  door: {fileID: 0}
+  defaultRotation: {x: 0, y: 0, z: 0}
+  openRotation: {x: 0, y: 0, z: 0}
   openTime: 3
   tweening: 0
 --- !u!23 &2136025927
