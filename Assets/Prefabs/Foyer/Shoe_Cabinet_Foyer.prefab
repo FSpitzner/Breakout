@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4197596974043434}
+  - component: {fileID: 65746155370509972}
   m_Layer: 0
   m_Name: Shoe_Cabinet_Foyer
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1286120140855732}
   m_Mesh: {fileID: 4300000, guid: 73c1c0c384745fa4a992236307aff3e3, type: 3}
+--- !u!65 &65746155370509972
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1841938897247054}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.96, y: 0.6, z: 2.92}
+  m_Center: {x: -0.46, y: 0.325, z: 0}
