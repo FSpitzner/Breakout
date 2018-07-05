@@ -4,34 +4,35 @@ using UnityEngine;
 
 public class DoorOpener : MonoBehaviour {
 
-	public Vector3 targetPosOffset;
-	public float openTime = 3;
-	private Vector3 defaultPosition;
+    [Tooltip("Put Door in here. If this Skript is on the Door itself, let it empty")]
+    public GameObject door;
+    public Vector3 defaultRotation;
+	public Vector3 openRotation;
+	public float openTime = 2f;
 	private bool opened = false;
-    private bool shouldClose = false;
 	[HideInInspector]
 	public bool tweening = false;
-
+    /*
 	void OnDrawGizmos(){
 		
 		Gizmos.color = Color.blue;
 		Gizmos.DrawWireCube (new Vector3(transform.position.x + targetPosOffset.x, transform.position.y + targetPosOffset.y, transform.position.z + targetPosOffset.z), transform.lossyScale);
 	}
-
+    */
 	void Start(){
-		defaultPosition = transform.position;
+		defaultRotation = door.transform.localEulerAngles;
 	}
 
 	public void Open(){
 		if (!tweening) {
 			tweening = true;
 			if (!opened)
-				LeanTween.move (gameObject, transform.position + targetPosOffset, openTime).setOnComplete (() => {
+				LeanTween.rotateLocal (door != null ? door : gameObject, openRotation, openTime).setOnComplete (() => {
 					opened = true;
 					tweening = false;
 				});
 			else
-				LeanTween.move (gameObject, defaultPosition, openTime).setOnComplete (() => {
+				LeanTween.rotateLocal (door != null ? door : gameObject, defaultRotation, openTime).setOnComplete (() => {
 					opened = false;
 					tweening = false;
 				});
@@ -41,7 +42,7 @@ public class DoorOpener : MonoBehaviour {
     public void Close()
     {
         tweening = true;
-        LeanTween.move(gameObject, defaultPosition, openTime).setOnComplete(() =>
+        LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
         {
             opened = false;
             tweening = false;

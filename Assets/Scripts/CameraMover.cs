@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Diese Klasse wird verwendet, um die Kamera beim Wechsel von Räumen von einer Ebene zur nächsten zu bewegen
+// Diese Klasse wird verwendet, um bei Spielstart die Kamera in Position zu fahren
 
 public class CameraMover : MonoBehaviour {
 
@@ -12,13 +12,13 @@ public class CameraMover : MonoBehaviour {
 
 	public void StartGame()
     {
-        LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0, 3, -10), 2f).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0, 2, -5), 2f).setEase(LeanTweenType.easeInOutSine);
         LeanTween.rotate(
             GameObject.FindGameObjectWithTag("MainCamera"),
             Quaternion.LookRotation(transform.position - new Vector3(
                 transform.position.x,
-                transform.position.y + 3,
-                transform.position.z - 10)).eulerAngles,
+                transform.position.y + 2,
+                transform.position.z - 5)).eulerAngles,
             2f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
             PlayerController.instance.CameraOnPosition(true);
             LevelController.instance.InformCameraPointing();

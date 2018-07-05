@@ -46,10 +46,10 @@ public class ChangeStage : InteractTrigger {
             Debug.Log("Player: " + player);
 			if (player.stage == room1) {
 				SwitchRooms (2, player);
-                CameraToStagePosition(2);
+                //CameraToStagePosition(2);
 			} else {
 				SwitchRooms (1, player);
-                CameraToStagePosition(1);
+                //CameraToStagePosition(1);
 			}
             
         }
@@ -58,29 +58,35 @@ public class ChangeStage : InteractTrigger {
 	private void SwitchRooms(int nextRoom, PlayerController player){
         player.SetLockInputs(true);
         player.transform.position = nextRoom == 1 ? room2StartPoint : room1StartPoint;
-        LeanTween.move(player.gameObject, nextRoom == 1 ? room1StartPoint : room2StartPoint, playerRoomSwitchSpeed).setOnComplete(() =>
-        {
-            player.SetLockInputs(false);
-            if (nextRoom == 1)
-            {
-                foreach(GameObject go in room1Objects)
-                {
-                    go.SetActive(false);
-                }
-                player.stage = room1;
-            }
-            else
-            {
-                foreach(GameObject go in room2Objects)
-                {
-                    go.SetActive(false);
-                }
-                player.stage = room2;
-            }
-            door.Close();
+        LTSeq seq = LeanTween.sequence();
+        seq.append(door.openTime);
+        seq.append(() => {
+            CameraToStagePosition(nextRoom);
         });
-        CameraToStagePosition(nextRoom);
-	}
+        seq.append(
+            LeanTween.move(player.gameObject, nextRoom == 1 ? room1StartPoint : room2StartPoint, playerRoomSwitchSpeed).setOnComplete(() =>
+            {
+                player.SetLockInputs(false);
+                if (nextRoom == 1)
+                {
+                    foreach (GameObject go in room2Objects)
+                    {
+                        go.SetActive(false);
+                    }
+                    player.stage = room1;
+                }
+                else
+                {
+                    foreach (GameObject go in room1Objects)
+                    {
+                        go.SetActive(false);
+                    }
+                    player.stage = room2;
+                }
+                door.Close();
+            })
+        );
+    }
 
 	private void CameraToStagePosition(int nextRoom){
         Debug.Log("Moving Camera!");
