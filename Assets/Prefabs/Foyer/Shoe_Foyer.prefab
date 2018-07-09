@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4470882660409130}
+  - component: {fileID: 65989765230354422}
   m_Layer: 0
   m_Name: Shoe_Foyer
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1438401923343726}
   m_Mesh: {fileID: 4300000, guid: 7a66b5aab9673e444989df76c5d7d21f, type: 3}
+--- !u!65 &65989765230354422
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1605042575170296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14, y: 0.12, z: 0.32}
+  m_Center: {x: 0, y: 0.06, z: -0.17}

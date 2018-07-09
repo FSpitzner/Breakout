@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4937100408873582}
+  - component: {fileID: 65400035036112898}
   m_Layer: 0
   m_Name: Sewing_Machine_Warden_Office
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1599443850296266}
   m_Mesh: {fileID: 4300000, guid: bd916344a5861fa4e89a2993d92c066b, type: 3}
+--- !u!65 &65400035036112898
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1776223989906098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.44, y: 0.7, z: 1.05}
+  m_Center: {x: -0, y: 0.35, z: 0.51}

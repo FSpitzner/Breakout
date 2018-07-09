@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4716922436502576}
+  - component: {fileID: 65043781797866170}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866039466641100}
   m_Mesh: {fileID: 4300000, guid: b598a49b82ef8744c99b0d831ad6a30b, type: 3}
+--- !u!65 &65043781797866170
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1651472521970166}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 0.75, z: 1.72}
+  m_Center: {x: -0.5, y: 0.4, z: -0.85}

@@ -19,9 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4432779068528360}
-  - component: {fileID: 65488779262120422}
-  - component: {fileID: 136029756035232318}
-  - component: {fileID: 136252812002497236}
+  - component: {fileID: 64484993784302314}
   m_Layer: 0
   m_Name: Cooker
   m_TagString: Untagged
@@ -115,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1870554258716986}
   m_Mesh: {fileID: 4300002, guid: f3b231995a92a874ab721ea85ac68cb3, type: 3}
---- !u!65 &65488779262120422
-BoxCollider:
+--- !u!64 &64484993784302314
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -124,32 +122,8 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.85, y: 1.93, z: 2.95}
-  m_Center: {x: -1.13, y: 0.96, z: 0}
---- !u!136 &136029756035232318
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137681728960242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.4
-  m_Height: 1.5
-  m_Direction: 2
-  m_Center: {x: -1, y: 1.2, z: 1.9}
---- !u!136 &136252812002497236
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137681728960242}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 5.4
-  m_Direction: 1
-  m_Center: {x: -1, y: 3.5, z: 2.45}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: f3b231995a92a874ab721ea85ac68cb3, type: 3}

@@ -19,11 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4495102529819764}
-  - component: {fileID: 65301019647430294}
-  - component: {fileID: 136330320972823362}
-  - component: {fileID: 136720733623827130}
-  - component: {fileID: 136141810838724220}
-  - component: {fileID: 136329160605754304}
+  - component: {fileID: 64302187118898642}
   m_Layer: 0
   m_Name: Kitchen_Table
   m_TagString: Untagged
@@ -117,8 +113,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1901891727754120}
   m_Mesh: {fileID: 4300002, guid: ed8a1fb2e6375b147a03bddd8230cd2e, type: 3}
---- !u!65 &65301019647430294
-BoxCollider:
+--- !u!64 &64302187118898642
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -126,58 +122,8 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.2, y: 0.35, z: 2.4}
-  m_Center: {x: 0, y: 1.76, z: 0}
---- !u!136 &136141810838724220
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042112532391760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.94, y: 1, z: 1}
---- !u!136 &136329160605754304
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042112532391760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.94, y: 1, z: -1}
---- !u!136 &136330320972823362
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042112532391760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: -0.94, y: 1, z: -1}
---- !u!136 &136720733623827130
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1042112532391760}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: -0.94, y: 1, z: 1}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: ed8a1fb2e6375b147a03bddd8230cd2e, type: 3}
