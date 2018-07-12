@@ -10,6 +10,9 @@ public class DoorOpener : MonoBehaviour {
 	public Vector3 openRotation;
 	public float openTime = 2f;
 	private bool opened = false;
+    public bool doorIsLocked = false;
+    public int keyItemID = 0;
+    public int questID = 0;
 	[HideInInspector]
 	public bool tweening = false;
     /*
@@ -23,29 +26,60 @@ public class DoorOpener : MonoBehaviour {
 		defaultRotation = door != null ? door.transform.localEulerAngles : transform.localEulerAngles;
 	}
 
-	public void Open(){
-		if (!tweening) {
-			tweening = true;
-			if (!opened)
-				LeanTween.rotateLocal (door != null ? door : gameObject, openRotation, openTime).setOnComplete (() => {
-					opened = true;
-					tweening = false;
-				});
-			else
-				LeanTween.rotateLocal (door != null ? door : gameObject, defaultRotation, openTime).setOnComplete (() => {
-					opened = false;
-					tweening = false;
-				});
-		}
-	}
+    public bool CheckDoorIsLocked()
+    {
+        Debug.Log("Check started");
+        if(doorIsLocked)
+            Debug.Log("Door is Locked!");
+        LevelController.instance.getQuest().CheckQuestObject(this);
+        return doorIsLocked == false ? false : CheckHasKeys();
+    }
 
-    public void Close()
+    private bool CheckHasKeys()
+    {
+        bool hasKeys = false;
+        PlayerController.instance.items.ForEach(delegate(ItemController i)
+        {
+            if(i.itemID == keyItemID)
+            {
+                hasKeys = true;
+            }
+        });
+        return hasKeys;
+    }
+
+	public void Open(){
+        if (!tweening)
+            {
+                tweening = true;
+                if (!opened)
+                    LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
+                    {
+                        opened = true;
+                        tweening = false;
+                    });
+                else
+                    LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
+                    {
+                        opened = false;
+                        tweening = false;
+                    });
+            }
+    	}
+
+    public void Close(ChangeStage stage)
     {
         tweening = true;
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
         {
             opened = false;
             tweening = false;
+            InformCloser(stage);
         });
+    }
+
+    private void InformCloser(ChangeStage stage)
+    {
+        stage.CompleteRoomSwitch();
     }
 }
