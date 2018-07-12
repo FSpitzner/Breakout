@@ -131,10 +131,11 @@ public class PlayerController : MonoBehaviour {
 	private void MovementControl(int forcePower){
 		float walkingHorizontal = Input.GetAxis ("Horizontal");
 		float walkingVertical = Input.GetAxis ("Vertical");
-		rb.AddForce (new Vector3 (walkingHorizontal, 0f, walkingVertical) * forcePower, ForceMode.Force);
-        if(rb.velocity != Vector3.zero)
+        Vector3 forcedirection = new Vector3(walkingHorizontal, 0f, walkingVertical);
+        rb.AddForce (forcedirection * forcePower, ForceMode.Force);
+        if(forcedirection != Vector3.zero)
         {
-            transform.rotation = Quaternion.LookRotation(rb.velocity);
+            transform.rotation = Quaternion.LookRotation(forcedirection);
         }
 
 		/*
@@ -195,5 +196,10 @@ public class PlayerController : MonoBehaviour {
     public void CameraOnPosition(bool isOnPos)
     {
         cameraOnPos = isOnPos;
+    }
+
+    public void StopPlayerMovement()
+    {
+        rb.velocity = Vector3.zero;
     }
 }
