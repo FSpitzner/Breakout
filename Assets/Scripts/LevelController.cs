@@ -16,8 +16,9 @@ public class LevelController : MonoBehaviour {
     private bool gameOver = false;
     public GameMenuController menuController;
     public CameraPointing cameraPointingSkript;
-    
-	[Header("Fear Settings")]
+    private QuestController quest;
+
+    [Header("Fear Settings")]
     [Tooltip("Fear-Value at which Dreamworld gets Triggered")]
     public int fearDreamworldTrigger;
     [Tooltip("Amount of Fear-decrease per Interval-Check when Dreamworld is Triggered")]
@@ -25,8 +26,8 @@ public class LevelController : MonoBehaviour {
     [Tooltip("The Amount of Fear needed for the panic attack (Game Over)")]
     public int panicFearLevel;
 	private bool dreamworldTriggered = false;
-	//private int fear;
-    public int fear;
+	private int fear;
+    //public int fear;
 
 	[Header("Dreamworld Settings")]
     [Tooltip("Put in every Dreamworld-Object of the Level here. They get Activated when the Dreamworld gets Triggered")]
@@ -247,5 +248,20 @@ public class LevelController : MonoBehaviour {
     public void InformCameraPointing()
     {
         cameraPointingSkript.CameraOnPos();
+    }
+
+    public void RegisterQuestController(QuestController qc)
+    {
+        quest = qc;
+    }
+
+    public QuestController getQuest()
+    {
+        return quest != null ? quest : null;
+    }
+
+    public int GetFear()
+    {
+        return fear;
     }
 }

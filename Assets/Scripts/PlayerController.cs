@@ -46,11 +46,15 @@ public class PlayerController : MonoBehaviour {
     private bool gameStarted = false;
     private bool cameraOnPos = false;
 
+    [HideInInspector]
+    public List<ItemController> items;
+
     private void Awake()
     {
         instance = this;
     }
     void Start(){
+        items = new List<ItemController>();
 		rb = this.GetComponent<Rigidbody> ();
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
         Debug.Log("Player: " + this);
@@ -128,6 +132,11 @@ public class PlayerController : MonoBehaviour {
 		float walkingHorizontal = Input.GetAxis ("Horizontal");
 		float walkingVertical = Input.GetAxis ("Vertical");
 		rb.AddForce (new Vector3 (walkingHorizontal, 0f, walkingVertical) * forcePower, ForceMode.Force);
+        if(rb.velocity != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(rb.velocity);
+        }
+
 		/*
 		if (Input.GetKey (KeyCode.A)) {
 			rb.AddForce (Vector3.left * forcePower, ForceMode.Force);
@@ -166,7 +175,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void CollectItem(ItemController item){
-		Debug.Log (item + " collected");
+        items.Add(item);
+        LevelController.instance.getQuest().SetValue(item.itemID, true);
+
+        //Debug.Log (item + " collected");
 	}
 
     public void SetLockInputs(bool isLocked)

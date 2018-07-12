@@ -19,7 +19,7 @@ public class playerSounds_control : MonoBehaviour
     void awake()
     {
         eventEmitterRefHeartBeatNEW = GetComponent<StudioEventEmitter>();
-        fearamount = LevelController.instance.fear;
+        fearamount = LevelController.instance.GetFear();
     }
 
 

@@ -46,7 +46,7 @@ public class CameraPointing : MonoBehaviour {
                     
                 }
 
-                howmuchfear = LevelController.instance.fear;
+                howmuchfear = LevelController.instance.GetFear();
 
                 volume.weight = pulse.Evaluate(timer);
                 pulse.Evaluate(timerPosition);
