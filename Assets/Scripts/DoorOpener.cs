@@ -32,6 +32,7 @@ public class DoorOpener : MonoBehaviour {
         if(doorIsLocked)
             Debug.Log("Door is Locked!");
         LevelController.instance.getQuest().CheckQuestObject(this);
+        Debug.Log("Jetzt bin ich schon hier!");
         return doorIsLocked == false ? false : CheckHasKeys();
     }
 
@@ -45,7 +46,7 @@ public class DoorOpener : MonoBehaviour {
                 hasKeys = true;
             }
         });
-        return hasKeys;
+        return !hasKeys;
     }
 
 	public void Open(){
