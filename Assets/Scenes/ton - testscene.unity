@@ -1685,6 +1685,7 @@ MonoBehaviour:
   cameraDummy: {fileID: 2008677462}
   camSmoothSpeed: 0.004
   stage: {fileID: 1457843861}
+  items: []
 --- !u!4 &1146981260
 Transform:
   m_ObjectHideFlags: 0
@@ -1821,7 +1822,6 @@ MonoBehaviour:
   fearDreamworldTrigger: 20
   fearTriggeredDecrease: 2
   panicFearLevel: 35
-  fear: 0
   dreamworld:
   - {fileID: 1503742254}
   - {fileID: 1128697702}
@@ -1834,12 +1834,12 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1201073524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/heartbeats/heartbeatsSystem_Event
+  Event: event:/playerSounds/heartbeatsSystem_Event
   PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
@@ -3032,7 +3032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/heartbeats/heartbeatsSystem_Event
+  Event: event:/playerSounds/heartbeatsSystem_Event
   PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
@@ -3135,6 +3135,9 @@ MonoBehaviour:
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: 0, z: 0}
   openTime: 3
+  doorIsLocked: 0
+  keyItemID: 0
+  questID: 0
   tweening: 0
 --- !u!23 &2136025927
 MeshRenderer:
