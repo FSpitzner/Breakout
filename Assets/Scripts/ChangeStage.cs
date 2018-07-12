@@ -68,6 +68,7 @@ public class ChangeStage : InteractTrigger {
 	private void SwitchRooms(PlayerController player){
         player.SetLockInputs(true);
         player.transform.position = nextRoom == 1 ? room2StartPoint : room1StartPoint;
+        player.StopPlayerMovement();
         LTSeq seq = LeanTween.sequence();
         seq.append(door.openTime);
         seq.append(() => {
