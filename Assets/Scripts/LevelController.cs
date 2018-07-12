@@ -162,55 +162,8 @@ public class LevelController : MonoBehaviour {
         
         
         //SOUND - checkingFEAR
-     /*   if (fear > 0){
-            
-            //check for Fearlevel and adjust heartbeat sound in pitch and / or speed
-            
-            if (fear > 0 && fear < 5){
-                playerSoundSystem.heartSpeed("vlow");
-            }else if (fear >= 5 && fear <10)
-                 {
-                     playerSoundSystem.heartSpeed("low");
-                     //pulseSpeed = 1.3f;
-                 }
-                 else if (fear >= 10 && fear < 15){
-                     playerSoundSystem.heartSpeed("lmedium");
-                     //pulseSpeed = 0.75f;
-                 }
-                 else if (fear >= 15 && fear < 20)
-                 {
-                     playerSoundSystem.heartSpeed("medium");
-                     //pulseSpeed = 0.48f;
-                 }
-                 else if (fear >= 20 && fear < 25)
-                 {
-                     playerSoundSystem.heartSpeed("hmedium");
-                     //pulseSpeed = 0.48f;
-                 }
-                 else if (fear >= 25 && fear < 30)
-                 {
-                     playerSoundSystem.heartSpeed("high");
-                     //pulseSpeed = 0.48f;
-                 }
-                 else if (fear >= 30)
-                 {
-                     playerSoundSystem.heartSpeed("vhigh");
-                     //pulseSpeed = 0.48f;
-                 }
-        }*/
+        playerSoundSystem.setfearamount(fear);
     }
-    
-    /*public int returnfear()
-    {
-        return fear;
-    }*/
-    /*public void playHeartbeat(int amountfear)
-    {
-        if (amountfear > 10) { eventEmitterRefHeartBeat.SetParameter("speed", 1f); }
-
-        eventEmitterRefHeartBeat.Play();
-
-    }*/
     
 	public void ChangeFearBy(int amount){
 		fear += amount;
