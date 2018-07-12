@@ -39,7 +39,8 @@ public class ChangeStage : InteractTrigger {
 
 	public override void Interact(){
         Debug.Log("Interacting");
-		if (!door.tweening && door.CheckDoorIsLocked()) {
+		if (!door.tweening && !door.CheckDoorIsLocked()) {
+            Debug.Log("Hier bin ich");
             PlayerController player = PlayerController.instance;
             foreach(GameObject g in room1Objects)
             {
