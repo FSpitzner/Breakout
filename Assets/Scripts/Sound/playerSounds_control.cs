@@ -7,8 +7,14 @@ using FMODUnity;
 public class playerSounds_control : MonoBehaviour
 {
     //[FMODUnity.EventRef]
-    public StudioEventEmitter eventEmitterRefHeartBeatNEW;
+    public StudioEventEmitter eventEmitterRefHeartBeat;
     private int fearamount;
+
+    public StudioEventEmitter eventEmitterRefThunderSMALL;
+    public StudioEventEmitter eventEmitterRefThunderBIG;
+//    public StudioEventEmitter eventEmitterRefThunderSMALL;
+//    public StudioEventEmitter eventEmitterRefThunderSMALL;
+
 
     // Use this for initialization
     void Start()
@@ -18,8 +24,11 @@ public class playerSounds_control : MonoBehaviour
 
     void awake()
     {
-        eventEmitterRefHeartBeatNEW = GetComponent<StudioEventEmitter>();
+        eventEmitterRefHeartBeat = GetComponent<StudioEventEmitter>();
         fearamount = LevelController.instance.GetFear();
+
+        eventEmitterRefThunderSMALL = GetComponent<StudioEventEmitter>();
+        eventEmitterRefThunderBIG = GetComponent<StudioEventEmitter>();
     }
 
     public void setfearamount(int amount)
@@ -64,7 +73,7 @@ public class playerSounds_control : MonoBehaviour
         {
             heartSpeed("vhigh");
         }
-        eventEmitterRefHeartBeatNEW.Play();
+        eventEmitterRefHeartBeat.Play();
 
     }
 
@@ -81,32 +90,44 @@ public class playerSounds_control : MonoBehaviour
     public void heartSpeed(string speed){
         if (speed == "vlow") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 0);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 0f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 0f);
             Debug.Log("heartbeat Speed VLOW");
         }else if (speed == "low") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 1);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 1f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 1f);
             Debug.Log("heartbeat Speed LOW");
         }else if (speed == "lmedium") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 2);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 2f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 2f);
             Debug.Log("heartbeat Speed LMEDIUM");
         }else if (speed == "medium") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 0);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 3f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 3f);
             Debug.Log("heartbeat Speed MEDIUM");
         }else if (speed == "hmedium") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 1);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 4f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 4f);
             Debug.Log("heartbeat Speed HMEDIUM");
         }else if (speed == "high") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 2);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 5f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 5f);
             Debug.Log("heartbeat Speed HIGH");
         }else if (speed == "vhigh") {
             //eventEmitterRefHeartBeatNEW.SetParameter("pitch", 3);
-            eventEmitterRefHeartBeatNEW.SetParameter("speed", 6f);
+            eventEmitterRefHeartBeat.SetParameter("speed", 6f);
             Debug.Log("heartbeat Speed VHIGH");
+        }
+    }
+
+    public void playThunder(int thunderID)
+    {//thunderID: 0=small thunder; higher number bigger thunder
+        if (thunderID == 0)
+        {
+            eventEmitterRefThunderSMALL.Play();
+        }
+        else if (thunderID == 1)
+        {
+            eventEmitterRefThunderBIG.Play();
         }
     }
 }

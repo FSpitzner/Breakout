@@ -13,6 +13,9 @@ public class LevelController : MonoBehaviour {
     public static LevelController instance;
     private List<Trigger> interactTrigger;
     private List<Trigger> environmentTrigger;
+    //------------
+    private List<Trigger> thunderTrigger;
+    //------------
     private bool gameOver = false;
     public GameMenuController menuController;
     public CameraPointing cameraPointingSkript;
@@ -41,12 +44,13 @@ public class LevelController : MonoBehaviour {
 
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
-
-    //public FMODUnity.StudioEventEmitter eventEmitterRefHeartBeat;
+    //FOR TEST ONLY
+    int thundersize;
+   
 
 	void Awake(){
 		instance = this;
-        //eventEmitterRefHeartBeat = GetComponent<FMODUnity.StudioEventEmitter>();
+        
 	}
 
 	void Start(){
@@ -56,6 +60,7 @@ public class LevelController : MonoBehaviour {
         }
 		interactTrigger = new List<Trigger> ();
 		environmentTrigger = new List<Trigger> ();
+        thunderTrigger = new List<Trigger>();
 		Invoke ("FearIntervalCheck", 1);
 	}
 
@@ -102,7 +107,15 @@ public class LevelController : MonoBehaviour {
 		}else if (trigger.GetTriggerType().CompareTo ("Environment") == 0){
 			this.environmentTrigger.Add (trigger);
 			Debug.Log (trigger + " is registered");
-		}
+        }
+        else if (trigger.GetTriggerType().CompareTo("Thunder") == 0)
+        {
+            this.thunderTrigger.Add(trigger);
+            System.Random randomIntForThunder = new System.Random();
+            thundersize= randomIntForThunder.Next(0,1);
+            playerSoundSystem.playThunder(thundersize);
+            Debug.Log(trigger + " is registered");
+        }
 	}
 
 	public void UnregisterTrigger(Trigger trigger){
@@ -116,7 +129,15 @@ public class LevelController : MonoBehaviour {
 				this.environmentTrigger.Remove (trigger);
 				Debug.Log (trigger + " is not longer registered");
 			}
-		}
+        }
+        else if (trigger.GetTriggerType().CompareTo("Thunder") == 0)
+        {
+            if (this.thunderTrigger.Contains(trigger))
+            {
+                this.thunderTrigger.Remove(trigger);
+                Debug.Log(trigger + " is not longer registered");
+            }
+        }
 	}
 
 	public void UseTriggerObject(){

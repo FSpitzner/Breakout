@@ -55,6 +55,8 @@ GameObject:
   - component: {fileID: 4559627473357924}
   - component: {fileID: 33206818446554672}
   - component: {fileID: 23861536014062616}
+  - component: {fileID: 114071763080311964}
+  - component: {fileID: 114204183464730498}
   m_Layer: 0
   m_Name: Fenster_mitte
   m_TagString: Untagged
@@ -450,3 +452,47 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895602917575492}
   m_Mesh: {fileID: 4300000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+--- !u!114 &114071763080311964
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396633354959342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/wind_WINDOWEvent
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.711503
+  OverrideMaxDistance: 8.021894
+--- !u!114 &114204183464730498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1396633354959342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/rain_WINDOWEvent
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.711503
+  OverrideMaxDistance: 7.659503
