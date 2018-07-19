@@ -9,6 +9,9 @@ using System;
 public class PlayerController : MonoBehaviour {
     public static PlayerController instance;
 
+    [Header("Animator")]
+    public Animator ani;
+
 	[Header("Player Statistics")]
 
 	public float maxMoveSpeed;
@@ -16,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 	public float jumpPower;
 	public float maxRunSpeed;
 	public int fear;
+    public float velocity;
 
 	private int moveState = 1;
 	private Rigidbody rb;
@@ -77,6 +81,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
+        
         if (gameStarted && cameraOnPos)
         {
             if (!controlsLocked)
@@ -92,9 +97,15 @@ public class PlayerController : MonoBehaviour {
                 if (Input.GetKeyDown(crouchKey))
                 {
                     if (moveState != 0)
+                    {
                         moveState = 0;
+                        ani.SetBool("crouching", true);
+                    }
                     else
+                    {
                         moveState = 1;
+                        ani.SetBool("crouching", false);
+                    }
                     Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
                 }
                 if (Input.GetKeyDown(jumpKey))
@@ -126,7 +137,9 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-	}
+        velocity = rb.velocity.magnitude;
+        ani.SetFloat("velocity", rb.velocity.magnitude);
+    }
 
 	private void MovementControl(int forcePower){
 		float walkingHorizontal = Input.GetAxis ("Horizontal");

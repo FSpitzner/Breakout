@@ -183,7 +183,7 @@ public class LevelController : MonoBehaviour {
         
         
         //SOUND - checkingFEAR
-        playerSoundSystem.setfearamount(fear);
+        //playerSoundSystem.setfearamount(fear);
     }
     
 	public void ChangeFearBy(int amount){
