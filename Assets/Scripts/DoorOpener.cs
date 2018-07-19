@@ -22,9 +22,6 @@ public class DoorOpener : MonoBehaviour {
 		Gizmos.DrawWireCube (new Vector3(transform.position.x + targetPosOffset.x, transform.position.y + targetPosOffset.y, transform.position.z + targetPosOffset.z), transform.lossyScale);
 	}
     */
-	void Start(){
-		defaultRotation = door != null ? door.transform.localEulerAngles : transform.localEulerAngles;
-	}
 
     public bool CheckDoorIsLocked()
     {
