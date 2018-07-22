@@ -6,16 +6,15 @@ using UnityEngine;
 public class ItemTrigger : InteractTrigger {
 
 	public bool collectableFanatasie = true, collectableReal = true;
-
-	void Start(){
-		triggerType = "Interact";
-	}
+    public Fear fear;
+    public ItemController item;
 
 	public override void Interact (){
-		bool dreamworldTriggered = LevelController.instance.GetDreamworldTriggered ();
+        bool dreamworldTriggered = fear.IsDreamworldActive();
 		if ((collectableReal && collectableFanatasie) || (collectableReal && !dreamworldTriggered) || (collectableFanatasie && dreamworldTriggered)) {
-			LevelController.instance.player.CollectItem (gameObject.GetComponent<ItemController> ());
+			player.CollectItem (item);
 			gameObject.SetActive (false);
+            player.UnregisterInteractionTrigger(this);
 		}
 	}
 }

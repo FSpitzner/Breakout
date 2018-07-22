@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour {
 	public float camSmoothSpeed = 0.2f;
 	private Vector3 camCurVelocity;
 
+    private List<InteractTrigger> interactTriggers;
+
 	//LevelSettings
 	//[HideInInspector]
 	public StageController stage;
@@ -57,7 +59,9 @@ public class PlayerController : MonoBehaviour {
     {
         instance = this;
     }
+
     void Start(){
+        interactTriggers = new List<InteractTrigger>();
         items = new List<ItemController>();
 		rb = this.GetComponent<Rigidbody> ();
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
@@ -75,7 +79,10 @@ public class PlayerController : MonoBehaviour {
                 ref camCurVelocity, camSmoothSpeed);
             if (Input.GetKeyDown(interactKey))
             {
-                LevelController.instance.UseTriggerObject();
+                interactTriggers.ForEach((InteractTrigger it) =>
+                {
+                    it.Interact();
+                });
             }
         }
 	}
@@ -214,5 +221,16 @@ public class PlayerController : MonoBehaviour {
     public void StopPlayerMovement()
     {
         rb.velocity = Vector3.zero;
+    }
+
+    public void RegisterInteractionTrigger(InteractTrigger trigger)
+    {
+        interactTriggers.Add(trigger);
+    }
+
+    public void UnregisterInteractionTrigger(InteractTrigger trigger)
+    {
+        if (interactTriggers.Contains(trigger))
+            interactTriggers.Remove(trigger);
     }
 }

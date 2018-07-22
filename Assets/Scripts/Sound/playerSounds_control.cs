@@ -8,7 +8,7 @@ public class playerSounds_control : MonoBehaviour
 {
     //[FMODUnity.EventRef]
     public StudioEventEmitter eventEmitterRefHeartBeat;
-    private int fearamount;
+    public Fear fear;
 
     public StudioEventEmitter eventEmitterRefThunderSMALL;
     public StudioEventEmitter eventEmitterRefThunderBIG;
@@ -25,15 +25,9 @@ public class playerSounds_control : MonoBehaviour
     void awake()
     {
         eventEmitterRefHeartBeat = GetComponent<StudioEventEmitter>();
-        fearamount = LevelController.instance.GetFear();
 
         eventEmitterRefThunderSMALL = GetComponent<StudioEventEmitter>();
         eventEmitterRefThunderBIG = GetComponent<StudioEventEmitter>();
-    }
-
-    public void setfearamount(int amount)
-    {
-        fearamount = amount;
     }
 
 
@@ -45,31 +39,32 @@ public class playerSounds_control : MonoBehaviour
 
     public void playHeartSFX(/*int amountfear*/)
     {
-        if (fearamount > 0 && fearamount < 5)
+        
+        if (this.fear.fear > 0 && fear.fear < 5)
         {
             heartSpeed("vlow");
         }
-        else if (fearamount >= 5 && fearamount < 10)
+        else if (fear.fear >= 5 && fear.fear < 10)
         {
             heartSpeed("low");
         }
-        else if (fearamount >= 10 && fearamount < 15)
+        else if (fear.fear >= 10 && fear.fear < 15)
         {
             heartSpeed("lmedium");
         }
-        else if (fearamount >= 15 && fearamount < 20)
+        else if (fear.fear >= 15 && fear.fear < 20)
         {
             heartSpeed("medium");
         }
-        else if (fearamount >= 20 && fearamount < 25)
+        else if (fear.fear >= 20 && fear.fear < 25)
         {
             heartSpeed("hmedium");
         }
-        else if (fearamount >= 25 && fearamount < 30)
+        else if (fear.fear >= 25 && fear.fear < 30)
         {
             heartSpeed("high");
         }
-        else if (fearamount >= 30)
+        else if (fear.fear >= 30)
         {
             heartSpeed("vhigh");
         }

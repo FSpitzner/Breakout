@@ -8,11 +8,11 @@ public class ChangeStage : InteractTrigger {
 	[Header("Room Settings")]
 	public StageController room1;
 	public Vector3 room1StartPoint;
-    public GameObject[] room1Objects;
+    public StageController[] room1Objects;
 	public StageController room2;
 	public Vector3 room2StartPoint;
-    public GameObject[] room2Objects;
-    public GameObject[] sharedObjects;
+    public StageController[] room2Objects;
+    public StageController[] sharedObjects;
 	private RoomDirection room2PosFromRoom1;
 	public DoorOpener door;
     public float playerRoomSwitchSpeed = 2f;
@@ -33,7 +33,6 @@ public class ChangeStage : InteractTrigger {
     
 
 	void Start(){
-        triggerType = "Interact";
 		room2PosFromRoom1 = transform.GetComponent<RoomDirection> ();
 	}
 
@@ -41,17 +40,21 @@ public class ChangeStage : InteractTrigger {
         Debug.Log("Interacting");
 		if (!door.tweening && !door.CheckDoorIsLocked()) {
             Debug.Log("Hier bin ich");
-            PlayerController player = PlayerController.instance;
-            foreach(GameObject g in room1Objects)
+            foreach(StageController sc in room1Objects)
             {
-                g.SetActive(true);
+                if (!sc.isActive)
+                {
+                    sc.SetActive(true);
+                }
             }
-            foreach(GameObject g in room2Objects)
+            foreach(StageController sc in room2Objects)
             {
-                g.SetActive(true);
+                if (!sc.isActive)
+                {
+                    sc.SetActive(true);
+                }
             }
 			door.Open ();
-            Debug.Log("Player: " + player);
 			if (player.stage == room1) {
                 nextRoom = 2;
                 SwitchRooms (player);
@@ -88,17 +91,17 @@ public class ChangeStage : InteractTrigger {
         player.SetLockInputs(false);
         if (nextRoom == 1)
         {
-            foreach (GameObject go in room2Objects)
+            foreach (StageController sc in room2Objects)
             {
-                go.SetActive(false);
+                sc.SetActive(false);
             }
             player.stage = room1;
         }
         else
         {
-            foreach (GameObject go in room1Objects)
+            foreach (StageController sc in room1Objects)
             {
-                go.SetActive(false);
+                sc.SetActive(false);
             }
             player.stage = room2;
         }

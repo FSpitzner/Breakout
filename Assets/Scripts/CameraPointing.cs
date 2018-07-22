@@ -14,14 +14,12 @@ public class CameraPointing : MonoBehaviour {
     private float timer;
     private float timerPosition;
     private bool cameraOnPos = false;
-
+    private bool dreamworldActive;
     public playerSounds_control playerSoundSystem;
-
-    private int howmuchfear;
 
     void Update() {
         if (cameraOnPos) {
-            if (LevelController.instance.IsDreamworldTriggered())
+            if (dreamworldActive)
             {
                 if (!isTweening) {
                     timer = 0;
@@ -45,9 +43,6 @@ public class CameraPointing : MonoBehaviour {
                     }*/
                     
                 }
-
-                howmuchfear = LevelController.instance.GetFear();
-
                 volume.weight = pulse.Evaluate(timer);
                 pulse.Evaluate(timerPosition);
                 //Debug.Log("TIMERPOS " + timerPosition);
@@ -81,5 +76,10 @@ public class CameraPointing : MonoBehaviour {
     public void CameraOnPos()
     {
         cameraOnPos = true;
+    }
+
+    public void SetDreamworldActive(bool value)
+    {
+        dreamworldActive = value;
     }
 }

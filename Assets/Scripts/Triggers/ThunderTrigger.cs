@@ -4,11 +4,4 @@ using UnityEngine;
 
 public class ThunderTrigger : Trigger
 {
-
-
-
-    void Start()
-    {
-        triggerType = "Thunder";
-    }
 }

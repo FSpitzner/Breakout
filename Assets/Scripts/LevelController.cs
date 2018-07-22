@@ -22,19 +22,16 @@ public class LevelController : MonoBehaviour {
     private QuestController quest;
 
     [Header("Fear Settings")]
-    [Tooltip("Fear-Value at which Dreamworld gets Triggered")]
-    public int fearDreamworldTrigger;
-    [Tooltip("Amount of Fear-decrease per Interval-Check when Dreamworld is Triggered")]
-	public int fearTriggeredDecrease;
-    [Tooltip("The Amount of Fear needed for the panic attack (Game Over)")]
-    public int panicFearLevel;
-	private bool dreamworldTriggered = false;
-	private int fear;
+    [Tooltip("The Fear Scriptable Object")]
+    public Fear fear;
+    [Tooltip("The value fear gets resetted to if resetFearOnStartToDefault is active")]
+    public float defaultFear;
+    [Tooltip("If active fear gets resetted to Default Fear on Game Start")]
+    public bool resetFearOnStartToDefault;
+
     //public int fear;
 
 	[Header("Dreamworld Settings")]
-    [Tooltip("Put in every Dreamworld-Object of the Level here. They get Activated when the Dreamworld gets Triggered")]
-	public DreamworldObject[] dreamworld;
     [Tooltip("Put in Amy's Companion here")]
     public CompanionController companion;
 
@@ -50,7 +47,10 @@ public class LevelController : MonoBehaviour {
 
 	void Awake(){
 		instance = this;
-        
+        if (resetFearOnStartToDefault)
+        {
+            fear.fear = defaultFear;
+        }
 	}
 
 	void Start(){
@@ -61,10 +61,9 @@ public class LevelController : MonoBehaviour {
 		interactTrigger = new List<Trigger> ();
 		environmentTrigger = new List<Trigger> ();
         thunderTrigger = new List<Trigger>();
-		Invoke ("FearIntervalCheck", 1);
 	}
 
-	private void FearIntervalCheck(){
+	/*private void FearIntervalCheck(){
         fear -= fearTriggeredDecrease;
         if (environmentTrigger.Count != 0) {
 			foreach (EnvironmentTrigger t in environmentTrigger) {
@@ -83,7 +82,7 @@ public class LevelController : MonoBehaviour {
         }
 		CheckDreamworld ();
 		Invoke ("FearIntervalCheck", fearMeterCheckInterval);
-	}
+	}*/
 
     private void Update()
     {
@@ -99,78 +98,9 @@ public class LevelController : MonoBehaviour {
         }
     }
 
-    public void RegisterTrigger(Trigger trigger){
-		Debug.Log ("Trigger entered: " + trigger + " | Triggertyp: " + trigger.GetTriggerType());
-		if (trigger.GetTriggerType().CompareTo ("Interact") == 0) {
-			this.interactTrigger.Add (trigger);
-			Debug.Log (trigger + " is registered");
-		}else if (trigger.GetTriggerType().CompareTo ("Environment") == 0){
-			this.environmentTrigger.Add (trigger);
-			Debug.Log (trigger + " is registered");
-        }
-        else if (trigger.GetTriggerType().CompareTo("Thunder") == 0)
-        {
-            this.thunderTrigger.Add(trigger);
-            System.Random randomIntForThunder = new System.Random();
-            thundersize= randomIntForThunder.Next(0,1);
-            playerSoundSystem.playThunder(thundersize);
-            Debug.Log(trigger + " is registered");
-        }
-	}
-
-	public void UnregisterTrigger(Trigger trigger){
-		if (trigger.GetTriggerType().CompareTo ("Interact") == 0) {
-			if (this.interactTrigger.Contains (trigger)) {
-				Debug.Log (trigger + " is not longer registered");
-				this.interactTrigger.Remove (trigger);
-			}
-		} else if (trigger.GetTriggerType().CompareTo ("Environment") == 0) {
-			if (this.environmentTrigger.Contains (trigger)) {
-				this.environmentTrigger.Remove (trigger);
-				Debug.Log (trigger + " is not longer registered");
-			}
-        }
-        else if (trigger.GetTriggerType().CompareTo("Thunder") == 0)
-        {
-            if (this.thunderTrigger.Contains(trigger))
-            {
-                this.thunderTrigger.Remove(trigger);
-                Debug.Log(trigger + " is not longer registered");
-            }
-        }
-	}
-
-	public void UseTriggerObject(){
-		if (interactTrigger.Count != 0)
-			foreach (Trigger t in interactTrigger) {
-				t.Interact ();
-			}
-	}
-
     private void CheckDreamworld()
     {
-        if (fear >= fearDreamworldTrigger && !dreamworldTriggered)
-        {
-            dreamworldTriggered = true;
-            companion.transform.position = companion.companionTargetAmy.transform.position;
-            foreach (DreamworldObject obj in dreamworld)
-            {
-                obj.Activate();
-            }
-            companion.SetActive(true);
-        }
-        else if (fear <= 0 && dreamworldTriggered)
-        {
-            foreach (DreamworldObject obj in dreamworld)
-            {
-                obj.Deactivate();
-            }
-            companion.SetActive(false);
-            dreamworldTriggered = false;
-        }
-        Debug.Log("Fear now at: " + fear);
-
-
+        
         /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
          *'''''####'''''''####'''''###''###'''####'''''###'''#########'''''*
          *'''###''###'''###''###'''###''###'''#####''''###'''###''''###''''*
@@ -186,23 +116,6 @@ public class LevelController : MonoBehaviour {
         //playerSoundSystem.setfearamount(fear);
     }
     
-	public void ChangeFearBy(int amount){
-		fear += amount;
-	}
-
-	public void IncreaseFear(int amount){
-		fear += amount;
-	}
-
-	public bool GetDreamworldTriggered(){
-		return dreamworldTriggered;
-	}
-
-    public bool IsDreamworldTriggered()
-    {
-        return dreamworldTriggered;
-    }
-
     public float getPulseSpeed()
     {
         return pulseSpeed;
@@ -232,10 +145,5 @@ public class LevelController : MonoBehaviour {
     public QuestController getQuest()
     {
         return quest != null ? quest : null;
-    }
-
-    public int GetFear()
-    {
-        return fear;
     }
 }
