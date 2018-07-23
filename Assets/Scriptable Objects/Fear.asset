@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Name: Fear
   m_EditorClassIdentifier: 
   fear: 0
+  fearDreamworldActivateValue: 20
+  fearDreamworldDeactivateValue: 10
+  fearPanicAttack: 30
+  onDreamworldEnter: {fileID: 11400000, guid: 6d3dea57362859d478421e19c717279b, type: 2}
+  onDreamworldExit: {fileID: 11400000, guid: 159fbd8acf9850742ac541f295e8ddc1, type: 2}
+  onPanicAttack:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
