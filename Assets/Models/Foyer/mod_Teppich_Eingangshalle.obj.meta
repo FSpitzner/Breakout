@@ -1,16 +1,21 @@
 fileFormatVersion: 2
 guid: 1df47e8decf559d4ea3e1a90bb760004
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Teppich
+    100004: Teppich.003
     400000: //RootNode
     400002: Teppich
+    400004: Teppich.003
     2100000: TeppichMat
     2300000: Teppich
+    2300002: Teppich.003
     3300000: Teppich
+    3300002: Teppich.003
     4300000: Teppich
+    4300002: Teppich.003
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -39,11 +44,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
-    meshCompression: 0
+    globalScale: 1
+    meshCompression: 2
     addColliders: 0
     importVisibility: 0
     importBlendShapes: 0
@@ -62,10 +67,12 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 2
     normalCalculationMode: 4
   importAnimation: 0
   copyAvatar: 0

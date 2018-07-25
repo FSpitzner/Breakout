@@ -1,19 +1,25 @@
 fileFormatVersion: 2
 guid: b91872cc923ebcd4bbcd6088f83a64ca
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: Kuechenzeile_Ecke
     100002: //RootNode
+    100004: Kuechenzeile_Ecke.001
     400000: Kuechenzeile_Ecke
     400002: //RootNode
+    400004: Kuechenzeile_Ecke.001
     2100000: Kuechenzeile_EckeMat
+    2100002: Kuechenzeile_Ecke.001Mat
     2300000: Kuechenzeile_Ecke
+    2300002: Kuechenzeile_Ecke.001
     3300000: Kuechenzeile_Ecke
+    3300002: Kuechenzeile_Ecke.001
     4300000: Kuechenzeile_Ecke
+    4300002: Kuechenzeile_Ecke.001
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -39,22 +45,22 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
-    weldVertices: 1
+    weldVertices: 0
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -62,12 +68,14 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 2
     normalCalculationMode: 4
-  importAnimation: 1
+  importAnimation: 0
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

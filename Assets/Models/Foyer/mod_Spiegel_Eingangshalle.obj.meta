@@ -1,22 +1,32 @@
 fileFormatVersion: 2
 guid: 10f94e7a1f776b642a7a28f8ff517778
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Spiegel_Glas
     100004: Spiegel_Rahmen
+    100006: Spiegel_Glas.003
+    100008: Spiegel_Rahmen.003
     400000: //RootNode
     400002: Spiegel_Glas
     400004: Spiegel_Rahmen
+    400006: Spiegel_Glas.003
+    400008: Spiegel_Rahmen.003
     2100000: Spiegel_GlasMat
     2100002: Spiegel_RahmenMat
     2300000: Spiegel_Glas
     2300002: Spiegel_Rahmen
+    2300004: Spiegel_Glas.003
+    2300006: Spiegel_Rahmen.003
     3300000: Spiegel_Glas
     3300002: Spiegel_Rahmen
+    3300004: Spiegel_Glas.003
+    3300006: Spiegel_Rahmen.003
     4300000: Spiegel_Glas
     4300002: Spiegel_Rahmen
+    4300004: Spiegel_Glas.003
+    4300006: Spiegel_Rahmen.003
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -45,11 +55,11 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
-    meshCompression: 0
+    globalScale: 1.2
+    meshCompression: 2
     addColliders: 0
     importVisibility: 0
     importBlendShapes: 0
@@ -68,10 +78,12 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 2
     normalCalculationMode: 4
   importAnimation: 0
   copyAvatar: 0
