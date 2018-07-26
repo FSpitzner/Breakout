@@ -18,13 +18,17 @@ public class PlayerController : MonoBehaviour {
 	public float maxCrouchSpeed;
 	public float jumpPower;
 	public float maxRunSpeed;
-	public int fear;
     public float velocity;
 
 	private int moveState = 1;
 	private Rigidbody rb;
 	private bool jumping = false;
 
+    [Header("Collider")]
+    [Tooltip("Amy's default Collider when standing")]
+    public Collider defaultCollider;
+    [Tooltip("Amy's Collider when crouching")]
+    public Collider crouchCollider;
 	// Controllerbelegung
 
 	[Header("Inputs")]
@@ -67,6 +71,7 @@ public class PlayerController : MonoBehaviour {
 		rb.interpolation = RigidbodyInterpolation.Interpolate;
         Debug.Log("Player: " + this);
         Debug.Log("Stage Registered: " + stage);
+        crouchCollider.enabled = false;
 	}
 
 	void Update(){
@@ -101,17 +106,21 @@ public class PlayerController : MonoBehaviour {
                 {
                     moveState = 1;
                 }
-                if (Input.GetKeyDown(crouchKey))
+                if (Input.GetButtonUp("Jump"))
                 {
                     if (moveState != 0)
                     {
                         moveState = 0;
                         ani.SetBool("crouching", true);
+                        crouchCollider.enabled = true;
+                        defaultCollider.enabled = false;
                     }
                     else
                     {
                         moveState = 1;
                         ani.SetBool("crouching", false);
+                        defaultCollider.enabled = true;
+                        crouchCollider.enabled = false;
                     }
                     Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
                 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName ="Scriptable Objects/Fear Trigger Type")]
 public class FearTriggerType : ScriptableObject {
 
     public float fearPowerPerTick;

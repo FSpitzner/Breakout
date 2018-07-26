@@ -15,17 +15,8 @@ public class StageController : MonoBehaviour {
     private float opacity = 0f;
     public Fear fear;
     private bool dreamworldObjectsActive = false;
-
-    //private List<float> defaultmatopacity;
-
-    /*private void Start()
-    {
-        defaultmatopacity = new List<float>();
-        mats.ForEach((Material m) =>
-        {
-            defaultmatopacity.Add(m.GetFloat("Vector1_DB2A1952"));
-        });
-    }*/
+    private float transparencyTime = 1f;
+    
     public void ActivateDreamworldObjects()
     {
         dreamworldObjectsActive = true;
@@ -96,7 +87,7 @@ public class StageController : MonoBehaviour {
             }
             tweening = true;
             if(opacity < 1f)
-                opacity += 0.5f * Time.deltaTime;
+                opacity += 1f/transparencyTime * Time.deltaTime;
             else if(opacity >= 1f)
             {
                 opacity = 1f;
@@ -109,17 +100,6 @@ public class StageController : MonoBehaviour {
                 tweening = false;
                 gameObject.SetActive(false);
             }
-
-            /*
-            tweening = true;
-            deactivate = false;
-            opacity = 0f;
-            LeanTween.value(opacity, 1f, 0.5f).setOnComplete(()=>
-            {
-                isActive = false;
-                tweening = false;
-                gameObject.SetActive(false);
-            });*/
         }else if (activate)
         {
             if (!tweening)
@@ -132,7 +112,7 @@ public class StageController : MonoBehaviour {
             }
             tweening = true;
             if (opacity > 0f)
-                opacity -= 0.5f * Time.deltaTime;
+                opacity -= 1f/transparencyTime * Time.deltaTime;
             else if (opacity <= 0f)
             {
                 opacity = 0f;
@@ -144,20 +124,6 @@ public class StageController : MonoBehaviour {
                 activate = false;
                 tweening = false;
             }
-
-
-
-            /*
-            tweening = true;
-            activate = false;
-            opacity = 1f;
-            Debug.Log("Start Tweening to activate, opacity: " + opacity);
-            LeanTween.value(opacity, 0f, 0.5f).setOnComplete(() =>
-            {
-                Debug.Log("Tween finished, opacity is now at " + opacity);
-                isActive = true;
-                tweening = false;
-            });*/
         }
         if (tweening)
         {
@@ -167,38 +133,6 @@ public class StageController : MonoBehaviour {
                 m.SetFloat("Vector1_DB2A1952", opacity);
             });
         }
-        /*
-
-        if (deactivate)
-        {
-            tweening = true;
-            float opacity = 0;
-            LeanTween.value(opacity, 1, 0.5f).setOnComplete(()=>
-            {
-                isActive = false;
-                deactivate = false;
-                tweening = false;
-                gameObject.SetActive(false);
-            });
-            mats.ForEach((Material m) =>
-            {
-                m.SetFloat("opacity", opacity);
-            });
-        }else if (activate)
-        {
-            tweening = true;
-            float opacity = 1;
-            LeanTween.value(opacity, 0, 0.5f).setOnComplete(() =>
-            {
-                isActive = true;
-                activate = false;
-                tweening = false;
-            });
-            mats.ForEach((Material m) =>
-            {
-                m.SetFloat("opacity", opacity);
-            });
-        }*/
     }
 
     public void FillMaterials()
@@ -225,7 +159,7 @@ public class StageController : MonoBehaviour {
         }
         if (parent.childCount != 0)
         {
-            foreach (Transform child in parent.transform)
+            foreach (Transform child in parent)
             {
                 GetMaterials(child);
             }
@@ -237,7 +171,7 @@ public class StageController : MonoBehaviour {
         return isActive;
     }
 
-    private void OnApplicationQuit()
+    public void OnQuit()
     {
         mats.ForEach((Material m) =>
         {

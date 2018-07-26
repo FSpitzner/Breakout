@@ -44,6 +44,7 @@ public class RoomDirection : MonoBehaviour{
 }
 
 [CustomEditor(typeof(RoomDirection))]
+[CanEditMultipleObjects]
 public class RoomDirectionEditor : Editor{
 	bool left, right, infront, behind, aboth, below;
 	RoomDirection script;
