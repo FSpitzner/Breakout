@@ -9,11 +9,6 @@ public class EnvironmentTrigger : Trigger {
 
     private bool isInside = false;
 
-
-    /*void Start(){
-		triggerType = "Environment";
-	}*/
-
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log("Player hat mich betreten");

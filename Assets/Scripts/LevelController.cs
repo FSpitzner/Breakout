@@ -1,25 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour {
-    
-	[Header("General Settings")]
+
+    [Header("General Settings")]
     [Tooltip("Insert Player-GameObject here")]
     public PlayerController player;
-    [Tooltip("Interval in which changes to the Fear-Value are made in Seconds")]
-    public float fearMeterCheckInterval = 2;
     public static LevelController instance;
-    private List<Trigger> interactTrigger;
-    private List<Trigger> environmentTrigger;
-    //------------
-    private List<Trigger> thunderTrigger;
-    //------------
     private bool gameOver = false;
     public GameMenuController menuController;
     public CameraPointing cameraPointingSkript;
     private QuestController quest;
+
 
     [Header("Fear Settings")]
     [Tooltip("The Fear Scriptable Object")]
@@ -28,6 +23,10 @@ public class LevelController : MonoBehaviour {
     public float defaultFear;
     [Tooltip("If active fear gets resetted to Default Fear on Game Start")]
     public bool resetFearOnStartToDefault;
+    [Tooltip("Amount of Fear added per Tick. Use negative Amounts here")]
+    public float fearPerTick = -0.2f;
+    [Tooltip("Amount of Ticks per Second")]
+    public float ticksPerSecond = 5f;
 
     //public int fear;
 
@@ -43,9 +42,16 @@ public class LevelController : MonoBehaviour {
     public playerSounds_control playerSoundSystem;
     //FOR TEST ONLY
     int thundersize;
-   
 
-	void Awake(){
+    [Header("Weather")]
+    [Tooltip("Thunderstorm?")]
+    public bool thunderstorm = false;
+    [HideInInspector]
+    [Tooltip("Insert Thunderstorm Controller here")]
+    public ThunderstormController thunderstormController;
+
+
+    void Awake(){
 		instance = this;
         if (resetFearOnStartToDefault)
         {
@@ -58,32 +64,14 @@ public class LevelController : MonoBehaviour {
         {
             menuController.gameObject.SetActive(true);
         }
-		interactTrigger = new List<Trigger> ();
-		environmentTrigger = new List<Trigger> ();
-        thunderTrigger = new List<Trigger>();
 	}
 
-	/*private void FearIntervalCheck(){
-        fear -= fearTriggeredDecrease;
-        if (environmentTrigger.Count != 0) {
-			foreach (EnvironmentTrigger t in environmentTrigger) {
-				fear += t.fearPower;
-			}
-		}
-        if(fear >= panicFearLevel)
-        {
-            Debug.Log("Game Over!");
-            gameOver = true;
-        }
-
-        if(fear < 0)
-        {
-            fear = 0;
-        }
-		CheckDreamworld ();
-		Invoke ("FearIntervalCheck", fearMeterCheckInterval);
-	}*/
-
+    private void FearTick()
+    {
+        fear.fear += fearPerTick;
+        Invoke("FearTick", 1 / ticksPerSecond);
+    }
+    
     private void Update()
     {
         if (gameStarted) { 
@@ -95,6 +83,13 @@ public class LevelController : MonoBehaviour {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
+        }
+        if(fear.fear <= 0)
+        {
+            fear.fear = 0f;
+        }else if(fear.fear >= fear.fearPanicAttack)
+        {
+            fear.fear = fear.fearPanicAttack;
         }
     }
 
@@ -124,7 +119,8 @@ public class LevelController : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
-        player.StartGame();
+        Invoke("FearTick", 1 / ticksPerSecond);
+        //player.StartGame();
     }
 
     public GameMenuController GetGameMenuController()
@@ -145,5 +141,50 @@ public class LevelController : MonoBehaviour {
     public QuestController getQuest()
     {
         return quest != null ? quest : null;
+    }
+
+    private void OnApplicationQuit()
+    {
+        List<StageController> stages = new List<StageController>();
+        stages = GetStageController(transform, stages);
+        stages.ForEach((StageController sc) => {
+            sc.OnQuit();
+        });
+    }
+
+    private List<StageController> GetStageController(Transform parent, List<StageController> stages)
+    {
+        if(parent.GetComponent<StageController>() != null)
+        {
+            stages.Add(parent.GetComponent<StageController>());
+        }
+        else
+        {
+            foreach(Transform child in parent)
+            {
+                GetStageController(child, stages);
+            }
+        }
+        return stages;
+    }
+}
+
+[CustomEditor(typeof(LevelController))]
+[CanEditMultipleObjects]
+public class LevelControllerEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+        LevelController script = (LevelController)target;
+        if (script.thunderstorm)
+        {
+            script.thunderstormController =
+                EditorGUILayout.ObjectField("Thunderstorm Controller", script.thunderstormController, typeof(ThunderstormController), true) as ThunderstormController;
+        }
+        else
+        {
+            script.thunderstormController = null;
+        }
     }
 }

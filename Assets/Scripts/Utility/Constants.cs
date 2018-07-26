@@ -18,6 +18,11 @@ public class Constants{
     #region GameObject Names
     public static readonly string NAME_COMPANION_TARGET = "CompanionTarget";
     #endregion
+
+    #region FMOD Parameter Names
+    public static readonly string THUNDERID = "ThunderID2Play";
+
+    #endregion
 }
 
 // TODO: NICETOHAVE

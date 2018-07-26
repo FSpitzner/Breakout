@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName ="Scriptable Objects/Fear")]
 public class Fear : ScriptableObject {
     [Tooltip("The current amount of Amy's fear")]
     public float fear;
@@ -23,19 +23,25 @@ public class Fear : ScriptableObject {
     public void IncreaseFear(float amount)
     {
         fear += amount;
+        if (fear <= 0)
+        {
+            fear = 0;
+        }else if(fear >= fearPanicAttack)
+        {
+            fear = fearPanicAttack;
+        }
         CheckFearAmount();
     }
 
     private void CheckFearAmount()
     {
-        if(fear >= fearDreamworldActivateValue)
+        if (fear >= fearPanicAttack)
+        {
+            onPanicAttack.Invoke();
+        }else if (fear >= fearDreamworldActivateValue)
         {
             dreamworldActive = true;
             onDreamworldEnter.Raise();
-        }
-        if(fear >= fearPanicAttack)
-        {
-            onPanicAttack.Invoke();
         }
         if(IsDreamworldActive() && fear <= fearDreamworldDeactivateValue)
         {

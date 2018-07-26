@@ -12,6 +12,7 @@ public class CameraMover : MonoBehaviour {
 
 	public void StartGame()
     {
+        Debug.Log("Game Started");
         LeanTween.moveLocal(GameObject.FindGameObjectWithTag("MainCamera"), new Vector3(0, 2, -5), 2f).setEase(LeanTweenType.easeInOutSine);
         LeanTween.rotate(
             GameObject.FindGameObjectWithTag("MainCamera"),

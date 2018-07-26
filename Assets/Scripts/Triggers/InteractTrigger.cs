@@ -14,7 +14,7 @@ public class InteractTrigger : Trigger{
     {
         if(other.tag == "Player")
         {
-            player = other.GetComponent<PlayerController>();
+            player = other.attachedRigidbody.GetComponent<PlayerController>();
             player.RegisterInteractionTrigger(this);
         }
     }
