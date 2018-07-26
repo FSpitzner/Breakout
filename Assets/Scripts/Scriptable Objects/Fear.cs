@@ -20,6 +20,16 @@ public class Fear : ScriptableObject {
     public GameEvent onDreamworldExit;
     public UnityEvent onPanicAttack;
 
+    [Header("Heartbeat")]
+    [Tooltip("The lower values for the starting point of the respecting heartbeat in %")]
+    public int start;
+    public int low; 
+    public int lowMedium;
+    public int medium;
+    public int highMedium;
+    public int high;
+    public int panic;
+
     public void IncreaseFear(float amount)
     {
         fear += amount;
@@ -48,4 +58,33 @@ public class Fear : ScriptableObject {
     {
         return dreamworldActive;
     }
+    public float getFearStart()
+    {
+        return fearPanicAttack * (start / 100);
+    }
+    public float getFearLow()
+    {
+        return fearPanicAttack * (low / 100);
+    }
+    public float getFearLowMedium()
+    {
+        return fearPanicAttack * (lowMedium / 100);
+    }
+    public float getFearMedium()
+    {
+        return fearPanicAttack * (medium / 100);
+    }
+    public float getFearHighMedium()
+    {
+        return fearPanicAttack * (highMedium / 100);
+    }
+    public float getFearHigh()
+    {
+        return fearPanicAttack * (high / 100);
+    }
+    public float getFearPanic()
+    {
+        return fearPanicAttack * (panic / 100);
+    }
+    
 }
