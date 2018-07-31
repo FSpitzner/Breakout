@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AniReset.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudio.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
     <Compile Include="Assets\LeanTween\Examples\Archived\OldGUIExamplesCS.cs" />
@@ -118,7 +119,6 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\Fear.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\FearTriggerType.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\GameEvent.cs" />
-    <Compile Include="Assets\Scripts\Scriptable Objects\Thunder.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\ThunderType.cs" />
     <Compile Include="Assets\Scripts\Sound\playerSounds_control.cs" />
     <Compile Include="Assets\Scripts\StageController.cs" />
@@ -135,6 +135,7 @@
     <Compile Include="Assets\Scripts\Utility\LocalMaths.cs" />
     <Compile Include="Assets\Scripts\Utility\MinMaxRangeAttribute.cs" />
     <Compile Include="Assets\Scripts\Utility\RangedFloat.cs" />
+    <Compile Include="Assets\Scripts\Utility\Thunder.cs" />
     <None Include="Assets\Scripts\Items\ItemList.txt" />
     <None Include="Assets\Models\Placeholder for Models.txt" />
     <None Include="Assets\LeanTween\Examples\Archived\2dUnlitWithFade.shader" />

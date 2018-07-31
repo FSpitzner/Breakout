@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.701
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.38169977, g: 0.42443857, b: 0.4863147, a: 0.701}
+  m_IndirectSpecularColor: {r: 0.38125232, g: 0.42429578, b: 0.48801005, a: 0.701}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2278,6 +2278,7 @@ MonoBehaviour:
   dreamworldObjects: []
   isActive: 0
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
+  soundState: 0
 --- !u!114 &866835671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3380,7 +3381,7 @@ MonoBehaviour:
   companion: {fileID: 1757484489}
   playerSoundSystem: {fileID: 2117446916}
   thunderstorm: 1
-  thunderstormController: {fileID: 0}
+  thunderstormController: {fileID: 1201073529}
 --- !u!114 &1201073527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3404,7 +3405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: 
+  Event: event:/ThunderEvent
   PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
@@ -3413,8 +3414,8 @@ MonoBehaviour:
   Preload: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &1201073529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,15 +3428,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thunderstormActive: 1
+  lightAni: {fileID: 1759784694}
   thunderInterval:
-    minValue: 0
-    maxValue: 0
+    minValue: 7.9241824
+    maxValue: 10.235402
   thunderstormDistance:
-    minValue: 0
-    maxValue: 0
-  smallThunders: {fileID: 0}
-  bigThunders: {fileID: 0}
+    minValue: 0.7704066
+    maxValue: 1.4674412
+  thunderAmount: 1
   see: {fileID: 1201073528}
+  player: {fileID: 1146981259}
 --- !u!1 &1226128989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,6 +3966,7 @@ MonoBehaviour:
   - {fileID: 1128697702}
   isActive: 1
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
+  soundState: 0
 --- !u!114 &1457843862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4286,6 +4289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1759784693}
   - component: {fileID: 1759784692}
+  - component: {fileID: 1759784694}
   m_Layer: 0
   m_Name: Directional light
   m_TagString: Untagged
@@ -4303,7 +4307,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4336,13 +4340,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1759784691}
-  m_LocalRotation: {x: 0.23755902, y: -0.21001737, z: 0.15126136, w: 0.9362577}
+  m_LocalRotation: {x: 0.9045109, y: -0.24403606, z: -0.086219065, w: 0.33892873}
   m_LocalPosition: {x: -10.77, y: 8.81, z: -7.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 30.555002, y: -21.914001, z: 12.3}
+  m_LocalEulerAnglesHint: {x: 34.823, y: -156.95201, z: -142.485}
+--- !u!95 &1759784694
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759784691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d5f2658c833edbb4d861f369e1150b88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1808067876 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1065687749518984, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
@@ -4813,8 +4835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventEmitterRefHeartBeat: {fileID: 2117446917}
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
-  eventEmitterRefThunderSMALL: {fileID: 0}
-  eventEmitterRefThunderBIG: {fileID: 0}
 --- !u!114 &2117446917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4886,6 +4906,7 @@ MonoBehaviour:
   dreamworldObjects: []
   isActive: 0
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
+  soundState: 1
 --- !u!114 &2125058119
 MonoBehaviour:
   m_ObjectHideFlags: 0

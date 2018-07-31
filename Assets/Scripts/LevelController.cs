@@ -68,7 +68,7 @@ public class LevelController : MonoBehaviour {
 
     private void FearTick()
     {
-        fear.fear += fearPerTick;
+        fear.IncreaseFear(fearPerTick);
         Invoke("FearTick", 1 / ticksPerSecond);
     }
     
@@ -120,6 +120,7 @@ public class LevelController : MonoBehaviour {
     {
         gameStarted = true;
         Invoke("FearTick", 1 / ticksPerSecond);
+        thunderstormController.StartThunderstorm();
         //player.StartGame();
     }
 
