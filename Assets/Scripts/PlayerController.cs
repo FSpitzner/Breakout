@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour {
 
 	//LevelSettings
 	//[HideInInspector]
+    [Tooltip("Scriptable Object Player Stage")]
 	public StageController stage;
     private bool controlsLocked = false;
     private bool gameStarted = false;

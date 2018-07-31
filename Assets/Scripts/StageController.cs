@@ -16,6 +16,7 @@ public class StageController : MonoBehaviour {
     public Fear fear;
     private bool dreamworldObjectsActive = false;
     private float transparencyTime = 1f;
+    public int soundState;
     
     public void ActivateDreamworldObjects()
     {

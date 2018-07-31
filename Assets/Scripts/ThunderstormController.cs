@@ -18,6 +18,7 @@ public class ThunderstormController : MonoBehaviour {
     public ThunderType bigThunders;
 
     public StudioEventEmitter see;
+    public PlayerController player;
 
     public void StartThunderstorm()
     {
@@ -32,10 +33,10 @@ public class ThunderstormController : MonoBehaviour {
             switch (nextthunder)
             {
                 case 0:
-                    smallThunders.PlayRandom(see);
+                    smallThunders.PlayRandom(see, player.stage);
                     break;
                 case 1:
-                    bigThunders.PlayRandom(see);
+                    bigThunders.PlayRandom(see, player.stage);
                     break;
             }
             Invoke("PlayThunder", Random.Range(thunderInterval.minValue, thunderInterval.maxValue));

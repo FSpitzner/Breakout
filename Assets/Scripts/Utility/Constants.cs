@@ -21,6 +21,7 @@ public class Constants{
 
     #region FMOD Parameter Names
     public static readonly string THUNDERID = "ThunderID2Play";
+    public static readonly string SOUNDSTATE = "InXOut";
 
     #endregion
 }
