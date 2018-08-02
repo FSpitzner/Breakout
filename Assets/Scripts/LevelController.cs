@@ -129,11 +129,6 @@ public class LevelController : MonoBehaviour {
         return menuController;
     }
 
-    public void InformCameraPointing()
-    {
-        cameraPointingSkript.CameraOnPos();
-    }
-
     public void RegisterQuestController(QuestController qc)
     {
         quest = qc;

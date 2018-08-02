@@ -9,6 +9,7 @@ public class CameraMover : MonoBehaviour {
     [Header("Camera Settings")]
     [Tooltip("Time it takes to move the Camera to its position after starting the game")]
     public float cameraMoveTime = 2f;
+    public GameEvent cameraOnPosition;
 
 	public void StartGame()
     {
@@ -21,8 +22,7 @@ public class CameraMover : MonoBehaviour {
                 transform.position.y + 2,
                 transform.position.z - 5)).eulerAngles,
             2f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => {
-            PlayerController.instance.CameraOnPosition(true);
-            LevelController.instance.InformCameraPointing();
+                cameraOnPosition.Raise();
         });
     }
 	

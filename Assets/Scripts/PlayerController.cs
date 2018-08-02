@@ -220,7 +220,6 @@ public class PlayerController : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
-        cameraDummy.GetComponent<CameraMover>().StartGame();
     }
 
     public void CameraOnPosition(bool isOnPos)

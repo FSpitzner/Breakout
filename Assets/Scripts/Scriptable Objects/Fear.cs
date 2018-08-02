@@ -18,7 +18,7 @@ public class Fear : ScriptableObject {
 
     public GameEvent onDreamworldEnter;
     public GameEvent onDreamworldExit;
-    public UnityEvent onPanicAttack;
+    public GameEvent onPanicAttack;
 
     [Header("Heartbeat")]
     [Tooltip("The lower values for the starting point of the respecting heartbeat in %")]
@@ -43,11 +43,16 @@ public class Fear : ScriptableObject {
         CheckFearAmount();
     }
 
+    public void SetFearTo(float amount)
+    {
+        fear = amount;
+    }
+
     private void CheckFearAmount()
     {
         if (fear >= fearPanicAttack)
         {
-            onPanicAttack.Invoke();
+            onPanicAttack.Raise();
         }else if (fear >= fearDreamworldActivateValue)
         {
             dreamworldActive = true;

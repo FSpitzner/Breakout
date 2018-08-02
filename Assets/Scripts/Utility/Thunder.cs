@@ -6,7 +6,7 @@ using UnityEditor;
 [Serializable]
 public class Thunder {
     public int ID;
-    //public Animation animation;
+    public int FearAmount;
 }
 
 [CustomPropertyDrawer(typeof(Thunder))]
@@ -21,10 +21,10 @@ public class ThunderEditor : PropertyDrawer
         EditorGUI.indentLevel = 0;
 
         var idRect = new Rect(position.x+10, position.y, 30, position.height);
-        //var animationRect = new Rect(position.x + 45, position.y, 200, position.height);
+        var fearRect = new Rect(position.x + 45, position.y, 100, position.height);
 
         EditorGUI.PropertyField(idRect, property.FindPropertyRelative("ID"), GUIContent.none);
-        //EditorGUI.PropertyField(animationRect, property.FindPropertyRelative("animation"), GUIContent.none);
+        EditorGUI.PropertyField(fearRect, property.FindPropertyRelative("FearAmount"), GUIContent.none);
 
         EditorGUI.indentLevel = indent;
         EditorGUI.EndProperty();
