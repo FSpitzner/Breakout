@@ -21,7 +21,7 @@ public class playerSounds_control : MonoBehaviour
 
     void awake()
     {
-        eventEmitterRefHeartBeat = GetComponent<StudioEventEmitter>();
+        //eventEmitterRefHeartBeat = GetComponent<StudioEventEmitter>();
 
         //eventEmitterRefThunder = GetComponent<StudioEventEmitter>();
     }
