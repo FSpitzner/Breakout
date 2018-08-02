@@ -75,7 +75,11 @@
             <destination>{f9be7417-56e3-4776-9fd2-886973933a7c}</destination>
         </relationship>
     </object>
-    <object class="EventAutomatableProperties" id="{f276d77c-e156-4ef8-81cb-1c82450f14f0}"/>
+    <object class="EventAutomatableProperties" id="{f276d77c-e156-4ef8-81cb-1c82450f14f0}">
+        <property name="isPersistent">
+            <value>true</value>
+        </property>
+    </object>
     <object class="MarkerTrack" id="{a5d04039-0d7e-49ce-912a-a22a6ec52abf}"/>
     <object class="GroupTrack" id="{ef58e09b-6052-47ed-919c-f9bb9183f527}">
         <relationship name="automationTracks">
@@ -288,7 +292,7 @@
     </object>
     <object class="EventMixerGroup" id="{744d9ea6-9dab-4bc7-b665-a7d62a16865d}">
         <property name="name">
-            <value>Audio 2</value>
+            <value>0</value>
         </property>
         <relationship name="automators">
             <destination>{5efdb563-90a1-4bcf-8bcc-cf71152a1619}</destination>
@@ -318,7 +322,7 @@
     </object>
     <object class="EventMixerGroup" id="{d6fab01a-3095-42c2-aa36-c39205c2521c}">
         <property name="name">
-            <value>Audio 3</value>
+            <value>1</value>
         </property>
         <relationship name="automators">
             <destination>{4e2e0992-c7e0-44dd-a567-6c7054e5d4a7}</destination>
@@ -1461,7 +1465,7 @@
             <value>0</value>
         </property>
         <property name="value">
-            <value>20</value>
+            <value>180</value>
         </property>
     </object>
     <object class="AutomationPoint" id="{a7384e4c-c01e-44dc-8a8d-2f54ae802e9c}">
