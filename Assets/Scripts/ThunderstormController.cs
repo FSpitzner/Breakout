@@ -38,7 +38,7 @@ public class ThunderstormController : MonoBehaviour {
     {
         if (thunderstormActive)
         {
-            PlaySpecific(i);
+            PlayRandom();
             Invoke("PlayThunder", Random.Range(thunderInterval.minValue, thunderInterval.maxValue));
         }
     }
@@ -48,10 +48,11 @@ public class ThunderstormController : MonoBehaviour {
         int randomThunderID = Random.Range(0, thunders.Length-1);
         Debug.Log("Playing Thunder " + randomThunderID);
         lightAni.SetInteger("ThunderID", randomThunderID);
+        StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue), randomThunderID, (float)player.stage.soundState));
         fear.IncreaseFear(thunders[randomThunderID].FearAmount);
-        see.SetParameter(Constants.THUNDERID, (float)randomThunderID);
-        see.SetParameter(Constants.SOUNDSTATE, 0.5f/*player.stage.soundState*/);
-        see.Play();
+        /*see.SetParameter(Constants.THUNDERID, (float)randomThunderID);
+        see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
+        see.Play();*/
     }
 
     public void PlaySpecific(int id)
