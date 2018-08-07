@@ -7,7 +7,7 @@ public class EnvironmentTrigger : Trigger {
     public FearTriggerType type;
     public Fear fear;
 
-    private bool isInside = false;
+    protected bool isInside = false;
 
     private void OnTriggerEnter(Collider other)
     {

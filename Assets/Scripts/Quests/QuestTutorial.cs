@@ -8,6 +8,11 @@ public class QuestTutorial : QuestController
     public QuestController nextQuest;
     private bool gotCompanion = false, gotBackpack = false;
 
+    private void Start()
+    {
+        LevelController.instance.RegisterQuestController(this);
+    }
+
     public override void SetValue(int obj, bool state)
     {
         switch (obj)

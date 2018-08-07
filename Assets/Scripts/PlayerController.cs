@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpPower;
 	public float maxRunSpeed;
     public float velocity;
+    [HideInInspector]
+    public bool canStandup = true;
 
 	private int moveState = 1;
 	private Rigidbody rb;
@@ -107,24 +109,27 @@ public class PlayerController : MonoBehaviour {
                 {
                     moveState = 1;
                 }
-                if (Input.GetButtonUp("Jump"))
+                if (canStandup)
                 {
-                    if (moveState != 0)
+                    if (Input.GetButtonUp("Jump"))
                     {
-                        moveState = 0;
-                        ani.SetBool("crouching", true);
-                        crouchCollider.enabled = true;
-                        defaultCollider.enabled = false;
+                        if (moveState != 0)
+                        {
+                            moveState = 0;
+                            ani.SetBool("crouching", true);
+                            crouchCollider.enabled = true;
+                            defaultCollider.enabled = false;
+                        }
+                        else
+                        {
+                            moveState = 1;
+                            ani.SetBool("crouching", false);
+                            defaultCollider.enabled = true;
+                            crouchCollider.enabled = false;
+                        }
+                        Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
                     }
-                    else
-                    {
-                        moveState = 1;
-                        ani.SetBool("crouching", false);
-                        defaultCollider.enabled = true;
-                        crouchCollider.enabled = false;
-                    }
-                    Debug.Log("Now we are " + (moveState == 0 ? "crouching" : "walking"));
-                }
+                }/*
                 if (Input.GetKeyDown(jumpKey))
                 {
                     if (!jumping)
@@ -132,7 +137,7 @@ public class PlayerController : MonoBehaviour {
                         jumping = true;
                         Jumper();
                     }
-                }
+                }*/
 
                 switch (moveState)
                 {
@@ -189,8 +194,8 @@ public class PlayerController : MonoBehaviour {
 				Debug.Log("KeyCode down: " + kcode);
 			}
 		}
-		Debug.Log ("Horizontal: " + Input.GetAxis ("Horizontal"));
-		Debug.Log ("Vertical: " + Input.GetAxis ("Vertical"));
+		//Debug.Log ("Horizontal: " + Input.GetAxis ("Horizontal"));
+		//Debug.Log ("Vertical: " + Input.GetAxis ("Vertical"));
 	}
 
 	void OnCollisionEnter(Collision collision)
