@@ -189,8 +189,8 @@ public class PlayerController : MonoBehaviour {
 				Debug.Log("KeyCode down: " + kcode);
 			}
 		}
-		//Debug.Log ("Horizontal: " + Input.GetAxis ("ControllerPOVVertical"));
-		//Debug.Log ("Vertical: " + Input.GetAxis ("ControllerPOVHorizontal"));
+		Debug.Log ("Horizontal: " + Input.GetAxis ("Horizontal"));
+		Debug.Log ("Vertical: " + Input.GetAxis ("Vertical"));
 	}
 
 	void OnCollisionEnter(Collision collision)
