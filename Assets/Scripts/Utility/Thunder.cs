@@ -6,7 +6,7 @@ using UnityEditor;
 [Serializable]
 public class Thunder {
     public int ID;
-    public int FearAmount;
+    public float FearAmount;
 }
 
 [CustomPropertyDrawer(typeof(Thunder))]

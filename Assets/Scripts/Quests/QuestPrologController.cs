@@ -7,7 +7,7 @@ public class QuestPrologController : QuestController {
     [Header("Quest Items")]
     [Tooltip("UI-Graphics-Panel for Keys")]
     public GameObject uikeys;
-
+    public DoorOpener amyDoor;
 
 
     private bool gotBread = false, gotFlashlight = false, gotKeys = false;
@@ -15,6 +15,7 @@ public class QuestPrologController : QuestController {
     private void Start()
     {
         LevelController.instance.RegisterQuestController(this);
+        amyDoor.doorIsLocked = false;
     }
 
     public override void CheckQuestObject(Object obj)
