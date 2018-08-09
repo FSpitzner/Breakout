@@ -234,6 +234,7 @@ public class PlayerController : MonoBehaviour {
 
     public void RegisterInteractionTrigger(InteractTrigger trigger)
     {
+        Debug.Log("Trigger " + trigger + " registered");
         interactTriggers.Add(trigger);
     }
 
