@@ -120,7 +120,8 @@ public class LevelController : MonoBehaviour {
     {
         gameStarted = true;
         Invoke("FearTick", 1 / ticksPerSecond);
-        thunderstormController.StartThunderstorm();
+        if(thunderstorm)
+            thunderstormController.StartThunderstorm();
         //player.StartGame();
     }
 
