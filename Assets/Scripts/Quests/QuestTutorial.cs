@@ -5,8 +5,9 @@ using UnityEngine;
 public class QuestTutorial : QuestController
 {
     public GameObject tutorialPanel;
+    public DoorOpener door;
     public QuestController nextQuest;
-    private bool gotCompanion = false, gotBackpack = false;
+    private bool gotFlower = false, gotBackpack = false;
 
     private void Start()
     {
@@ -17,10 +18,10 @@ public class QuestTutorial : QuestController
     {
         switch (obj)
         {
-            case 0:
-                gotCompanion = state;
+            case 3:
+                gotFlower = state;
                 break;
-            case 1:
+            case 4:
                 gotBackpack = state;
                 break;
             default:
@@ -31,10 +32,27 @@ public class QuestTutorial : QuestController
 	
     private void CheckWinState()
     {
-        if(gotCompanion && gotBackpack)
+        if(gotFlower && gotBackpack)
         {
+            door.doorIsLocked = false;
             nextQuest.enabled = true;
             this.enabled = false;
         }
+    }
+
+    public void SetItem(object obj)
+    {
+        switch (((ItemController)obj).itemID)
+        {
+            case 3:
+                gotFlower = true;
+                break;
+            case 4:
+                gotBackpack = true;
+                break;
+            default:
+                break;
+        }
+        CheckWinState();
     }
 }
