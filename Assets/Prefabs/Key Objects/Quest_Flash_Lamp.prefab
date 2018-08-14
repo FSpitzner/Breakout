@@ -147,7 +147,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: a708fa3ff7ce8cd4dba83e21f0f87d53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,7 +173,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354448369265808}
-  m_Mesh: {fileID: 4300002, guid: c5cf7191d1c15ff4aaddf1376b7b52ba, type: 3}
+  m_Mesh: {fileID: 4300002, guid: 0bf6d56e08b1cf04ebac6455aee322a0, type: 3}
 --- !u!65 &65456618041714640
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -222,7 +222,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2
-  m_Height: 1.1
+  m_Radius: 0.12
+  m_Height: 0.6
   m_Direction: 2
-  m_Center: {x: 0, y: 0.18, z: 0}
+  m_Center: {x: 0, y: 0.1, z: 0}
