@@ -1,24 +1,33 @@
 fileFormatVersion: 2
-guid: 1493986cab1472642912478b16bd481d
+guid: cbe3f7d24d089c64dafdd28441747fbc
 ModelImporter:
-  serializedVersion: 22
+  serializedVersion: 23
   fileIDToRecycleName:
-    100000: default
+    100000: Klinke
     100002: //RootNode
-    100004: Schluessel
-    400000: default
+    100004: Tuer
+    100006: Wand_mit_Tuerrahmen
+    400000: Klinke
     400002: //RootNode
-    400004: Schluessel
-    2100000: defaultMat
-    2300000: default
-    2300002: Schluessel
-    3300000: default
-    3300002: Schluessel
-    4300000: default
-    4300002: Schluessel
+    400004: Tuer
+    400006: Wand_mit_Tuerrahmen
+    2100000: Material_005
+    2100002: Material_004
+    2100004: Material_003
+    2300000: Klinke
+    2300002: Tuer
+    2300004: Wand_mit_Tuerrahmen
+    3300000: Klinke
+    3300002: Tuer
+    3300004: Wand_mit_Tuerrahmen
+    4300000: Wand_mit_Tuerrahmen
+    4300002: Tuer
+    4300004: Klinke
+    7400000: Default Take
+    9500000: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -47,19 +56,19 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
-    importVisibility: 0
-    importBlendShapes: 0
-    importCameras: 0
-    importLights: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
-    weldVertices: 0
+    weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -67,12 +76,14 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
@@ -91,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
