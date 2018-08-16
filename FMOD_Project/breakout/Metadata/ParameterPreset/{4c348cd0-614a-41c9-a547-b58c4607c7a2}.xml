@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{4c348cd0-614a-41c9-a547-b58c4607c7a2}">
+        <property name="name">
+            <value>ambmusicvol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2cc0e62d-d1a2-4914-95ac-cbff31815172}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{498f9094-f1ad-47ff-92d0-8cf00298836d}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{498f9094-f1ad-47ff-92d0-8cf00298836d}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

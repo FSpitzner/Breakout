@@ -8,6 +8,7 @@ public class playerSounds_control : MonoBehaviour
 {
     //[FMODUnity.EventRef]
     public StudioEventEmitter eventEmitterRefHeartBeat;
+    public StudioEventEmitter eventEmitterRefAmbientIngameMusic;
     public Fear fear;
 
     //public StudioEventEmitter eventEmitterRefThunder;
@@ -70,5 +71,16 @@ public class playerSounds_control : MonoBehaviour
             Debug.Log("heartbeat Speed VHIGH");
         }
         eventEmitterRefHeartBeat.Play();
+    }
+
+    public void playAmbientInGame(){
+        eventEmitterRefAmbientIngameMusic.SetParameter(Constants.AMOUNTMENTALILLNESS, 0);
+        eventEmitterRefAmbientIngameMusic.Play();
+    }
+
+    public void GameOverAmbientInGame()
+    {
+        //TODO
+        eventEmitterRefAmbientIngameMusic.Stop();
     }
 }

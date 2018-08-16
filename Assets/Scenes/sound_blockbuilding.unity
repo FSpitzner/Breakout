@@ -36110,11 +36110,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114818444264431726, guid: 6921526ac3a8f544093e2f73bd47b58f,
-        type: 2}
-      propertyPath: Params.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4801441648866724, guid: 6921526ac3a8f544093e2f73bd47b58f, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5.0893593
@@ -36147,20 +36142,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 114818444264431726, guid: 6921526ac3a8f544093e2f73bd47b58f,
-        type: 2}
-      propertyPath: Event
-      value: event:/Weather/windAmbientEvent
-      objectReference: {fileID: 0}
-    - target: {fileID: 114818444264431726, guid: 6921526ac3a8f544093e2f73bd47b58f,
-        type: 2}
-      propertyPath: Params.Array.data[0].Name
-      value: volume
-      objectReference: {fileID: 0}
-    - target: {fileID: 114818444264431726, guid: 6921526ac3a8f544093e2f73bd47b58f,
+    - target: {fileID: 114325611525862612, guid: 6921526ac3a8f544093e2f73bd47b58f,
         type: 2}
       propertyPath: Params.Array.data[0].Value
-      value: 0.571
+      value: 0.522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6921526ac3a8f544093e2f73bd47b58f, type: 2}
@@ -60631,6 +60616,62 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1756863599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756863595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463711b5734044245a8a54d0783a1fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c5def6f93acec1e4a8d6bb5e90e12b0d, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1019580404}
+        m_MethodName: playAmbientInGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1756863600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756863595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463711b5734044245a8a54d0783a1fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e7616ad4ee3e521448d0c18f57366178, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1019580404}
+        m_MethodName: GameOverAmbientInGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &1756863602 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114653793711095098, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
@@ -63898,10 +63939,6 @@ Prefab:
     - target: {fileID: 4550610079785980, guid: 6598b5c3837408740ab196d54c62c122, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4550610079785980, guid: 6598b5c3837408740ab196d54c62c122, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 1895602917575492, guid: 6598b5c3837408740ab196d54c62c122, type: 2}
       propertyPath: m_Name
