@@ -20,8 +20,15 @@ public class Constants{
     #endregion
 
     #region FMOD Parameter Names
+
     public static readonly string THUNDERID = "ThunderID2Play";
     public static readonly string SOUNDSTATE = "InXOut";
+
+    public static readonly string AMBWINDVOL = "ambwindvol";
+    public static readonly string HEARTVOL = "heartvolume";
+    public static readonly string AMBRAINVOL = "ambrainvol";
+
+    public static readonly string HEARTSPEED = "heartspeed";
 
     #endregion
 }
