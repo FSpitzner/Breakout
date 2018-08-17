@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114355330663919962}
   - component: {fileID: 114818444264431726}
   - component: {fileID: 114325611525862612}
+  - component: {fileID: 114754423338918644}
   m_Layer: 0
   m_Name: PlayerSoundSystem
   m_TagString: Untagged
@@ -64,7 +65,7 @@ MonoBehaviour:
   Preload: 0
   Params:
   - Name: ambmusicvol
-    Value: 1
+    Value: 0.522
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -112,6 +113,30 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &114754423338918644
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298631260627166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/Music/Menu
+  PlayEvent: 1
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: MenuVol
+    Value: 0.603
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!114 &114756436870496438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventEmitterRefHeartBeat: {fileID: 114720728600566486}
   eventEmitterRefAmbientIngameMusic: {fileID: 114325611525862612}
+  eventEmitterRefMenuMusic: {fileID: 114754423338918644}
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
 --- !u!114 &114818444264431726
 MonoBehaviour:

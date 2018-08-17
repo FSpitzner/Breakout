@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using FMODUnity;
+using FMOD.Studio;
+
 
 public class playerSounds_control : MonoBehaviour
 {
     //[FMODUnity.EventRef]
     public StudioEventEmitter eventEmitterRefHeartBeat;
     public StudioEventEmitter eventEmitterRefAmbientIngameMusic;
+    public StudioEventEmitter eventEmitterRefMenuMusic;
+
+    public EventInstance MenuMusic;
     public Fear fear;
+
+    private bool MenuMusicPlaybackState;
 
     //public StudioEventEmitter eventEmitterRefThunder;
 
@@ -23,7 +30,8 @@ public class playerSounds_control : MonoBehaviour
     void awake()
     {
         //eventEmitterRefHeartBeat = GetComponent<StudioEventEmitter>();
-
+         //MenuMusic = RuntimeManager. CreateInstance("event:/Music/Menu");
+         //startMenuMusic();
         //eventEmitterRefThunder = GetComponent<StudioEventEmitter>();
     }
 
@@ -82,5 +90,15 @@ public class playerSounds_control : MonoBehaviour
     {
         //TODO
         eventEmitterRefAmbientIngameMusic.Stop();
+    }
+
+   /* public void startMenuMusic()
+    {
+        MenuMusic.start();
+    }*/
+
+    public void StopMenuMusic()
+    {
+        eventEmitterRefMenuMusic.Stop();
     }
 }

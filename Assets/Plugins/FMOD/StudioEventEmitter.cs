@@ -22,7 +22,6 @@ namespace FMODUnity
 
         private FMOD.Studio.EventDescription eventDescription;
         public  FMOD.Studio.EventDescription EventDescription { get { return eventDescription; } }
-
         private FMOD.Studio.EventInstance instance;
         public  FMOD.Studio.EventInstance EventInstance { get { return instance; } }
 
