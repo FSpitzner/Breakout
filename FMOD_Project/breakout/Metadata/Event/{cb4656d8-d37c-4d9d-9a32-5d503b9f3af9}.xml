@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{cb4656d8-d37c-4d9d-9a32-5d503b9f3af9}">
         <property name="name">
-            <value>rain_WINDOWEvent</value>
+            <value>rain_WINDOWEvent_OLD</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
         </property>
         <relationship name="folder">
-            <destination>{3fa8c5ef-2ea7-4851-afe5-cc1eafa2ec58}</destination>
+            <destination>{efab9823-1a33-481c-926a-e1ffc87194fa}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{dba3f99c-e7a2-4bce-a386-f76e96ac2471}</destination>
@@ -955,11 +955,20 @@
         <property name="filterTypeA">
             <value>6</value>
         </property>
+        <property name="filterTypeE">
+            <value>8</value>
+        </property>
         <property name="frequencyA">
             <value>111.655685</value>
         </property>
+        <property name="frequencyE">
+            <value>3408.66455</value>
+        </property>
         <property name="qualityA">
             <value>0.20465517</value>
+        </property>
+        <property name="gainE">
+            <value>0.517240763</value>
         </property>
     </object>
     <object class="GainEffect" id="{bdd2e817-f236-45ca-974f-cdbb67d9ac31}">

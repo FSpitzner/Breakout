@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{145ca21e-b7b0-4c5c-ad48-3ce715e6f222}">
+        <property name="name">
+            <value>ambrainvol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2cc0e62d-d1a2-4914-95ac-cbff31815172}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{ab36fb1e-a2bb-46a0-81f0-06e5de70d349}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{ab36fb1e-a2bb-46a0-81f0-06e5de70d349}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="velocity">
+            <value>0.29999998211860657</value>
+        </property>
+    </object>
+</objects>
