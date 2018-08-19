@@ -10,12 +10,7 @@ public class QuestPrologController : QuestController {
 
 
     private bool gotBread = false, gotFlashlight = false, gotKeys = false;
-
-    private void Start()
-    {
-        LevelController.instance.RegisterQuestController(this);
-    }
-
+    
     public override void CheckQuestObject(Object obj)
     {
         if(obj.GetType() == typeof(DoorOpener))
@@ -26,25 +21,6 @@ public class QuestPrologController : QuestController {
                 uikeys.SetActive(true);
             }
         }
-    }
-
-    public override void SetValue(int obj, bool state)
-    {
-        switch (obj)
-        {
-            case 0:
-                gotBread = state;
-                break;
-            case 1:
-                gotFlashlight = state;
-                break;
-            case 2:
-                gotKeys = state;
-                break;
-            default:
-                break;
-        }
-        CheckWinState();
     }
 
     private void CheckWinState()
@@ -63,5 +39,24 @@ public class QuestPrologController : QuestController {
 
         Debug.Log("WIN");
         
+    }
+
+    public override void SetItem(Object obj)
+    {
+        switch (((ItemController)obj).itemID)
+        {
+            case 0:
+                gotBread = true;
+                break;
+            case 1:
+                gotFlashlight = true;
+                break;
+            case 2:
+                gotKeys = true;
+                break;
+            default:
+                break;
+        }
+        CheckWinState();
     }
 }

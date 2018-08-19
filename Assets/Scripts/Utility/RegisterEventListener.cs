@@ -25,6 +25,7 @@ public class RegisterEventListener : MonoBehaviour {
 
     private void OnEnable()
     {
+        Debug.Log("Event " + Event.name + " registered");
         Event.RegisterListener(this);
     }
 
@@ -38,6 +39,9 @@ public class RegisterEventListener : MonoBehaviour {
         if (respondWithMethode)
         {
             Debug.Log("Registriere: " + registeredObject);
+
+            MethodInfo[] methods = target.GetType().GetMethods();
+            targetMethode = methods[methodeID];
             Debug.Log("Invoke Method: " + targetMethode);
             targetMethode.Invoke(
                 target,
@@ -62,15 +66,18 @@ public class RegisterEventListenerEditor : Editor
         {
             script.target = EditorGUILayout.ObjectField("Target", script.target, typeof(MonoBehaviour), true) as MonoBehaviour;
             //EditorGUILayout.IntField(script.methodeID);
-            methods = script.target.GetType().GetMethods();
-
-            string[] methodNames = new string[methods.Length];
-            for (int i = 0; i < methods.Length; i++)
+            if (script.target != null)
             {
-                methodNames[i] = methods[i].Name;
+                methods = script.target.GetType().GetMethods();
+
+                string[] methodNames = new string[methods.Length];
+                for (int i = 0; i < methods.Length; i++)
+                {
+                    methodNames[i] = methods[i].Name;
+                }
+                script.methodeID = EditorGUILayout.Popup(script.methodeID, methodNames);
             }
-            script.methodeID = EditorGUILayout.Popup(script.methodeID, methodNames);
-            script.targetMethode = methods[script.methodeID];
+            //script.targetMethode = methods[script.methodeID];
            // Debug.Log("Target Methode: " + script.targetMethode);
         }
         else

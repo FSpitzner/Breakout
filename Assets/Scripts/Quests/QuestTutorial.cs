@@ -4,31 +4,10 @@ using UnityEngine;
 
 public class QuestTutorial : QuestController
 {
-    public GameObject tutorialPanel;
+    public GameEvent completeEvent;
     public DoorOpener door;
     public QuestController nextQuest;
     private bool gotFlower = false, gotBackpack = false;
-
-    private void Start()
-    {
-        LevelController.instance.RegisterQuestController(this);
-    }
-
-    public override void SetValue(int obj, bool state)
-    {
-        switch (obj)
-        {
-            case 3:
-                gotFlower = state;
-                break;
-            case 4:
-                gotBackpack = state;
-                break;
-            default:
-                break;
-        }
-        CheckWinState();
-    }
 	
     private void CheckWinState()
     {
@@ -37,10 +16,11 @@ public class QuestTutorial : QuestController
             door.doorIsLocked = false;
             nextQuest.enabled = true;
             this.enabled = false;
+            completeEvent.Raise();
         }
     }
 
-    public void SetItem(object obj)
+    public override void SetItem(Object obj)
     {
         switch (((ItemController)obj).itemID)
         {

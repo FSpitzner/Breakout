@@ -21,7 +21,7 @@ public class RegisterEvent : ScriptableObject {
     public void RegisterListener(RegisterEventListener listener)
     {
         eventListeners.Add(listener);
-        Debug.Log("Listener " + listener + "has tried to Register!\nRegistered Listeners: " + eventListeners.Count);
+        //Debug.Log("Listener " + listener + "has tried to Register!\nRegistered Listeners: " + eventListeners.Count);
     }
 
     public void UnregisterListener(RegisterEventListener listener)

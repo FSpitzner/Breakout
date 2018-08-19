@@ -7,6 +7,7 @@ public class DoorOpener : MonoBehaviour {
 
     [Tooltip("Put Door in here. If this Skript is on the Door itself, let it empty")]
     public GameObject door;
+    public RegisterEvent openDoorEvent;
     public Vector3 defaultRotation;
 	public Vector3 openRotation;
 	public float openTime = 2f;
@@ -29,7 +30,14 @@ public class DoorOpener : MonoBehaviour {
         Debug.Log("Check started");
         if(doorIsLocked)
             Debug.Log("Door is Locked!");
-        LevelController.instance.getQuest().CheckQuestObject(this);
+        //LevelController.instance.getQuest().CheckQuestObject(this);
+        if (openDoorEvent != null)
+        {
+            openDoorEvent.GetListeners().ForEach((RegisterEventListener rel) =>
+            {
+                rel.OnEventRaised(this);
+            });
+        }
         Debug.Log("Jetzt bin ich schon hier!");
         return doorIsLocked == false ? false : CheckHasKeys();
     }
