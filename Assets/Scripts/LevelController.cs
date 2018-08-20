@@ -13,7 +13,6 @@ public class LevelController : MonoBehaviour {
     private bool gameOver = false;
     public GameMenuController menuController;
     public CameraPointing cameraPointingSkript;
-    private QuestController quest;
 
 
     [Header("Fear Settings")]
@@ -36,7 +35,13 @@ public class LevelController : MonoBehaviour {
 
     private float pulseSpeed = 0f;
     private bool gameStarted = false;
-    
+
+    [Header("Attention Settings")]
+    public Attention attention;
+    public float attentionPerTick = -.5f;
+    public float attentionTicksPerSecond = 5f;
+    public float defaultAttention = 0f;
+    public bool resetAttentionOnStart = true;
 
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
@@ -57,6 +62,10 @@ public class LevelController : MonoBehaviour {
         {
             fear.fear = defaultFear;
         }
+        if (resetAttentionOnStart)
+        {
+            attention.value = 0f;
+        }
 	}
 
 	void Start(){
@@ -70,6 +79,12 @@ public class LevelController : MonoBehaviour {
     {
         fear.IncreaseFear(fearPerTick);
         Invoke("FearTick", 1 / ticksPerSecond);
+    }
+
+    private void AttentionTick()
+    {
+        attention.ChangeValueByAmount(attentionPerTick);
+        Invoke("AttentionTick", 1 / attentionTicksPerSecond);
     }
     
     private void Update()
@@ -120,6 +135,7 @@ public class LevelController : MonoBehaviour {
     {
         gameStarted = true;
         Invoke("FearTick", 1 / ticksPerSecond);
+        Invoke("AttentionTick", 1 / attentionTicksPerSecond);
         if(thunderstorm)
             thunderstormController.StartThunderstorm();
         //player.StartGame();
@@ -128,16 +144,6 @@ public class LevelController : MonoBehaviour {
     public GameMenuController GetGameMenuController()
     {
         return menuController;
-    }
-
-    public void RegisterQuestController(QuestController qc)
-    {
-        quest = qc;
-    }
-
-    public QuestController getQuest()
-    {
-        return quest != null ? quest : null;
     }
 
     private void OnApplicationQuit()

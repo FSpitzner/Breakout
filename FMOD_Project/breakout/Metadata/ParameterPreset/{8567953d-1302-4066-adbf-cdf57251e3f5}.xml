@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{8567953d-1302-4066-adbf-cdf57251e3f5}">
+        <property name="name">
+            <value>MenuFadeoutWorkaround</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2cc0e62d-d1a2-4914-95ac-cbff31815172}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{38575fe5-5995-43f1-a1d1-88e486cb8565}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{38575fe5-5995-43f1-a1d1-88e486cb8565}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
