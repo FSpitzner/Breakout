@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4582,6 +4582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 2147455269}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -100, z: 0}
   openTime: 1
@@ -4589,6 +4590,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1 &157033737
 GameObject:
   m_ObjectHideFlags: 0
@@ -5078,6 +5080,16 @@ Prefab:
     - target: {fileID: 4092133387318394, guid: 09030349b3b93534aae12abfaa107341, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749770236686742, guid: 09030349b3b93534aae12abfaa107341,
+        type: 2}
+      propertyPath: OverrideAttenuation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114749770236686742, guid: 09030349b3b93534aae12abfaa107341,
+        type: 2}
+      propertyPath: OverrideMinDistance
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09030349b3b93534aae12abfaa107341, type: 2}
@@ -7791,6 +7803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1118816513}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -82, z: 0}
   openTime: 1
@@ -7798,6 +7811,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!4 &218648940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4112733288355018, guid: 4ebdac4c21af2fe40a98fe4343a8cc56,
@@ -18201,6 +18215,11 @@ MonoBehaviour:
   fearPerTick: -0.2
   ticksPerSecond: 5
   companion: {fileID: 318647113}
+  attention: {fileID: 0}
+  attentionPerTick: -0.5
+  attentionTicksPerSecond: 5
+  defaultAttention: 0
+  resetAttentionOnStart: 1
   playerSoundSystem: {fileID: 1019580404}
   thunderstorm: 1
   thunderstormController: {fileID: 540659162}
@@ -24431,6 +24450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1879490161}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -100, z: 0}
   openTime: 1
@@ -24438,6 +24458,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1001 &730907607
 Prefab:
   m_ObjectHideFlags: 0
@@ -35815,6 +35836,55 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6921526ac3a8f544093e2f73bd47b58f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1048036458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298631260627166, guid: 6921526ac3a8f544093e2f73bd47b58f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1048036457}
+--- !u!114 &1048036459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048036458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/generalEnvironment/door_open_EVENT
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 0
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1048036460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048036458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/generalEnvironment/door_close_EVENT
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &1048923816
 Prefab:
   m_ObjectHideFlags: 0
@@ -48577,6 +48647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1079246565}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -100, z: 0}
   openTime: 1
@@ -48584,6 +48655,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1001 &1415937590
 Prefab:
   m_ObjectHideFlags: 0
@@ -62124,10 +62196,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 4371979548391862, guid: 44ff1a42e72616c44bd807a8349eb0a7, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 1960574611630380, guid: 44ff1a42e72616c44bd807a8349eb0a7, type: 2}
       propertyPath: m_Name
       value: Wall_OneWindow_One
@@ -62459,21 +62527,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 4092133387318394, guid: 09030349b3b93534aae12abfaa107341, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
     - target: {fileID: 1801971403527996, guid: 09030349b3b93534aae12abfaa107341, type: 2}
       propertyPath: m_Name
       value: Wall_TwoWindow_Two
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092133387318394, guid: 09030349b3b93534aae12abfaa107341, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092133387318394, guid: 09030349b3b93534aae12abfaa107341, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09030349b3b93534aae12abfaa107341, type: 2}
@@ -63945,6 +64001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 30497795}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -100, z: 0}
   openTime: 1
@@ -63952,6 +64009,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1 &1911259881
 GameObject:
   m_ObjectHideFlags: 0
@@ -67859,6 +67917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1462963380}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: -100, z: 0}
   openTime: 1
@@ -67866,6 +67925,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1 &2003128261
 GameObject:
   m_ObjectHideFlags: 0
@@ -72716,6 +72776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 0}
+  openDoorEvent: {fileID: 0}
   defaultRotation: {x: 0, y: 0, z: 0}
   openRotation: {x: 0, y: 0, z: 0}
   openTime: 3
@@ -72723,6 +72784,7 @@ MonoBehaviour:
   keyItemID: 0
   questID: 0
   tweening: 0
+  playerSoundSystem: {fileID: 0}
 --- !u!1001 &2121549596
 Prefab:
   m_ObjectHideFlags: 0

@@ -12,11 +12,14 @@ public class playerSounds_control : MonoBehaviour
     public StudioEventEmitter eventEmitterRefHeartBeat;
     public StudioEventEmitter eventEmitterRefAmbientIngameMusic;
     public StudioEventEmitter eventEmitterRefMenuMusic;
+    public StudioEventEmitter eventEmitterRefDoorOPENCreak;
+    public StudioEventEmitter eventEmitterRefDoorCLOSECreak;
 
     public EventInstance MenuMusic;
     public Fear fear;
 
     private bool MenuMusicPlaybackState;
+    private Random doorSoundSelector;
 
     //public StudioEventEmitter eventEmitterRefThunder;
 
@@ -76,6 +79,7 @@ public class playerSounds_control : MonoBehaviour
         else if (fear.fear >= fear.getFearPanic())
         {
             eventEmitterRefHeartBeat.SetParameter(Constants.HEARTSPEED, 6f);
+            eventEmitterRefAmbientIngameMusic.SetParameter(Constants.AMOUNTMENTALILLNESS, 1);
             Debug.Log("heartbeat Speed VHIGH");
         }
         eventEmitterRefHeartBeat.Play();
@@ -100,5 +104,18 @@ public class playerSounds_control : MonoBehaviour
     public void StopMenuMusic()
     {
         eventEmitterRefMenuMusic.Stop();
+    }
+
+    public void playDoorCreak(bool openclose)
+    {
+        //TODO: RANDOM DOOR SOUND
+        if (openclose == false)
+        {
+            eventEmitterRefDoorOPENCreak.Play();
+        }
+        else
+        {
+            eventEmitterRefDoorCLOSECreak.Play();
+        }
     }
 }

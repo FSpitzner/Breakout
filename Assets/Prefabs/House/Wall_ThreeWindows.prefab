@@ -55,8 +55,8 @@ GameObject:
   - component: {fileID: 4559627473357924}
   - component: {fileID: 33206818446554672}
   - component: {fileID: 23861536014062616}
-  - component: {fileID: 114071763080311964}
-  - component: {fileID: 114204183464730498}
+  - component: {fileID: 114060925269716730}
+  - component: {fileID: 114766581136531284}
   m_Layer: 0
   m_Name: Fenster_mitte
   m_TagString: Untagged
@@ -452,7 +452,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895602917575492}
   m_Mesh: {fileID: 4300000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
---- !u!114 &114071763080311964
+--- !u!114 &114060925269716730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/Weather/wind_WINDOWEvent
-  PlayEvent: 1
-  StopEvent: 0
+  PlayEvent: 11
+  StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 6.711503
   OverrideMaxDistance: 8.021894
---- !u!114 &114204183464730498
+--- !u!114 &114766581136531284
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -486,8 +486,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/Weather/Rain_WINDOW_Event
-  PlayEvent: 1
-  StopEvent: 0
+  PlayEvent: 11
+  StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0

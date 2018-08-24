@@ -17,6 +17,9 @@ public class DoorOpener : MonoBehaviour {
     public int questID = 0;
 	[HideInInspector]
 	public bool tweening = false;
+
+    [Header("PlayerSoundSystem")]
+    public playerSounds_control playerSoundSystem;
     /*
 	void OnDrawGizmos(){
 		
@@ -58,24 +61,34 @@ public class DoorOpener : MonoBehaviour {
 	public void Open(){
         if (!tweening)
             {
+               //opened: true= open --> door closes; false=closed --> door opens
                 tweening = true;
                 if (!opened)
+                {    //DOORCREAKING
+                    playerSoundSystem.playDoorCreak(opened);
                     LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                     {
                         opened = true;
                         tweening = false;
                     });
+                }
                 else
+                {
+                    //DOORCREAKING
+                    playerSoundSystem.playDoorCreak(opened);
                     LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
                     {
                         opened = false;
                         tweening = false;
                     });
+                }
             }
     	}
 
     public void Close(ChangeStage stage)
     {
+        //DOORCREAKING
+        playerSoundSystem.playDoorCreak(opened);
         tweening = true;
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
         {
