@@ -134,6 +134,7 @@ public class StageController : MonoBehaviour {
                 m.SetFloat("Vector1_DB2A1952", opacity);
             });
         }
+        
     }
 
     public void FillMaterials()
