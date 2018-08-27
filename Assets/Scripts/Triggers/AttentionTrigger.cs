@@ -11,24 +11,28 @@ public class AttentionTrigger : Trigger {
     private PlayerController player;
     private float timer = 0f;
     private bool onCooldown = false;
+    public bool thunderPlaying = false;
     
     private void FixedUpdate()
     {
-        if (isInside)
+        if (!thunderPlaying)
         {
-            if(timer >= cooldownTimer)
+            if (isInside)
             {
-                onCooldown = false;
-                timer = 0f;
-            }
-            if (onCooldown)
-            {
-                timer += Time.deltaTime;
-            }
-            else if (player.velocity >= type.maxSpeed)
-            {
-                attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
-                
+                if (timer >= cooldownTimer)
+                {
+                    onCooldown = false;
+                    timer = 0f;
+                }
+                if (onCooldown)
+                {
+                    timer += Time.deltaTime;
+                }
+                else if (player.velocity >= type.maxSpeed)
+                {
+                    attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
+
+                }
             }
         }
     }

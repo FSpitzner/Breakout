@@ -11,9 +11,9 @@ public class EnvironmentTrigger : Trigger {
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("Player hat mich betreten");
         if (other.tag == "Player")
         {
+            Debug.Log("Player hat " + gameObject.name + " betreten");
             isInside = true;
             FearTick();
         }
@@ -23,6 +23,7 @@ public class EnvironmentTrigger : Trigger {
     {
         if(other.tag == "Player")
         {
+            Debug.Log("Player hat " + gameObject.name + " verlassen");
             isInside = false;
         }
     }
