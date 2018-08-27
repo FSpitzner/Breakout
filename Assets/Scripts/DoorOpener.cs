@@ -74,7 +74,7 @@ public class DoorOpener : MonoBehaviour {
             tweening = true;
             if (!opened)
             {    //DOORCREAKING
-                playerSoundSystem.playDoorCreak(opened);
+                // playerSoundSystem.playDoorCreak(opened);
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                 {
                     opened = true;
@@ -83,7 +83,6 @@ public class DoorOpener : MonoBehaviour {
             }
             else
             {
-<<<<<<< HEAD
                //opened: true= open --> door closes; false=closed --> door opens
                 tweening = true;
                 if (!opened)
@@ -96,11 +95,9 @@ public class DoorOpener : MonoBehaviour {
                     });
                 }
                 else
-=======
                 //DOORCREAKING
-                playerSoundSystem.playDoorCreak(opened);
+               // playerSoundSystem.playDoorCreak(opened);
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
->>>>>>> 9271476f16826653e0e791f0a3c1db354bef7f62
                 {
                     opened = false;
                     tweening = false;
