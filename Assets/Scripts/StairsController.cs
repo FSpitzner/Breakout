@@ -14,7 +14,27 @@ public class StairsController : MonoBehaviour {
 
     private PlayerController player;
     private StageController releaseStage;
-    
+
+    private bool goingUp, goingDown;
+    public float goingDownTime = 17.4f;
+    public float goingUpTime = 18.2084f;
+    private float timer = 0f;
+
+    private void Update()
+    {
+        if (goingDown || goingUp)
+        {
+            timer += Time.deltaTime;
+            if(timer >= (goingDown == true ? goingDownTime : goingUpTime))
+            {
+                ReleasePlayer();
+                goingDown = false;
+                goingUp = false;
+                timer = 0f;
+            }
+        }
+    }
+
     public void EnableBottomStage()
     {
         bottomStage.SetActive(true);
@@ -38,13 +58,18 @@ public class StairsController : MonoBehaviour {
     public void StartAnimation(StairTrigger trigger, PlayerController player)
     {
         this.player = player;
-        if(trigger == bottomTrigger)
+        
+        if(trigger == topTrigger)
         {
+            goingUp = true;
+            EnableBottomStage();
             animator.SetBool("GoingDown", true);
             releaseStage = bottomStage;
         }
         else
         {
+            goingDown = true;
+            EnableTopStage();
             animator.SetBool("GoingUp", true);
             releaseStage = topStage;
         }

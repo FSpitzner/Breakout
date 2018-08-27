@@ -7,6 +7,7 @@ using UnityEditor;
 public class Thunder {
     public int ID;
     public float FearAmount;
+    public float AttentionTime;
 }
 
 [CustomPropertyDrawer(typeof(Thunder))]
@@ -21,10 +22,12 @@ public class ThunderEditor : PropertyDrawer
         EditorGUI.indentLevel = 0;
 
         var idRect = new Rect(position.x+10, position.y, 30, position.height);
-        var fearRect = new Rect(position.x + 45, position.y, 100, position.height);
+        var fearRect = new Rect(position.x + 45, position.y, 50, position.height);
+        var attentionRect = new Rect(position.x + 100, position.y, 40, position.height);
 
         EditorGUI.PropertyField(idRect, property.FindPropertyRelative("ID"), GUIContent.none);
         EditorGUI.PropertyField(fearRect, property.FindPropertyRelative("FearAmount"), GUIContent.none);
+        EditorGUI.PropertyField(attentionRect, property.FindPropertyRelative("AttentionTime"), GUIContent.none);
 
         EditorGUI.indentLevel = indent;
         EditorGUI.EndProperty();

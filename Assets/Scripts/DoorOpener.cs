@@ -18,6 +18,13 @@ public class DoorOpener : MonoBehaviour {
 	[HideInInspector]
 	public bool tweening = false;
 
+    [Header("Fear Settings")]
+    public bool increaseFear;
+    [ConditionalHide("increaseFear", true)]
+    public Fear fear;
+    [ConditionalHide("increaseFear", true)]
+    public float fearAmount;
+
     [Header("PlayerSoundSystem")]
     public playerSounds_control playerSoundSystem;
     /*
@@ -60,7 +67,23 @@ public class DoorOpener : MonoBehaviour {
 
 	public void Open(){
         if (!tweening)
+        {
+            if (increaseFear)
+                fear.IncreaseFear(fearAmount);
+            //opened: true= open --> door closes; false=closed --> door opens
+            tweening = true;
+            if (!opened)
+            {    //DOORCREAKING
+                playerSoundSystem.playDoorCreak(opened);
+                LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
+                {
+                    opened = true;
+                    tweening = false;
+                });
+            }
+            else
             {
+<<<<<<< HEAD
                //opened: true= open --> door closes; false=closed --> door opens
                 tweening = true;
                 if (!opened)
@@ -73,17 +96,18 @@ public class DoorOpener : MonoBehaviour {
                     });
                 }
                 else
+=======
+                //DOORCREAKING
+                playerSoundSystem.playDoorCreak(opened);
+                LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
+>>>>>>> 9271476f16826653e0e791f0a3c1db354bef7f62
                 {
-                    //DOORCREAKING
-                    playerSoundSystem.playDoorCreak(opened);
-                    LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-                    {
-                        opened = false;
-                        tweening = false;
-                    });
-                }
+                    opened = false;
+                    tweening = false;
+                });
             }
-    	}
+        }
+    }
 
     public void Close(ChangeStage stage)
     {

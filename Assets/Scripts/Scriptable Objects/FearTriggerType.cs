@@ -10,6 +10,6 @@ public class FearTriggerType : ScriptableObject {
 
     public float GetTickTime()
     {
-        return 1f / ticksPerSecond;
+        return (1f / ticksPerSecond);
     }
 }
