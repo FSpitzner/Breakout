@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour {
 
 	public void CollectItem(ItemController item){
         items.Add(item);
-        LevelController.instance.getQuest().SetValue(item.itemID, true);
+        //LevelController.instance.getQuest().SetValue(item.itemID, true);
 
         //Debug.Log (item + " collected");
 	}
@@ -239,6 +239,7 @@ public class PlayerController : MonoBehaviour {
 
     public void RegisterInteractionTrigger(InteractTrigger trigger)
     {
+        Debug.Log("Trigger " + trigger + " registered");
         interactTriggers.Add(trigger);
     }
 

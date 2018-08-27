@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -33,7 +33,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 1
+    Value: 0
   - Platform: 2
     Value: 0
   LoggingSettings:
@@ -57,7 +57,12 @@ MonoBehaviour:
   Plugins: []
   MasterBank: Master Bank
   Banks:
+  - ThunderBig
+  - rain_normal
+  - ThunderSmall
+  - rain_Window
+  - wind_window
+  - Bank_heartbeatSystem
   - windsfx
   - FearLocation
   - FearLocation_2d
-  - HeartBeat

@@ -8,6 +8,9 @@ public class ItemTrigger : InteractTrigger {
 	public bool collectableFanatasie = true, collectableReal = true;
     public Fear fear;
     public ItemController item;
+    public bool shootEvent;
+    [ConditionalHide("shootEvent", true)]
+    public RegisterEventShooter eventShooter;
 
 	public override void Interact (){
         bool dreamworldTriggered = fear.IsDreamworldActive();
@@ -15,6 +18,10 @@ public class ItemTrigger : InteractTrigger {
 			player.CollectItem (item);
 			gameObject.SetActive (false);
             player.UnregisterInteractionTrigger(this);
+            if (shootEvent)
+            {
+                eventShooter.RaiseEvent();
+            }
 		}
 	}
 }

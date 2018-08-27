@@ -55,8 +55,8 @@ GameObject:
   - component: {fileID: 4559627473357924}
   - component: {fileID: 33206818446554672}
   - component: {fileID: 23861536014062616}
-  - component: {fileID: 114071763080311964}
-  - component: {fileID: 114204183464730498}
+  - component: {fileID: 114060925269716730}
+  - component: {fileID: 114766581136531284}
   m_Layer: 0
   m_Name: Fenster_mitte
   m_TagString: Untagged
@@ -163,8 +163,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895602917575492}
-  m_LocalRotation: {x: 0.0000018099951, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 60, y: 5.68, z: 14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4316190350818956}
@@ -172,7 +172,7 @@ Transform:
   - {fileID: 4098069718770088}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4559627473357924
 Transform:
   m_ObjectHideFlags: 1
@@ -215,7 +215,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -250,7 +250,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,7 +285,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,7 +320,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -355,7 +355,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7fb06db52828d2d488a72422d74b2189, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -390,7 +390,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
+  - {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -452,7 +452,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895602917575492}
   m_Mesh: {fileID: 4300000, guid: 6ced6f441ada6a04d9c3979d8017ad16, type: 3}
---- !u!114 &114071763080311964
+--- !u!114 &114060925269716730
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -463,9 +463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/wind_WINDOWEvent
-  PlayEvent: 1
-  StopEvent: 0
+  Event: event:/Weather/wind_WINDOWEvent
+  PlayEvent: 11
+  StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0
@@ -474,7 +474,7 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 6.711503
   OverrideMaxDistance: 8.021894
---- !u!114 &114204183464730498
+--- !u!114 &114766581136531284
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/rain_WINDOWEvent
-  PlayEvent: 1
-  StopEvent: 0
+  Event: event:/Weather/Rain_WINDOW_Event
+  PlayEvent: 11
+  StopEvent: 12
   CollisionTag: 
   AllowFadeout: 1
   TriggerOnce: 0

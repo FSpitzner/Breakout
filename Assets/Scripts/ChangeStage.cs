@@ -130,12 +130,12 @@ public class ChangeStage : InteractTrigger {
                 Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z));
                 break;
             case 4:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
-                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z));
+                LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, nextpos.y, nextpos.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(nextpos.x, nextpos.y, nextpos.z));
                 break;
             case 5:
-                LeanTween.move(dummy.gameObject, new Vector3(dummy.transform.position.x, nextpos.y, dummy.transform.position.z), moveTime);
-                Debug.Log("Camera Moved to: " + new Vector3(dummy.transform.position.x, dummy.transform.position.y, nextpos.z));
+                LeanTween.move(dummy.gameObject, new Vector3(nextpos.x, nextpos.y, nextpos.z), moveTime);
+                Debug.Log("Camera Moved to: " + new Vector3(nextpos.x, nextpos.y, nextpos.z));
                 break;
         }
 	}

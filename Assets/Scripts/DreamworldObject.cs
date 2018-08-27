@@ -14,10 +14,11 @@ public class DreamworldObject : MonoBehaviour {
 
     public void Deactivate(){
 		Invoke ("Disappear", disappearTime);
-        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.5f);
     }
 
 	private void Disappear(){
-		transform.gameObject.SetActive (false);
+        LeanTween.scale(gameObject, new Vector3(0, 0, 0), 0.5f).setOnComplete(() => {
+            transform.gameObject.SetActive(false);
+        });
 	}
 }

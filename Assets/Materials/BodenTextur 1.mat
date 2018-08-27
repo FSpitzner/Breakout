@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BodenTextur 1
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4d320ccd2d65e9448abfd9faf872faaf, type: 3}
   m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -18,6 +18,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture_2384DEFA:
+        m_Texture: {fileID: 2800000, guid: e14715ff3ea896843824c3c2638159ff, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -59,6 +63,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_5C45386D: 0
+    - Vector1_DB2A1952: 0
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -81,6 +87,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_54CD5774: {r: 1, g: 1, b: 1, a: 0}
+    - Color_BA7882C0: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 0}
     - _Color: {r: 0.6792453, g: 0.5671057, b: 0.58600503, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
