@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 65267275840520362}
   - component: {fileID: 114546065981572698}
   - component: {fileID: 114767898660105042}
+  - component: {fileID: 114691084135888700}
   m_Layer: 0
   m_Name: Quest_Front_Door_Key
   m_TagString: Untagged
@@ -210,6 +211,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemID: 2
+--- !u!114 &114691084135888700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160443837551278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f02624bfb06b7479d709285fdd1719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 812c414cea432da4f9a273e344c3662f, type: 2}
+  registeredObject: {fileID: 114546065981572698}
 --- !u!114 &114767898660105042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,3 +239,5 @@ MonoBehaviour:
   collectableReal: 1
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
   item: {fileID: 114546065981572698}
+  shootEvent: 0
+  eventShooter: {fileID: 0}

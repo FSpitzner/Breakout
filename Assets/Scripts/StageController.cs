@@ -27,7 +27,7 @@ public class StageController : MonoBehaviour {
         });
     }
     
-    private void DeactivateDreamworldObjects()
+    public void DeactivateDreamworldObjects()
     {
         dreamworldObjectsActive = false;
         dreamworldObjects.ForEach((DreamworldObject dO) =>

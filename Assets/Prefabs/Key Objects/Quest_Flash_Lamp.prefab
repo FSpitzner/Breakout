@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 65456618041714640}
   - component: {fileID: 114141658551299240}
   - component: {fileID: 114056776222158508}
+  - component: {fileID: 114218200445909884}
   m_Layer: 0
   m_Name: Quest_Flash_Lamp
   m_TagString: Untagged
@@ -213,6 +214,21 @@ MonoBehaviour:
   collectableReal: 1
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
   item: {fileID: 114056776222158508}
+  shootEvent: 0
+  eventShooter: {fileID: 0}
+--- !u!114 &114218200445909884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933045892582586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f02624bfb06b7479d709285fdd1719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b0ae9166ce9ab43458fe4ba8212045d6, type: 2}
+  registeredObject: {fileID: 114056776222158508}
 --- !u!136 &136635085754035342
 CapsuleCollider:
   m_ObjectHideFlags: 1

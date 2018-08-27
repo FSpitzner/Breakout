@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 65686878397483178}
   - component: {fileID: 114605927761479434}
   - component: {fileID: 114216687355931176}
+  - component: {fileID: 114905705155495462}
   m_Layer: 0
   m_Name: Quest_Loaf
   m_TagString: Untagged
@@ -431,6 +432,8 @@ MonoBehaviour:
   collectableReal: 1
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
   item: {fileID: 114605927761479434}
+  shootEvent: 0
+  eventShooter: {fileID: 0}
 --- !u!114 &114605927761479434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -456,3 +459,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breadTinTrigger: {fileID: 65255353882510134}
   breadtrigger: {fileID: 65686878397483178}
+--- !u!114 &114905705155495462
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1912552779547310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f02624bfb06b7479d709285fdd1719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 880a52a196aeb2f46ab7d4570ad71186, type: 2}
+  registeredObject: {fileID: 114605927761479434}
