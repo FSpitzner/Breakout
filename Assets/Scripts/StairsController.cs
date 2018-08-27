@@ -15,6 +15,7 @@ public class StairsController : MonoBehaviour {
     private PlayerController player;
     private StageController releaseStage;
 
+    public GameObject cameraDummy;
     private bool goingUp, goingDown;
     public float goingDownTime = 17.4f;
     public float goingUpTime = 18.2084f;
