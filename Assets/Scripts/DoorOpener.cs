@@ -65,7 +65,7 @@ public class DoorOpener : MonoBehaviour {
                 tweening = true;
                 if (!opened)
                 {    //DOORCREAKING
-                    playerSoundSystem.playDoorCreak(opened);
+                 //   playerSoundSystem.playDoorCreak(opened);
                     LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                     {
                         opened = true;
@@ -88,7 +88,7 @@ public class DoorOpener : MonoBehaviour {
     public void Close(ChangeStage stage)
     {
         //DOORCREAKING
-        playerSoundSystem.playDoorCreak(opened);
+        //playerSoundSystem.playDoorCreak(opened);
         tweening = true;
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
         {
