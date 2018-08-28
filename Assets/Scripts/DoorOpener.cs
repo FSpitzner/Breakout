@@ -40,7 +40,6 @@ public class DoorOpener : MonoBehaviour {
         Debug.Log("Check started");
         if(doorIsLocked)
             Debug.Log("Door is Locked!");
-        //LevelController.instance.getQuest().CheckQuestObject(this);
         if (openDoorEvent != null)
         {
             openDoorEvent.GetListeners().ForEach((RegisterEventListener rel) =>
@@ -74,7 +73,7 @@ public class DoorOpener : MonoBehaviour {
             tweening = true;
             if (!opened)
             {    //DOORCREAKING
-                playerSoundSystem.playDoorCreak(opened);
+                //playerSoundSystem.playDoorCreak(opened);
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                 {
                     opened = true;

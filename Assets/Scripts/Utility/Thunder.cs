@@ -30,7 +30,7 @@ public class ThunderEditor : PropertyDrawer
 
         EditorGUI.PropertyField(idRect, property.FindPropertyRelative("ID"), GUIContent.none);
         EditorGUI.PropertyField(fearRect, property.FindPropertyRelative("FearAmount"), GUIContent.none);
-        EditorGUI.PropertyField(attentionDelayRect, property.FindPropertyRelative("AttentionTime"), GUIContent.none);
+        EditorGUI.PropertyField(attentionDelayRect, property.FindPropertyRelative("AttentionDelay"), GUIContent.none);
         EditorGUI.PropertyField(attentionTimeRect, property.FindPropertyRelative("AttentionTime"), GUIContent.none);
 
         EditorGUI.indentLevel = indent;

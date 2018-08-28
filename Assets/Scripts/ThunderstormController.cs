@@ -65,8 +65,6 @@ public class ThunderstormController : MonoBehaviour {
         lightAni.SetInteger("ThunderID", randomThunderID);
         StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue), randomThunderID, (float)player.stage.soundState));
         fear.IncreaseFear(thunders[randomThunderID].FearAmount);
-        thunderStartEvent.Raise();
-        thunderEventTimer = thunders[randomThunderID].AttentionTime;
         /*see.SetParameter(Constants.THUNDERID, (float)randomThunderID);
         see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
         see.Play();*/
@@ -78,8 +76,6 @@ public class ThunderstormController : MonoBehaviour {
         Debug.Log("Playing Thunder " + id);
         StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue),id, (float)player.stage.soundState));
         fear.IncreaseFear(thunders[id].FearAmount);
-        thunderStartEvent.Raise();
-        thunderEventTimer = thunders[id].AttentionTime;
         /*see.SetParameter(Constants.THUNDERID, (float)id);
         see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
         see.Play();*/
@@ -94,6 +90,8 @@ public class ThunderstormController : MonoBehaviour {
     private IEnumerator PlaySound(float delay, float id, float soundstate)
     {
         yield return new WaitForSeconds(delay);
+        thunderStartEvent.Raise();
+        thunderEventTimer = thunders[(int)id].AttentionTime;
         see.SetParameter(Constants.THUNDERID, id);
         see.SetParameter(Constants.SOUNDSTATE, soundstate);
         see.Play();

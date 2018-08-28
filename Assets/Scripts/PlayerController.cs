@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Animator")]
     public Animator ani;
+    public Transform playerMesh;
 
 	[Header("Player Statistics")]
 
@@ -35,14 +36,16 @@ public class PlayerController : MonoBehaviour {
 
 	[Header("Inputs")]
 
-	[SerializeField]
-	private KeyCode jumpKey;
+	//[SerializeField]
+	//private KeyCode jumpKey;
 	[SerializeField]
 	private KeyCode runKey;
 	[SerializeField]
 	private KeyCode crouchKey;
 	[SerializeField]
 	private KeyCode interactKey;
+    [SerializeField]
+    private KeyCode pauseKey;
 
 	[Header("Camera")]
 	public Transform cameraDummy;
@@ -58,6 +61,13 @@ public class PlayerController : MonoBehaviour {
     private bool controlsLocked = false;
     private bool gameStarted = false;
     private bool cameraOnPos = false;
+
+    [Header("Miscellaneous")]
+    public GameEvent pauseEvent;
+    public GameEvent resumeEvent;
+    private bool gameOver = false;
+    public bool walkingThroughDoor = false;
+
 
     [HideInInspector]
     public List<ItemController> items;
@@ -91,6 +101,18 @@ public class PlayerController : MonoBehaviour {
                 {
                     it.Interact();
                 });
+            }
+            if (Input.GetKeyDown(pauseKey) && !gameOver)
+            {
+                
+                if (Time.timeScale == 0)
+                {
+                    resumeEvent.Raise();
+                }
+                else
+                {
+                    pauseEvent.Raise();
+                }
             }
         }
 	}
@@ -159,8 +181,10 @@ public class PlayerController : MonoBehaviour {
                 }
             }
         }
-        velocity = rb.velocity.magnitude;
-        ani.SetFloat("velocity", rb.velocity.magnitude);
+        if (!walkingThroughDoor) {
+            velocity = rb.velocity.magnitude;
+        }
+        ani.SetFloat("velocity", velocity);
     }
 
 	private void MovementControl(int forcePower){
@@ -247,5 +271,30 @@ public class PlayerController : MonoBehaviour {
     {
         if (interactTriggers.Contains(trigger))
             interactTriggers.Remove(trigger);
+    }
+
+    public void ResetPlayerMesh()
+    {
+        playerMesh.localEulerAngles = new Vector3(0, 0, 0);
+        playerMesh.localPosition = new Vector3(0, -1, 0);
+    }
+
+    public void PauseGame(bool state)
+    {
+        if (state)
+        {
+            Time.timeScale = 0;
+            ani.SetFloat("velocity", 0f);
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    public void SetGameOver(bool state)
+    {
+        gameOver = state;
+        ani.SetBool("panicing", true);
     }
 }
