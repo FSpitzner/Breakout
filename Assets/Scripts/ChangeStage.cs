@@ -17,6 +17,9 @@ public class ChangeStage : InteractTrigger {
 	public DoorOpener door;
     public float playerRoomSwitchSpeed = 2f;
     private int nextRoom;
+    public bool looksLikeShit;
+    [ConditionalHide("looksLikeShit", true)]
+    public GameObject fadeoutPanel;
 
 	[Header("Camera Settings")]
 	public Vector3 room1CameraPos;
@@ -31,14 +34,43 @@ public class ChangeStage : InteractTrigger {
 		Gizmos.DrawWireSphere (room2StartPoint, 0.5f);
 	}
     
-
 	void Start(){
 		room2PosFromRoom1 = transform.GetComponent<RoomDirection> ();
 	}
 
 	public override void Interact(){
         Debug.Log("Interacting");
-		if (!door.tweening && !door.CheckDoorIsLocked()) {
+        if (looksLikeShit)
+        {
+            player.gameObject.GetComponent<GravityControl>().ChangeGravity();
+            fadeoutPanel.SetActive(true);
+            player.ani.gameObject.SetActive(false);
+            foreach (StageController sc in room1Objects)
+            {
+                if (!sc.isActive)
+                {
+                    sc.SetActive(true);
+                }
+            }
+            foreach (StageController sc in room2Objects)
+            {
+                if (!sc.isActive)
+                {
+                    sc.SetActive(true);
+                }
+            }
+            if (player.stage == room1)
+            {
+                nextRoom = 2;
+                SwitchRooms(player);
+            }
+            else
+            {
+                nextRoom = 1;
+                SwitchRooms(player);
+            }
+        }
+        else if (!door.tweening && !door.CheckDoorIsLocked()) {
             Debug.Log("Hier bin ich");
             foreach(StageController sc in room1Objects)
             {
@@ -54,7 +86,7 @@ public class ChangeStage : InteractTrigger {
                     sc.SetActive(true);
                 }
             }
-			door.Open ();
+            door.Open();
 			if (player.stage == room1) {
                 nextRoom = 2;
                 SwitchRooms (player);
@@ -72,22 +104,36 @@ public class ChangeStage : InteractTrigger {
         player.SetLockInputs(true);
         player.transform.position = nextRoom == 1 ? room2StartPoint : room1StartPoint;
         player.StopPlayerMovement();
+        Vector3 target = nextRoom == 1 ? room1StartPoint : room2StartPoint;
+        player.transform.LookAt(target);
+        player.walkingThroughDoor = true;
         LTSeq seq = LeanTween.sequence();
-        seq.append(door.openTime);
+        if(!looksLikeShit)
+            seq.append(door.openTime);
         seq.append(() => {
             CameraToStagePosition(nextRoom);
+            player.velocity = 1.5f;
         });
         seq.append(
-            LeanTween.move(player.gameObject, nextRoom == 1 ? room1StartPoint : room2StartPoint, playerRoomSwitchSpeed).setOnComplete(() =>
+            LeanTween.move(player.gameObject, target, playerRoomSwitchSpeed).setOnComplete(() =>
             {
-                door.Close(this);
+                if (!looksLikeShit)
+                {
+                    door.Close(this);
+                }
+                else
+                {
+                    CompleteRoomSwitch();
+                }
+                player.velocity = 0f;
+                player.walkingThroughDoor = false;
             })
         );
     }
 
     public void CompleteRoomSwitch()
     {
-        PlayerController player = PlayerController.instance;
+        player.ani.gameObject.SetActive(true);
         player.SetLockInputs(false);
         if (nextRoom == 1)
         {

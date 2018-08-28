@@ -15,11 +15,21 @@ public class StairsController : MonoBehaviour {
     private PlayerController player;
     private StageController releaseStage;
 
+    public Vector3 downPosition;
+    public Vector3 upPosition;
+
     public GameObject cameraDummy;
     private bool goingUp, goingDown;
     public float goingDownTime = 17.4f;
     public float goingUpTime = 18.2084f;
     private float timer = 0f;
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(downPosition, .25f);
+        Gizmos.DrawWireSphere(upPosition, .25f);
+    }
 
     private void Update()
     {
@@ -28,6 +38,14 @@ public class StairsController : MonoBehaviour {
             timer += Time.deltaTime;
             if(timer >= (goingDown == true ? goingDownTime : goingUpTime))
             {
+                if (goingUp)
+                {
+                    RebuildPlayerObjectUp();
+                }
+                else
+                {
+                    RebuildPlayerObjectDown();
+                }
                 ReleasePlayer();
                 goingDown = false;
                 goingUp = false;
@@ -62,16 +80,21 @@ public class StairsController : MonoBehaviour {
         
         if(trigger == topTrigger)
         {
-            goingUp = true;
+            player.transform.eulerAngles = new Vector3(0, -90, 0);
+            player.transform.position = downPosition; // Hier die Endposition beim herunterlaufen einfügen
+            goingDown = true;
             EnableBottomStage();
             animator.SetBool("GoingDown", true);
+            LeanTween.move(cameraDummy, new Vector3(cameraDummy.transform.position.x, 1.041f, cameraDummy.transform.position.z), goingDownTime);
             releaseStage = bottomStage;
         }
         else
         {
-            goingDown = true;
+            player.transform.eulerAngles = new Vector3(0, 90, 0);
+            goingUp = true;
             EnableTopStage();
             animator.SetBool("GoingUp", true);
+            LeanTween.move(cameraDummy, new Vector3(cameraDummy.transform.position.x, 7.52f, cameraDummy.transform.position.z), goingUpTime);
             releaseStage = topStage;
         }
         player.SetLockInputs(true);
@@ -81,5 +104,20 @@ public class StairsController : MonoBehaviour {
     {
         player.stage = releaseStage;
         player.SetLockInputs(false);
+    }
+
+    private void RebuildPlayerObjectUp()
+    {
+        Debug.Log("Rebuilding Player Up");
+        player.transform.position = upPosition;// Hier die Endposition beim hochlaufen einfügen
+        player.ResetPlayerMesh();
+        player.ani.transform.localEulerAngles = new Vector3(0, 0, 0);
+    }
+
+    private void RebuildPlayerObjectDown()
+    {
+        Debug.Log("Rebuilding Player Down");
+        player.transform.eulerAngles = new Vector3(0, -90, 0);
+        player.ResetPlayerMesh();
     }
 }
