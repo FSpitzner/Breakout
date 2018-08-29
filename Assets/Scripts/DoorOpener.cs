@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DoorOpener : MonoBehaviour {
+public class DoorOpener : MonoBehaviour
+{
 
     [Tooltip("Put Door in here. If this Skript is on the Door itself, let it empty")]
     public GameObject door;
     public RegisterEvent openDoorEvent;
     public Vector3 defaultRotation;
-	public Vector3 openRotation;
-	public float openTime = 2f;
-	private bool opened = false;
+    public Vector3 openRotation;
+    public float openTime = 2f;
+    private bool opened = false;
     public bool doorIsLocked = false;
     public int keyItemID = 0;
     public int questID = 0;
-	[HideInInspector]
-	public bool tweening = false;
+    [HideInInspector]
+    public bool tweening = false;
 
     [Header("Fear Settings")]
     public bool increaseFear;
@@ -38,7 +39,7 @@ public class DoorOpener : MonoBehaviour {
     public bool CheckDoorIsLocked()
     {
         Debug.Log("Check started");
-        if(doorIsLocked)
+        if (doorIsLocked)
             Debug.Log("Door is Locked!");
         //LevelController.instance.getQuest().CheckQuestObject(this);
         if (openDoorEvent != null)
@@ -55,9 +56,9 @@ public class DoorOpener : MonoBehaviour {
     private bool CheckHasKeys()
     {
         bool hasKeys = false;
-        PlayerController.instance.items.ForEach(delegate(ItemController i)
+        PlayerController.instance.items.ForEach(delegate (ItemController i)
         {
-            if(i.itemID == keyItemID)
+            if (i.itemID == keyItemID)
             {
                 hasKeys = true;
             }
@@ -65,7 +66,8 @@ public class DoorOpener : MonoBehaviour {
         return !hasKeys;
     }
 
-	public void Open(){
+    public void Open()
+    {
         if (!tweening)
         {
             if (increaseFear)
@@ -83,25 +85,14 @@ public class DoorOpener : MonoBehaviour {
             }
             else
             {
-               //opened: true= open --> door closes; false=closed --> door opens
-                tweening = true;
-                if (!opened)
-                {    //DOORCREAKING
-                 //   playerSoundSystem.playDoorCreak(opened);
-                    LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
+
+                // playerSoundSystem.playDoorCreak(opened);
+                playerSoundSystem.playDoorCreak(opened);
+                    LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
                     {
-                        opened = true;
+                        opened = false;
                         tweening = false;
                     });
-                }
-                else
-                //DOORCREAKING
-               // playerSoundSystem.playDoorCreak(opened);
-                LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-                {
-                    opened = false;
-                    tweening = false;
-                });
             }
         }
     }
