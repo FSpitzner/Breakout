@@ -54,15 +54,22 @@ MonoBehaviour:
     Value: 256
   - Platform: 2
     Value: 32
-  Plugins: []
+  Plugins:
+  - fmod_gain
   MasterBank: Master Bank
   Banks:
+  - AmbientinGame
   - ThunderBig
   - rain_normal
   - ThunderSmall
+  - Rain_Ambient
   - rain_Window
+  - steps
   - wind_window
   - Bank_heartbeatSystem
   - windsfx
+  - door
   - FearLocation
   - FearLocation_2d
+  - Menu
+  - GruberSleep

@@ -20,7 +20,7 @@ public class RegisterEventListener : MonoBehaviour {
     private void Start()
     {
         if (targetMethode == null && respondWithMethode)
-            Debug.LogWarning("Attention! TargetMethode on " + this + " not set!");
+            Debug.LogWarning("Attention! TargetMethode on " + gameObject.name + " not set!");
     }
 
     private void OnEnable()

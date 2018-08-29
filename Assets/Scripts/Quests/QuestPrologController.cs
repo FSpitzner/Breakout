@@ -8,7 +8,6 @@ public class QuestPrologController : QuestController {
     [Tooltip("UI-Graphics-Panel for Keys")]
     public GameObject uikeys;
 
-
     private bool gotBread = false, gotFlashlight = false, gotKeys = false;
     
     public override void CheckQuestObject(Object obj)
@@ -23,14 +22,15 @@ public class QuestPrologController : QuestController {
         }
     }
 
-    private void CheckWinState()
+    private bool CheckWinState()
     {
         Debug.Log("Test: Bread: " + gotBread + " , Flashlight: " + gotFlashlight + " , Keys: " + gotKeys);
         if(gotBread && gotFlashlight && gotKeys)
         {
             Debug.Log("Test done");
-            WIN();
+            return true;
         }
+        return false;
     }
 
     private void WIN()

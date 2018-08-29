@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using FMODUnity;
 
 public class DoorOpener : MonoBehaviour
 {
@@ -26,8 +27,11 @@ public class DoorOpener : MonoBehaviour
     [ConditionalHide("increaseFear", true)]
     public float fearAmount;
 
-    [Header("PlayerSoundSystem")]
-    public playerSounds_control playerSoundSystem;
+    [Header("Door Creaks")]
+    /*public StudioEventEmitter FMOD_EVENT_EMIT_reakOpen;
+    public StudioEventEmitter FMOD_EVENT_EMIT_reakClose;*/
+    public string CREAK_OPEN;
+    public string CREAK_CLOSE;
     /*
 	void OnDrawGizmos(){
 		
@@ -76,7 +80,11 @@ public class DoorOpener : MonoBehaviour
             tweening = true;
             if (!opened)
             {    //DOORCREAKING
+<<<<<<< HEAD
                 // playerSoundSystem.playDoorCreak(opened);
+=======
+                RuntimeManager.PlayOneShot(CREAK_OPEN);
+>>>>>>> 7c0c36ca0b11cae2ef1abc3d8f62acd1bcfaccef
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                 {
                     opened = true;
@@ -85,6 +93,7 @@ public class DoorOpener : MonoBehaviour
             }
             else
             {
+<<<<<<< HEAD
 
                 // playerSoundSystem.playDoorCreak(opened);
                 playerSoundSystem.playDoorCreak(opened);
@@ -93,6 +102,14 @@ public class DoorOpener : MonoBehaviour
                         opened = false;
                         tweening = false;
                     });
+=======
+                RuntimeManager.PlayOneShot(CREAK_CLOSE);
+                LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
+                {
+                    opened = false;
+                    tweening = false;
+                });
+>>>>>>> 7c0c36ca0b11cae2ef1abc3d8f62acd1bcfaccef
             }
         }
     }
@@ -100,7 +117,7 @@ public class DoorOpener : MonoBehaviour
     public void Close(ChangeStage stage)
     {
         //DOORCREAKING
-        //playerSoundSystem.playDoorCreak(opened);
+        RuntimeManager.PlayOneShot(CREAK_CLOSE);
         tweening = true;
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
         {
