@@ -76,7 +76,7 @@
     </object>
     <object class="EventMixerMaster" id="{569c9aec-9c54-4a8b-9f85-c06ceb595faf}">
         <property name="volume">
-            <value>10</value>
+            <value>5.5</value>
         </property>
         <relationship name="effectChain">
             <destination>{9a0de4cd-74b0-4e12-b2ff-24c105c39031}</destination>
@@ -138,8 +138,11 @@
             <destination>{94979d20-3ab0-43c3-9496-35be086438d3}</destination>
             <destination>{e7097332-fcdf-4bf2-8c62-4d54146162e3}</destination>
             <destination>{9e18df2a-e7fe-499f-a723-0cb4eb9884ee}</destination>
+            <destination>{f2b68b3e-a6c9-4d5a-ae8d-7fb3a375dab4}</destination>
             <destination>{86cbf02e-7e74-43cb-aa93-cd4beb561d5a}</destination>
             <destination>{0b30914e-e696-48db-87e1-fe91dcfc24c4}</destination>
+            <destination>{8c6e5995-bccc-48b3-b76a-5dc3b295a8a6}</destination>
+            <destination>{cb862f69-545d-48fa-bdb4-4c271883398a}</destination>
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{0c3851a2-a73a-4a75-820a-7e583f882929}"/>
@@ -151,7 +154,14 @@
     </object>
     <object class="MixerBusPanner" id="{7252d731-31e1-4451-8c29-a2b6d03db198}"/>
     <object class="MixerBusFader" id="{2339fe80-e4ab-4ce4-b326-d107d435ceee}"/>
-    <object class="SpatialiserEffect" id="{235764ec-4ed1-433c-ad93-6159ef5769cb}"/>
+    <object class="SpatialiserEffect" id="{235764ec-4ed1-433c-ad93-6159ef5769cb}">
+        <property name="minimumDistance">
+            <value>0.099999994</value>
+        </property>
+        <property name="maximumDistance">
+            <value>2</value>
+        </property>
+    </object>
     <object class="ThreeEQEffect" id="{16644385-3e10-427b-a162-2b6c5e785c92}">
         <property name="lowGain">
             <value>-23</value>
@@ -170,9 +180,6 @@
         </property>
     </object>
     <object class="FlangerEffect" id="{94979d20-3ab0-43c3-9496-35be086438d3}">
-        <property name="bypass">
-            <value>true</value>
-        </property>
         <property name="rate">
             <value>0.219999999</value>
         </property>
@@ -184,9 +191,6 @@
         </property>
     </object>
     <object class="ChorusEffect" id="{e7097332-fcdf-4bf2-8c62-4d54146162e3}">
-        <property name="bypass">
-            <value>true</value>
-        </property>
         <property name="rate">
             <value>0.0200000014</value>
         </property>
@@ -198,12 +202,20 @@
         </property>
     </object>
     <object class="PluginEffect" id="{9e18df2a-e7fe-499f-a723-0cb4eb9884ee}">
-        <property name="bypass">
-            <value>true</value>
-        </property>
         <relationship name="plugin">
             <destination>{4b299526-8c77-4a2c-94ea-8e01a63b6a64}</destination>
         </relationship>
+    </object>
+    <object class="SFXReverbEffect" id="{f2b68b3e-a6c9-4d5a-ae8d-7fb3a375dab4}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
+        <property name="decayTime">
+            <value>400</value>
+        </property>
+        <property name="wetLevel">
+            <value>-11.5</value>
+        </property>
     </object>
     <object class="ThreeEQEffect" id="{86cbf02e-7e74-43cb-aa93-cd4beb561d5a}">
         <property name="bypass">
@@ -233,10 +245,47 @@
             <value>true</value>
         </property>
         <property name="midGain">
-            <value>10</value>
+            <value>-7.5</value>
         </property>
         <property name="highGain">
+            <value>-6.5</value>
+        </property>
+    </object>
+    <object class="MultibandEqEffect" id="{8c6e5995-bccc-48b3-b76a-5dc3b295a8a6}">
+        <property name="filterTypeA">
             <value>10</value>
+        </property>
+        <property name="filterTypeB">
+            <value>4</value>
+        </property>
+        <property name="frequencyA">
+            <value>5721.8877</value>
+        </property>
+        <property name="frequencyB">
+            <value>2603.80005</value>
+        </property>
+        <property name="frequencyC">
+            <value>2396.7063</value>
+        </property>
+        <property name="qualityA">
+            <value>0.100000001</value>
+        </property>
+        <property name="qualityB">
+            <value>0.288379312</value>
+        </property>
+        <property name="gainC">
+            <value>-30</value>
+        </property>
+    </object>
+    <object class="ThreeEQEffect" id="{cb862f69-545d-48fa-bdb4-4c271883398a}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
+        <property name="midGain">
+            <value>-29</value>
+        </property>
+        <property name="highGain">
+            <value>-80</value>
         </property>
     </object>
     <object class="MixerBusFader" id="{eb207f98-45a0-41eb-b635-17848e6fd217}"/>

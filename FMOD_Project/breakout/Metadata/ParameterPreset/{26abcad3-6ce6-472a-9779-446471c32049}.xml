@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{26abcad3-6ce6-472a-9779-446471c32049}">
+        <property name="name">
+            <value>backpackVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b36c1cf6-eb1e-44b3-8a41-825a395f1ec1}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{319f974e-401c-4dfb-85bf-3ccded8ce7a1}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{319f974e-401c-4dfb-85bf-3ccded8ce7a1}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

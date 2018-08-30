@@ -28,6 +28,7 @@ public class Constants{
     public static readonly string HEARTVOL = "heartvolume";
     public static readonly string AMBRAINVOL = "ambrainvol";
     public static readonly string AMBIENTINGAMEMUSICVOL = "ambmusicvol";
+    public static readonly string DREAMWORLDMUSICVOL = "DreamworldMusicVol";
     public static readonly string AMOUNTMENTALILLNESS = "amountMentalIllness";
 
     public static readonly string MENUVOL = "MenuVol";

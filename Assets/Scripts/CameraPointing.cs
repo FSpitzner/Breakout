@@ -48,7 +48,8 @@ public class CameraPointing : MonoBehaviour {
                 //Debug.Log("TIMERPOS " + timerPosition);
                 //Debug.Log("TIMER " + timer);
                 //if (timerPosition >= 0.2 && timerPosition <= 0.3) { LevelController.instance.playHeartbeat(); }
-                if (timer >= 0.075 && timer <= 0.11) { playerSoundSystem.playHeartSFX(); }
+                if (timer >= 0.075 && timer <= 0.11) { playerSoundSystem.playHeartSFX();
+                }
 
                 /*Debug.Log("TRIGGERED!!!");
                 isTweening = true;

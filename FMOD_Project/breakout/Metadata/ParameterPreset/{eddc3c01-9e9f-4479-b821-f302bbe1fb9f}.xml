@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{eddc3c01-9e9f-4479-b821-f302bbe1fb9f}">
+        <property name="name">
+            <value>sighVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b36c1cf6-eb1e-44b3-8a41-825a395f1ec1}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{46bc0c78-6322-4b10-8fb3-4421c0afb2ea}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{46bc0c78-6322-4b10-8fb3-4421c0afb2ea}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
