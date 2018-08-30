@@ -163,13 +163,11 @@ public class DoorOpener : MonoBehaviour
             {    //DOORCREAKING
 
                 RuntimeManager.PlayOneShot(CREAK_OPEN);
-
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
 
                 {
 
                     opened = true;
-
                     tweening = false;
 
                 });
@@ -179,7 +177,6 @@ public class DoorOpener : MonoBehaviour
             else
 
             {
-
                 RuntimeManager.PlayOneShot(CREAK_CLOSE);
 
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
@@ -191,7 +188,6 @@ public class DoorOpener : MonoBehaviour
                     tweening = false;
 
                 });
-
             }
 
         }

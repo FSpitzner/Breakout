@@ -240,9 +240,9 @@ GameObject:
   - component: {fileID: 114106223045588740}
   - component: {fileID: 114123578245502096}
   - component: {fileID: 114617904043294024}
-  - component: {fileID: 95625418409699588}
-  - component: {fileID: 114668497700470698}
   - component: {fileID: 114778619800846048}
+  - component: {fileID: 114838440045872962}
+  - component: {fileID: 114307959323695902}
   m_Layer: 0
   m_Name: Player_2
   m_TagString: Player
@@ -1740,8 +1740,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1675982175515546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.87, z: -0.09}
-  m_LocalScale: {x: 178.48578, y: 178.48572, z: 178.48578}
+  m_LocalPosition: {x: -0, y: -1, z: -0.09}
+  m_LocalScale: {x: 180, y: 180, z: 180}
   m_Children:
   - {fileID: 4115316290290704}
   - {fileID: 4203688717952766}
@@ -1976,7 +1976,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182613612045028}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 19.81, y: 8.86, z: 9.96}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318439041717226}
@@ -2261,25 +2261,7 @@ Animator:
   m_Avatar: {fileID: 9000000, guid: e01922d23a96c1d408784ff07e40bdc6, type: 3}
   m_Controller: {fileID: 9100000, guid: 2af2e65f69335cc43b969efb76f31d2e, type: 2}
   m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!95 &95625418409699588
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1182613612045028}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 981c69b6614281244aa683f2294be14b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -2354,6 +2336,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListenerNumber: 0
+--- !u!114 &114307959323695902
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182613612045028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463711b5734044245a8a54d0783a1fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: fba72a6c54b6d7f4aa3e9d82fbb6b7c8, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114373316795720938}
+        m_MethodName: PauseGame
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114347511015532810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2390,6 +2400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 95386258125281256}
+  playerMesh: {fileID: 4611688780213960}
   maxMoveSpeed: 5
   maxCrouchSpeed: 2.5
   jumpPower: 10
@@ -2398,13 +2409,16 @@ MonoBehaviour:
   canStandup: 1
   defaultCollider: {fileID: 136052226973939042}
   crouchCollider: {fileID: 136315910288315274}
-  jumpKey: 332
   runKey: 331
   crouchKey: 333
   interactKey: 330
+  pauseKey: 337
   cameraDummy: {fileID: 0}
   camSmoothSpeed: 0.004
   stage: {fileID: 0}
+  pauseEvent: {fileID: 11400000, guid: 7eab1c31866b37843a9cb7cb79245587, type: 2}
+  resumeEvent: {fileID: 11400000, guid: fba72a6c54b6d7f4aa3e9d82fbb6b7c8, type: 2}
+  walkingThroughDoor: 0
   items: []
 --- !u!114 &114617904043294024
 MonoBehaviour:
@@ -2432,20 +2446,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 114373316795720938}
+        m_MethodName: PauseGame
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 114373316795720938}
+        m_MethodName: SetGameOver
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114668497700470698
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1182613612045028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beed9eac97b04a04281917396ac9966a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!114 &114693460131713670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2469,6 +2493,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54295062191059642}
+--- !u!114 &114838440045872962
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1182613612045028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463711b5734044245a8a54d0783a1fcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7eab1c31866b37843a9cb7cb79245587, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114373316795720938}
+        m_MethodName: PauseGame
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!136 &136052226973939042
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour {
     public GameEvent pauseEvent;
     public GameEvent resumeEvent;
     private bool gameOver = false;
+    [HideInInspector]
     public bool walkingThroughDoor = false;
 
 

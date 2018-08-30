@@ -105,7 +105,8 @@ public class ChangeStage : InteractTrigger {
         player.transform.position = nextRoom == 1 ? room2StartPoint : room1StartPoint;
         player.StopPlayerMovement();
         Vector3 target = nextRoom == 1 ? room1StartPoint : room2StartPoint;
-        player.transform.LookAt(target);
+        if(!looksLikeShit)
+            player.transform.LookAt(target);
         player.walkingThroughDoor = true;
         LTSeq seq = LeanTween.sequence();
         if(!looksLikeShit)
