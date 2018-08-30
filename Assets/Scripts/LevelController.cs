@@ -67,13 +67,14 @@ public class LevelController : MonoBehaviour {
             attention.value = 0f;
         }
 	}
-
-	void Start(){
-        if(menuController != null)
+    
+    private void Start()
+    {
+        if (menuController != null)
         {
             menuController.gameObject.SetActive(true);
         }
-	}
+    }
 
     private void FearTick()
     {
@@ -151,6 +152,11 @@ public class LevelController : MonoBehaviour {
             }
         }
         return stages;
+    }
+
+    public void ToogleCompanion(bool state)
+    {
+        companion.SetActive(state);
     }
 }
 

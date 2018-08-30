@@ -11,12 +11,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c56a10f4138c1f42859de66e5138a10, type: 3}
   m_Name: Fear
   m_EditorClassIdentifier: 
-  fear: 179.80014
+  fear: 107.80032
   fearDreamworldActivateValue: 120
   fearDreamworldDeactivateValue: 100
   fearPanicAttack: 180
+  fearEventEnterThreshold: 150
+  fearEventExitThreshold: 140
   onDreamworldEnter: {fileID: 11400000, guid: 6d3dea57362859d478421e19c717279b, type: 2}
   onDreamworldExit: {fileID: 11400000, guid: 159fbd8acf9850742ac541f295e8ddc1, type: 2}
+  onFearEnter: {fileID: 11400000, guid: 2c34af7568674bd46a968dbdc8e23c65, type: 2}
+  onFearExit: {fileID: 11400000, guid: b48beda9180ec884db7a67a560bbc7a6, type: 2}
   onPanicAttack: {fileID: 11400000, guid: e7616ad4ee3e521448d0c18f57366178, type: 2}
   start: 40
   low: 60

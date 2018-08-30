@@ -14,10 +14,16 @@ public class Fear : ScriptableObject {
     [Tooltip("The amount of Fear needed to Trigger the Panic Attack")]
     public float fearPanicAttack;
 
+    public float fearEventEnterThreshold;
+    public float fearEventExitThreshold;
+    private bool fearEventActive = false;
+
     private bool dreamworldActive;
 
     public GameEvent onDreamworldEnter;
     public GameEvent onDreamworldExit;
+    public GameEvent onFearEnter;
+    public GameEvent onFearExit;
     public GameEvent onPanicAttack;
 
     [Header("Heartbeat")]
@@ -53,7 +59,18 @@ public class Fear : ScriptableObject {
         if (fear >= fearPanicAttack)
         {
             onPanicAttack.Raise();
-        }else if (fear >= fearDreamworldActivateValue)
+        }
+        else if (fearEventActive && fear <= fearEventExitThreshold)
+        {
+            onFearExit.Raise();
+            fearEventActive = false;
+        }
+        else if (fear >= fearEventEnterThreshold && !fearEventActive)
+        {
+            onFearEnter.Raise();
+            fearEventActive = true;
+        }
+        else if (fear >= fearDreamworldActivateValue && !IsDreamworldActive())
         {
             dreamworldActive = true;
             onDreamworldEnter.Raise();

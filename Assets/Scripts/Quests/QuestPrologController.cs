@@ -7,6 +7,7 @@ public class QuestPrologController : QuestController {
     [Header("Quest Items")]
     [Tooltip("UI-Graphics-Panel for Keys")]
     public GameObject uikeys;
+    public GameEvent winEvent;
 
     private bool gotBread = false, gotFlashlight = false, gotKeys = false;
     
@@ -17,7 +18,14 @@ public class QuestPrologController : QuestController {
             DoorOpener door = (DoorOpener)obj;
             if(door.questID == 1)
             {
-                uikeys.SetActive(true);
+                if (gotKeys)
+                {
+                    WIN();
+                }
+                else
+                {
+                    uikeys.SetActive(true);
+                }
             }
         }
     }
@@ -36,7 +44,7 @@ public class QuestPrologController : QuestController {
     private void WIN()
     {
         // TODO: Show Outro
-
+        winEvent.Raise();
         Debug.Log("WIN");
         
     }

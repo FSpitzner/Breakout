@@ -98,10 +98,27 @@ public class PlayerController : MonoBehaviour {
                 ref camCurVelocity, camSmoothSpeed);
             if (Input.GetKeyDown(interactKey))
             {
-                interactTriggers.ForEach((InteractTrigger it) =>
+                bool isdoor = false;
+                if (interactTriggers.Count != 0)
                 {
-                    it.Interact();
-                });
+                    interactTriggers.ForEach((InteractTrigger it) =>
+                    {
+                        if (it.GetType() == typeof(ChangeStage))
+                        {
+                            Debug.Log("InteractTrigger: " + it.name + " is type of ChangeStage");
+                            isdoor = true;
+                        }
+                        it.Interact();
+                    });
+                    if (isdoor)
+                    {
+                        ani.SetBool("openDoor", true);
+                    }
+                    else
+                    {
+                        ani.SetBool("interact", true);
+                    }
+                }
             }
             if (Input.GetKeyDown(pauseKey) && !gameOver)
             {
