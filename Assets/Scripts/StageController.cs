@@ -182,6 +182,7 @@ public class StageController : MonoBehaviour {
     }
 }
 
+[CanEditMultipleObjects]
 [CustomEditor(typeof(StageController))]
 public class StageControllerEditor : Editor
 {

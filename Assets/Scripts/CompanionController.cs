@@ -60,6 +60,7 @@ public class CompanionController : MonoBehaviour {
          else
              movingSpeed = maxMovingSpeed;
              */
+        transform.LookAt(activeTarget);
         transform.position = Vector3.SmoothDamp(transform.position, activeTarget.position, ref curVelocity, 0.5f, maxMovingSpeed);
     }
     

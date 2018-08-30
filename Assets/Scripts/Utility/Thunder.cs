@@ -7,7 +7,8 @@ using UnityEditor;
 public class Thunder
 {
     public int ID;
-    public float FearAmount;
+    public float FearSoundstate0;
+    public float FearSoundstate1;
     public float AttentionDelay;
     public float AttentionTime;
 }
@@ -24,12 +25,14 @@ public class ThunderEditor : PropertyDrawer
         EditorGUI.indentLevel = 0;
 
         var idRect = new Rect(position.x + 10, position.y, 30, position.height);
-        var fearRect = new Rect(position.x + 45, position.y, 50, position.height);
-        var attentionDelayRect = new Rect(position.x + 100, position.y, 40, position.height);
-        var attentionTimeRect = new Rect(position.x + 145, position.y, 40, position.height);
+        var fearRect = new Rect(position.x + 45, position.y, 35, position.height);
+        var fear1Rect = new Rect(position.x + 85, position.y, 35, position.height);
+        var attentionDelayRect = new Rect(position.x + 125, position.y, 40, position.height);
+        var attentionTimeRect = new Rect(position.x + 170, position.y, 40, position.height);
 
         EditorGUI.PropertyField(idRect, property.FindPropertyRelative("ID"), GUIContent.none);
-        EditorGUI.PropertyField(fearRect, property.FindPropertyRelative("FearAmount"), GUIContent.none);
+        EditorGUI.PropertyField(fearRect, property.FindPropertyRelative("FearSoundstate0"), GUIContent.none);
+        EditorGUI.PropertyField(fear1Rect, property.FindPropertyRelative("FearSoundstate1"), GUIContent.none);
         EditorGUI.PropertyField(attentionDelayRect, property.FindPropertyRelative("AttentionDelay"), GUIContent.none);
         EditorGUI.PropertyField(attentionTimeRect, property.FindPropertyRelative("AttentionTime"), GUIContent.none);
 

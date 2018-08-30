@@ -64,7 +64,7 @@ public class ThunderstormController : MonoBehaviour {
         Debug.Log("Playing Thunder " + randomThunderID);
         lightAni.SetInteger("ThunderID", randomThunderID);
         StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue), randomThunderID, (float)player.stage.soundState));
-        fear.IncreaseFear(thunders[randomThunderID].FearAmount);
+        fear.IncreaseFear(player.stage.soundState == 0 ? thunders[randomThunderID].FearSoundstate0 : thunders[randomThunderID].FearSoundstate1);
         /*see.SetParameter(Constants.THUNDERID, (float)randomThunderID);
         see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
         see.Play();*/
@@ -75,7 +75,7 @@ public class ThunderstormController : MonoBehaviour {
         lightAni.SetInteger("ThunderID", id);
         Debug.Log("Playing Thunder " + id);
         StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue),id, (float)player.stage.soundState));
-        fear.IncreaseFear(thunders[id].FearAmount);
+        fear.IncreaseFear(player.stage.soundState == 0 ? thunders[id].FearSoundstate0 : thunders[id].FearSoundstate1);
         /*see.SetParameter(Constants.THUNDERID, (float)id);
         see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
         see.Play();*/

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PanelActivator : MonoBehaviour {
 
-	public void SetActive()
+    public GameObject obj;
+
+	public void Deactivate()
     {
-        gameObject.SetActive(false);
+        obj.SetActive(false);
     }
 }

@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class DreamworldObject : MonoBehaviour {
 
-	public float disappearTime;
+	public float delay;
 
-	public void Activate(){
-		transform.gameObject.SetActive (true);
-        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.5f);
+    private void Awake()
+    {
+        transform.localScale = new Vector3(0, 0, 0);
+        gameObject.SetActive(false);
+    }
+
+    public void Activate(){
+        Invoke("Appear", delay);
 	}
     
-
     public void Deactivate(){
-		Invoke ("Disappear", disappearTime);
+		Invoke ("Disappear", delay);
     }
 
 	private void Disappear(){
@@ -21,4 +25,10 @@ public class DreamworldObject : MonoBehaviour {
             transform.gameObject.SetActive(false);
         });
 	}
+
+    private void Appear()
+    {
+        transform.gameObject.SetActive(true);
+        LeanTween.scale(gameObject, new Vector3(1, 1, 1), 0.5f);
+    }
 }
