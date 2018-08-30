@@ -30,16 +30,18 @@ public class CompanionController : MonoBehaviour {
     public Transform companionTargetAmy;
     public Transform activeTarget;
     public Vector3 targetVector;
-    private Rigidbody rb;
-    private float defaultDrag;
+    public Animator animator;
+    private bool foundSomething = false;
+    //private Rigidbody rb;
+    //private float defaultDrag;
     private Vector3 curVelocity;
 
 
     private void Start()
     {
         movingSpeed = maxMovingSpeed;
-        rb = GetComponent<Rigidbody>();
-        defaultDrag = rb.drag;
+        //rb = GetComponent<Rigidbody>();
+        //defaultDrag = rb.drag;
         activeTarget = companionTargetAmy;
     }
 
@@ -47,6 +49,7 @@ public class CompanionController : MonoBehaviour {
     public void SetActive(bool state)
     {
         gameObject.SetActive(state);
+        transform.position = companionTargetAmy.position;
     }
 
     private void Update()
@@ -62,6 +65,16 @@ public class CompanionController : MonoBehaviour {
              */
         transform.LookAt(activeTarget);
         transform.position = Vector3.SmoothDamp(transform.position, activeTarget.position, ref curVelocity, 0.5f, maxMovingSpeed);
+        animator.SetFloat("velocity", curVelocity.magnitude);
+        if(!foundSomething && activeTarget != companionTargetAmy && Vector3.Distance(transform.position, activeTarget.position) <= 0.2f)
+        {
+            foundSomething = true;
+            animator.SetBool("spot", true);
+        }
+        else if(Vector3.Distance(transform.position, activeTarget.position) > 0.2f)
+        {
+            foundSomething = false;
+        }
     }
     
     private void FixedUpdate()

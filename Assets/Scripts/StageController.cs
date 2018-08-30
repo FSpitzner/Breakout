@@ -128,7 +128,7 @@ public class StageController : MonoBehaviour {
         }
         if (tweening)
         {
-            Debug.Log("Tweening! Opacity at: " + opacity);
+            ///Debug.Log("Tweening! Opacity at: " + opacity);
             mats.ForEach((Material m) =>
             {
                 m.SetFloat("Vector1_DB2A1952", opacity);
