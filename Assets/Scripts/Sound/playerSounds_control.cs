@@ -14,6 +14,7 @@ public class playerSounds_control : MonoBehaviour
     public StudioEventEmitter eventEmitterRefMenuMusic;
     public StudioEventEmitter eventEmitterRefDreamWorldMusic;
     public StudioEventEmitter eventEmitterRefSigh;
+    public StudioEventEmitter eventEmitterRefBackpack;
     //public StudioEventEmitter eventEmitterRefDoorOPENCreak;
     //public StudioEventEmitter eventEmitterRefDoorCLOSECreak;
 
@@ -158,7 +159,7 @@ public class playerSounds_control : MonoBehaviour
 
     public void playBackPack()
     {
-        RuntimeManager.PlayOneShot(Constants.BACKPACKEVENT);
+        eventEmitterRefBackpack.Play();
     }
 
     public void playSigh() {
