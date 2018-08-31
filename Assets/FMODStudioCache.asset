@@ -13,27 +13,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114494247519302760}
-  - {fileID: 114665521992267854}
-  - {fileID: 114994665819181320}
-  - {fileID: 114838197795265120}
-  - {fileID: 114248046801310538}
-  - {fileID: 114035843529399152}
-  - {fileID: 114937234955372042}
-  - {fileID: 114971668579949246}
-  - {fileID: 114806139252136690}
-  - {fileID: 114831326635989402}
-  - {fileID: 114765360241395666}
-  - {fileID: 114275745798959542}
-  - {fileID: 114251926476233672}
-  - {fileID: 114316673777643988}
-  - {fileID: 114420459082174080}
-  - {fileID: 114717337673554834}
-  - {fileID: 114285068839755382}
-  - {fileID: 114459218834897508}
-  - {fileID: 114256559120014120}
-  - {fileID: 114523918373624124}
-  - {fileID: 114560921370765866}
-  - {fileID: 114126352511287772}
+  - {fileID: 114523595897138694}
+  - {fileID: 114794903778001506}
+  - {fileID: 114850619214711266}
+  - {fileID: 114473529323328364}
+  - {fileID: 114327336070743724}
+  - {fileID: 114165944511307574}
+  - {fileID: 114797730150744868}
+  - {fileID: 114864815477886690}
+  - {fileID: 114357143617385880}
+  - {fileID: 114287419756097612}
+  - {fileID: 114471443963471318}
+  - {fileID: 114046596272336968}
+  - {fileID: 114307664104777864}
+  - {fileID: 114867906309296650}
+  - {fileID: 114302871989894396}
+  - {fileID: 114600929607370104}
+  - {fileID: 114628812196724328}
+  - {fileID: 114282571426727132}
+  - {fileID: 114606548988299912}
+  - {fileID: 114802818038173574}
+  - {fileID: 114379075253818204}
   EditorEvents:
   - {fileID: 114952559468451152}
   - {fileID: 114994904542457558}
@@ -57,10 +57,25 @@ MonoBehaviour:
   - {fileID: 114793909483934068}
   - {fileID: 114101669966289988}
   - {fileID: 114408271770043302}
-  MasterBankRef: {fileID: 114665521992267854}
+  MasterBankRef: {fileID: 114523595897138694}
   StringsBankRef: {fileID: 114494247519302760}
-  stringsBankWriteTime: 636713216389408892
+  stringsBankWriteTime: 636713214822159432
   cacheVersion: 2
+--- !u!114 &114017606271742078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: heartspeed
+  Min: 0
+  Max: 6
+  Default: 0
 --- !u!114 &114031104375243764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,6 +109,39 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1609024
   Exists: 1
+--- !u!114 &114046596272336968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\wind_window.bank
+  lastModified: 636702975508290124
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1628704
+  Exists: 1
+--- !u!114 &114070135701896656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: InXOut
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114079525417591494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +154,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: ambmusicvol
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114080646114191136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: backpackVol
   Min: 0
   Max: 1
   Default: 0
@@ -138,13 +201,13 @@ MonoBehaviour:
   Path: event:/Music/Menu
   guid: cf15cd4a94ff8c4ca707d451a98d32b4
   Banks:
-  - {fileID: 114560921370765866}
+  - {fileID: 114802818038173574}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114353730363094374}
-  - {fileID: 114637089552835518}
+  - {fileID: 114127622573344620}
+  - {fileID: 114333808540342436}
   MinDistance: 0
   MaxDistance: 0
   Length: 45482
@@ -166,6 +229,39 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2182816
   Exists: 1
+--- !u!114 &114127622573344620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: MenuVol
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114165944511307574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\rain_normal.bank
+  lastModified: 636680275449967060
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 450
+  Exists: 1
 --- !u!114 &114189925921039060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +276,7 @@ MonoBehaviour:
   Path: event:/Weather/wind_WINDOWEvent
   guid: 5b3f30028965a640ad850df97c895e38
   Banks:
-  - {fileID: 114251926476233672}
+  - {fileID: 114046596272336968}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -217,7 +313,7 @@ MonoBehaviour:
   Path: event:/LOOPONESHOTTEST
   guid: bca6f3b3845d2345af4426516a504f3c
   Banks:
-  - {fileID: 114256559120014120}
+  - {fileID: 114282571426727132}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -297,6 +393,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 66112
   Exists: 1
+--- !u!114 &114282571426727132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\LOOPONESHOTTEST.bank
+  lastModified: 636713214822149446
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1355904
+  Exists: 1
 --- !u!114 &114285068839755382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,6 +429,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 278336
   Exists: 1
+--- !u!114 &114287419756097612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\rain_Window.bank
+  lastModified: 636713214822659150
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5100224
+  Exists: 1
 --- !u!114 &114288177694913540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,6 +462,42 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114302871989894396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\door.bank
+  lastModified: 636709774787727681
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 163168
+  Exists: 1
+--- !u!114 &114307664104777864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\Bank_heartbeatSystem.bank
+  lastModified: 636713214821849622
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 82848
+  Exists: 1
 --- !u!114 &114316673777643988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,15 +530,33 @@ MonoBehaviour:
   Path: event:/playerSounds/heartbeatsSystem_Event
   guid: e0e5c4cde1d5bc4182fb4c26e8fe328a
   Banks:
-  - {fileID: 114316673777643988}
+  - {fileID: 114307664104777864}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114214649862537716}
+  - {fileID: 114017606271742078}
   MinDistance: 0
   MaxDistance: 0
   Length: 800
+--- !u!114 &114327336070743724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\ThunderBig.bank
+  lastModified: 636713214822429478
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1609024
+  Exists: 1
 --- !u!114 &114332541411477194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,15 +571,45 @@ MonoBehaviour:
   Path: event:/playerSounds/backpack_EVENT
   guid: b99d4a9177dca241bfcbcc6e901bc3e8
   Banks:
-  - {fileID: 114971668579949246}
+  - {fileID: 114797730150744868}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114288177694913540}
+  - {fileID: 114080646114191136}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114333808540342436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: WhichMusic
+  Min: 0
+  Max: 2
+  Default: 0
+--- !u!114 &114348759685907074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ambrainvol
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114353730363094374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +625,42 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114357143617385880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\Rain_Ambient.bank
+  lastModified: 636713214822279354
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 975328
+  Exists: 1
+--- !u!114 &114379075253818204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\GruberSleep.bank
+  lastModified: 636713214822019529
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 2182816
+  Exists: 1
 --- !u!114 &114401983407185650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +675,7 @@ MonoBehaviour:
   Path: event:/FearLocation_3d
   guid: 3b5407729215cd498fb2f4d71a0897f7
   Banks:
-  - {fileID: 114285068839755382}
+  - {fileID: 114600929607370104}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -445,7 +697,7 @@ MonoBehaviour:
   Path: event:/Music/GruberMusic
   guid: ab491fadc7fe4d468f5cee4f610bde5c
   Banks:
-  - {fileID: 114126352511287772}
+  - {fileID: 114379075253818204}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -504,6 +756,42 @@ MonoBehaviour:
   - Name: Desktop
     Value: 29952
   Exists: 1
+--- !u!114 &114471443963471318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\steps.bank
+  lastModified: 636711410243466575
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 66112
+  Exists: 1
+--- !u!114 &114473529323328364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\AmbientinGame.bank
+  lastModified: 636713214821658807
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 5772928
+  Exists: 1
 --- !u!114 &114494247519302760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,7 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Project\breakout\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636713216389408892
+  lastModified: 636713214822159432
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -536,7 +824,7 @@ MonoBehaviour:
   Path: event:/playerSounds/steps/walking_EVENT
   guid: ea5cd16f2961e847a15b3dcae1560270
   Banks:
-  - {fileID: 114275745798959542}
+  - {fileID: 114471443963471318}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -558,15 +846,48 @@ MonoBehaviour:
   Path: event:/Weather/Rain_WINDOW_Event
   guid: 32c39e8ff5b5d44987496dddfef32bcb
   Banks:
-  - {fileID: 114765360241395666}
+  - {fileID: 114287419756097612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
   Parameters:
-  - {fileID: 114710038863517180}
+  - {fileID: 114512902901223986}
   MinDistance: 1
   MaxDistance: 20
   Length: 76852
+--- !u!114 &114512902901223986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ambrainvol
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114523595897138694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\Master Bank.bank
+  lastModified: 636645803970350542
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
 --- !u!114 &114523918373624124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -614,7 +935,7 @@ MonoBehaviour:
   Path: event:/Weather/Rain_WINDOWEvent_OLD
   guid: d85646cb7cd39d4d9a325d503b9f3af9
   Banks:
-  - {fileID: 114765360241395666}
+  - {fileID: 114287419756097612}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -640,6 +961,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1242880
   Exists: 1
+--- !u!114 &114570175539591650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: sighVol
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114575455156946042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,15 +990,99 @@ MonoBehaviour:
   Path: event:/playerSounds/death_EVENT
   guid: 74b5424f8d1ea544b69bab669677ca87
   Banks:
-  - {fileID: 114459218834897508}
+  - {fileID: 114628812196724328}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114542918460749576}
+  - {fileID: 114671593577473498}
   MinDistance: 0
   MaxDistance: 0
   Length: 3582
+--- !u!114 &114600929607370104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation.bank
+  lastModified: 636645803970300588
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278336
+  Exists: 1
+--- !u!114 &114606548988299912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\FearLocation_2d.bank
+  lastModified: 636645803970320512
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 278048
+  Exists: 1
+--- !u!114 &114610019761887564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DreamworldMusicVol
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114628812196724328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\death.bank
+  lastModified: 636713214822449261
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 29952
+  Exists: 1
+--- !u!114 &114633951529425770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ThunderID2Play
+  Min: 0
+  Max: 12
+  Default: 0
 --- !u!114 &114637089552835518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,6 +1132,36 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114671593577473498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: deathVol
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114692161618603564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: amountMentalIllness
+  Min: 0
+  Max: 3
+  Default: 0
 --- !u!114 &114699708594665828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -756,7 +1206,7 @@ MonoBehaviour:
   Path: event:/playerSounds/steps/stairs_EVENT
   guid: fe07bb787c1dce4587e167cd98c14187
   Banks:
-  - {fileID: 114275745798959542}
+  - {fileID: 114471443963471318}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -796,7 +1246,7 @@ MonoBehaviour:
   Path: event:/generalEnvironment/door_open_EVENT
   guid: 09bb464872669144a2bd9daaaf01b3fc
   Banks:
-  - {fileID: 114717337673554834}
+  - {fileID: 114302871989894396}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -836,7 +1286,7 @@ MonoBehaviour:
   Path: event:/FearLocation_2d
   guid: 59be3ebe5b0ad84fa75c3a4713042b53
   Banks:
-  - {fileID: 114523918373624124}
+  - {fileID: 114606548988299912}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -844,6 +1294,60 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
+--- !u!114 &114794903778001506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\sighs.bank
+  lastModified: 636713214822679125
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 49664
+  Exists: 1
+--- !u!114 &114797730150744868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\backpack.bank
+  lastModified: 636713214822439460
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 29248
+  Exists: 1
+--- !u!114 &114802818038173574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\Menu.bank
+  lastModified: 636713214822229383
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1242880
+  Exists: 1
 --- !u!114 &114806139252136690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,13 +1380,13 @@ MonoBehaviour:
   Path: event:/Weather/ThunderEvent
   guid: 9da97dfc420b8840a6cced91e9ae738d
   Banks:
-  - {fileID: 114035843529399152}
+  - {fileID: 114327336070743724}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114031104375243764}
-  - {fileID: 114662632607949828}
+  - {fileID: 114633951529425770}
+  - {fileID: 114070135701896656}
   MinDistance: 0
   MaxDistance: 0
   Length: 22000
@@ -900,12 +1404,12 @@ MonoBehaviour:
   Path: event:/Weather/RainAmbientEVENT
   guid: 5023959f10f3a443807b678c1f5cf40c
   Banks:
-  - {fileID: 114831326635989402}
+  - {fileID: 114357143617385880}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114084220000308820}
+  - {fileID: 114348759685907074}
   MinDistance: 0
   MaxDistance: 0
   Length: 286852
@@ -941,12 +1445,12 @@ MonoBehaviour:
   Path: event:/Weather/windAmbientEvent
   guid: b0bc4930fb001a46bad7c2392c7a63ca
   Banks:
-  - {fileID: 114420459082174080}
+  - {fileID: 114867906309296650}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114431785036860502}
+  - {fileID: 114880948590764570}
   MinDistance: 0
   MaxDistance: 0
   Length: 638496
@@ -983,6 +1487,60 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114850619214711266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\DreamworldMusic.bank
+  lastModified: 636713214821919560
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 585600
+  Exists: 1
+--- !u!114 &114864815477886690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\ThunderSmall.bank
+  lastModified: 636686332130490895
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 450
+  Exists: 1
+--- !u!114 &114867906309296650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Unity Projects\Breakout\FMOD_Project\breakout\Build\Desktop\windsfx.bank
+  lastModified: 636713214823198836
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 13396448
+  Exists: 1
 --- !u!114 &114871916730614324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -997,7 +1555,7 @@ MonoBehaviour:
   Path: event:/generalEnvironment/door_close_EVENT
   guid: e8ad6f48e02d90479408a778e864f469
   Banks:
-  - {fileID: 114717337673554834}
+  - {fileID: 114302871989894396}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1005,6 +1563,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2436
+--- !u!114 &114880948590764570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ambwindvol
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114893822313290368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,12 +1592,12 @@ MonoBehaviour:
   Path: event:/Music/ambMusic
   guid: 9ecc8674e36b68499af6bd69079f665f
   Banks:
-  - {fileID: 114248046801310538}
+  - {fileID: 114473529323328364}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114079525417591494}
+  - {fileID: 114966183373107956}
   MinDistance: 0
   MaxDistance: 0
   Length: 226341
@@ -1075,15 +1648,30 @@ MonoBehaviour:
   Path: event:/playerSounds/sighs_EVENT
   guid: 9cb5f62662834f48a34a665a90a19946
   Banks:
-  - {fileID: 114994665819181320}
+  - {fileID: 114794903778001506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114843794091344678}
+  - {fileID: 114570175539591650}
   MinDistance: 0
   MaxDistance: 0
   Length: 3892
+--- !u!114 &114966183373107956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: ambmusicvol
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114971668579949246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1116,7 +1704,7 @@ MonoBehaviour:
   Path: event:/playerSounds/steps/running_EVENT
   guid: b03490fd8fe7af41a735a5972323a9a0
   Banks:
-  - {fileID: 114275745798959542}
+  - {fileID: 114471443963471318}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1156,13 +1744,13 @@ MonoBehaviour:
   Path: event:/Music/DreamWorldMusic_EVENT
   guid: 8b501e1a74ecfb4d84f1aa61cd8699f4
   Banks:
-  - {fileID: 114838197795265120}
+  - {fileID: 114850619214711266}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114699708594665828}
-  - {fileID: 114931291008045414}
+  - {fileID: 114610019761887564}
+  - {fileID: 114692161618603564}
   MinDistance: 0
   MaxDistance: 0
   Length: 24000
