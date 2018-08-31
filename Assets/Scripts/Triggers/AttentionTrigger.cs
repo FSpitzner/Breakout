@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+using FMOD.Studio;
+
 public class AttentionTrigger : Trigger {
 
     public float cooldownTimer = 2f;
@@ -15,26 +18,27 @@ public class AttentionTrigger : Trigger {
     
     private void FixedUpdate()
     {
-        if (isInside)
+        if (!thunderPlaying)
         {
-            if (!thunderPlaying)
+            if (isInside)
             {
                 if (timer >= cooldownTimer)
                 {
                     onCooldown = false;
                     timer = 0f;
                 }
-
-                else if (player.velocity >= type.maxSpeed && !onCooldown)
+                if (onCooldown)
+                {
+                    timer += Time.deltaTime;
+                }
+                else if (player.velocity >= type.maxSpeed)
                 {
                     attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
-                    onCooldown = true;
+
+                    RuntimeManager.PlayOneShot(Constants.LOUDSTEPFLOORCREAK);
+
                 }
             }
-        }
-        if (onCooldown)
-        {
-            timer += Time.deltaTime;
         }
     }
 

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114778489505740842}
   - component: {fileID: 114090358276139634}
   - component: {fileID: 114650149320601694}
+  - component: {fileID: 114996346506132440}
   m_Layer: 0
   m_Name: Wall_Door
   m_TagString: Untagged
@@ -277,9 +278,10 @@ MonoBehaviour:
   tweening: 0
   increaseFear: 0
   fear: {fileID: 0}
-  fearAmount: 0
+  fearValue: 0
   FMOD_EVENT_EMIT_CreakOpen: {fileID: 114090358276139634}
   FMOD_EVENT_EMIT_CreakClose: {fileID: 114778489505740842}
+  FMOD_EVENT_EMIT_Locked: {fileID: 114996346506132440}
 --- !u!114 &114778489505740842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,6 +294,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/generalEnvironment/door_close_EVENT
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &114996346506132440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1082761382119828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/generalEnvironment/door_locked_EVENT
   PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
