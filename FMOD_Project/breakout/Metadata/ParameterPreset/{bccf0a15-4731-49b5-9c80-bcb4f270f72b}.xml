@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{bccf0a15-4731-49b5-9c80-bcb4f270f72b}">
+        <property name="name">
+            <value>thunderVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2f467d3f-c74b-4169-8060-9677577c2b0a}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{337cb9ab-902a-44dc-9cb6-6e133a62c41d}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{337cb9ab-902a-44dc-9cb6-6e133a62c41d}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

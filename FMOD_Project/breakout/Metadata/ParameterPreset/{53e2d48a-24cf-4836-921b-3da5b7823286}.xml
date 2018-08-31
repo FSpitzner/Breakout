@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{53e2d48a-24cf-4836-921b-3da5b7823286}">
+        <property name="name">
+            <value>doorVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2f467d3f-c74b-4169-8060-9677577c2b0a}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{306fcd55-ae8a-4180-91d1-9e3d1085a454}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{306fcd55-ae8a-4180-91d1-9e3d1085a454}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

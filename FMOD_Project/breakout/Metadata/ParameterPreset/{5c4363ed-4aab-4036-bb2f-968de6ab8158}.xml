@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{5c4363ed-4aab-4036-bb2f-968de6ab8158}">
+        <property name="name">
+            <value>GruberToSleepingroom</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2b2beae9-2bb8-4a17-af2f-d092cc4e0b5c}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{82b899e8-b45e-430d-8021-98f22c0a3558}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{82b899e8-b45e-430d-8021-98f22c0a3558}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

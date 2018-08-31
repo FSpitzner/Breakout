@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4094857633457774}
   - component: {fileID: 114684084850627124}
+  - component: {fileID: 114082720422685484}
+  - component: {fileID: 114796027697018524}
   m_Layer: 0
   m_Name: GruberSchlafzimmer
   m_TagString: Untagged
@@ -40,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114082720422685484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107436529485366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec6ab3e12a2524458d7f48d4868ef80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GruberToSleepingroomEventPath: event:/gruber/gruber_Steps_EVENT
+  GruberSleepingroomMusic: {fileID: 114684084850627124}
 --- !u!114 &114684084850627124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +67,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Event: event:/Music/GruberMusic
-  PlayEvent: 1
+  PlayEvent: 0
   StopEvent: 0
   CollisionTag: 
   AllowFadeout: 1
@@ -61,4 +76,35 @@ MonoBehaviour:
   Params: []
   OverrideAttenuation: 1
   OverrideMinDistance: 1.4858656
-  OverrideMaxDistance: 12.920186
+  OverrideMaxDistance: 15.534481
+--- !u!114 &114796027697018524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107436529485366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80323f55ed35c5e4aa728327de0fbbea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 95a7735644f387e4dbb9dd0a174ef01a, type: 2}
+  methodeID: 0
+  respondWithMethode: 0
+  target: {fileID: 0}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114082720422685484}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

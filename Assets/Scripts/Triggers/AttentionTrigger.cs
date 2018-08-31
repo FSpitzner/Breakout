@@ -54,4 +54,9 @@ public class AttentionTrigger : Trigger {
             player = null;
         }
     }
+
+    public void SetThunderPlaying(bool state)
+    {
+        thunderPlaying = state;
+    }
 }

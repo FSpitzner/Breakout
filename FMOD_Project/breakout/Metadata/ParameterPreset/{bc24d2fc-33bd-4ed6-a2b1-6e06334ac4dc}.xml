@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{bc24d2fc-33bd-4ed6-a2b1-6e06334ac4dc}">
+        <property name="name">
+            <value>GruberSteps</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2b2beae9-2bb8-4a17-af2f-d092cc4e0b5c}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{1845dbed-bf7a-4a5e-a850-022095ab451c}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{1845dbed-bf7a-4a5e-a850-022095ab451c}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
