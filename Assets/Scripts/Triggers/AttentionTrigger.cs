@@ -25,7 +25,7 @@ public class AttentionTrigger : Trigger {
                     timer = 0f;
                 }
 
-                else if (player.velocity >= type.maxSpeed)
+                else if (player.velocity >= type.maxSpeed && !onCooldown)
                 {
                     attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
                     onCooldown = true;
