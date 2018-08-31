@@ -3,6 +3,7 @@ using UnityEngine;
 using FMODUnity;
 using System.Collections.Generic;
 using System.Collections;
+using FMOD.Studio;
 
 [RequireComponent(typeof(StudioEventEmitter))]
 public class ThunderstormController : MonoBehaviour {
@@ -27,10 +28,13 @@ public class ThunderstormController : MonoBehaviour {
     public PlayerController player;
     public Fear fear;
 
+    
     private int i = 0;
     private float thunderEventTimer = -.1f;
     public GameEvent thunderStartEvent;
     public GameEvent thunderStopEvent;
+
+    public playerSounds_control playerSoundSystem;
 
     private void Update()
     {
@@ -65,6 +69,7 @@ public class ThunderstormController : MonoBehaviour {
         lightAni.SetInteger("ThunderID", randomThunderID);
         StartCoroutine(PlaySound(Random.Range(thunderstormDistance.minValue, thunderstormDistance.maxValue), randomThunderID, (float)player.stage.soundState));
         fear.IncreaseFear(player.stage.soundState == 0 ? thunders[randomThunderID].FearSoundstate0 : thunders[randomThunderID].FearSoundstate1);
+        
         /*see.SetParameter(Constants.THUNDERID, (float)randomThunderID);
         see.SetParameter(Constants.SOUNDSTATE, player.stage.soundState);
         see.Play();*/
@@ -95,5 +100,7 @@ public class ThunderstormController : MonoBehaviour {
         see.SetParameter(Constants.THUNDERID, id);
         see.SetParameter(Constants.SOUNDSTATE, soundstate);
         see.Play();
+
+        playerSoundSystem.playSigh();
     }
 }
