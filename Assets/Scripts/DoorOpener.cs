@@ -49,7 +49,10 @@ public class DoorOpener : MonoBehaviour
         Debug.Log("Jetzt bin ich schon hier!");
         bool isLocked = doorIsLocked == false ? false : CheckHasKeys();
         if (isLocked)
+        {
+            if(FMOD_EVENT_EMIT_Locked != null)
             FMOD_EVENT_EMIT_Locked.Play();
+        }
         return doorIsLocked == false ? false : CheckHasKeys();
     }
 

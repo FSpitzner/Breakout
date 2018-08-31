@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 114759914978117034}
   - component: {fileID: 114942357984726132}
   - component: {fileID: 114782331317018104}
+  - component: {fileID: 114733207079661948}
   m_Layer: 0
   m_Name: PlayerSoundSystem
   m_TagString: Untagged
@@ -102,7 +103,9 @@ MonoBehaviour:
   AllowFadeout: 0
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: doorVol
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -176,7 +179,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: ambrainvol
+    Value: 0.355
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -282,7 +287,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: doorVol
+    Value: 1
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -305,6 +312,30 @@ MonoBehaviour:
   TriggerOnce: 0
   Preload: 0
   Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &114733207079661948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1298631260627166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/playerSounds/backpack_EVENT
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params:
+  - Name: backpackVol
+    Value: 0.929
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -348,10 +379,8 @@ MonoBehaviour:
   eventEmitterRefMenuMusic: {fileID: 114754423338918644}
   eventEmitterRefDreamWorldMusic: {fileID: 114942357984726132}
   eventEmitterRefSigh: {fileID: 114782331317018104}
+  eventEmitterRefBackpack: {fileID: 114733207079661948}
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
-  backpackEvent: event:/playerSounds/backpack_EVENT
-  deathEvent: event:/playerSounds/death_EVENT
-  sighEvent: event:/playerSounds/sighs_EVENT
 --- !u!114 &114759914978117034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,6 +454,8 @@ MonoBehaviour:
   Params:
   - Name: volume
     Value: 0.571
+  - Name: ambwindvol
+    Value: 0.393
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
@@ -477,7 +508,9 @@ MonoBehaviour:
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
-  Params: []
+  Params:
+  - Name: DreamworldMusicVol
+    Value: 0.678
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0

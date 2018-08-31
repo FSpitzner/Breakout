@@ -44,7 +44,7 @@ public class ChangeStage : InteractTrigger {
         {
             player.gameObject.GetComponent<GravityControl>().ChangeGravity();
             fadeoutPanel.SetActive(true);
-            player.ani.gameObject.SetActive(false);
+            player.playerMesh.gameObject.SetActive(false);
             foreach (StageController sc in room1Objects)
             {
                 if (!sc.isActive)
@@ -134,7 +134,7 @@ public class ChangeStage : InteractTrigger {
 
     public void CompleteRoomSwitch()
     {
-        player.ani.gameObject.SetActive(true);
+        player.playerMesh.gameObject.SetActive(true);
         player.SetLockInputs(false);
         if (nextRoom == 1)
         {
