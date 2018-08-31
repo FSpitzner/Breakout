@@ -4560,41 +4560,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4949063146665082, guid: bd9175caa31d8a146a6e34fa205561ae,
     type: 2}
   m_PrefabInternal: {fileID: 152514964}
---- !u!1 &154113593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082761382119828, guid: afa7736776431c14791ac785f7ba903d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1469935169}
 --- !u!4 &154113594 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4176816487905840, guid: afa7736776431c14791ac785f7ba903d,
     type: 2}
   m_PrefabInternal: {fileID: 1469935169}
---- !u!114 &154113595
+--- !u!114 &154113595 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 154113593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114639005650564222, guid: afa7736776431c14791ac785f7ba903d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1469935169}
   m_Script: {fileID: 11500000, guid: 5e94eaebf33d28848a65b90e3ce1d173, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 2147455269}
-  openDoorEvent: {fileID: 0}
-  defaultRotation: {x: 0, y: 0, z: 0}
-  openRotation: {x: 0, y: -100, z: 0}
-  openTime: 1
-  doorIsLocked: 0
-  keyItemID: 0
-  questID: 0
-  tweening: 0
-  increaseFear: 0
-  fear: {fileID: 0}
-  fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
 --- !u!1 &157033737
 GameObject:
   m_ObjectHideFlags: 0
@@ -7818,8 +7794,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!4 &218648940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4112733288355018, guid: 4ebdac4c21af2fe40a98fe4343a8cc56,
@@ -8515,6 +8491,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 1910769627}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 2
@@ -18219,7 +18197,7 @@ MonoBehaviour:
   menuController: {fileID: 1756863602}
   cameraPointingSkript: {fileID: 0}
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
-  defaultFear: 0
+  defaultFear: 140
   resetFearOnStartToDefault: 0
   fearPerTick: -0.2
   ticksPerSecond: 5
@@ -18321,55 +18299,68 @@ MonoBehaviour:
     maxValue: 0.7222223
   thunders:
   - ID: 0
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 1
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 2
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 3
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 4
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 5
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 6
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 7
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 8
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 9
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 10
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 11
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   - ID: 12
-    FearAmount: 0
+    FearSoundstate0: 0
+    FearSoundstate1: 0
     AttentionDelay: 0
     AttentionTime: 0
   see: {fileID: 540659163}
@@ -18377,6 +18368,7 @@ MonoBehaviour:
   fear: {fileID: 11400000, guid: 7e377b17a691b5746be68a0149711694, type: 2}
   thunderStartEvent: {fileID: 11400000, guid: ec1b029d0e7c52e489fda5425c12aac8, type: 2}
   thunderStopEvent: {fileID: 11400000, guid: e97092875de74d84d879bbe39a49d12d, type: 2}
+  playerSoundSystem: {fileID: 1019580404}
 --- !u!114 &540659163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21564,10 +21556,6 @@ Prefab:
       propertyPath: stage
       value: 
       objectReference: {fileID: 357395875}
-    - target: {fileID: 1182613612045028, guid: 5028e794fba301a40b86cb0c6ad64be5, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5028e794fba301a40b86cb0c6ad64be5, type: 2}
   m_IsPrefabAsset: 0
@@ -24554,8 +24542,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!1001 &730907607
 Prefab:
   m_ObjectHideFlags: 0
@@ -30847,57 +30835,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4264219605522332, guid: 7431966e6032ef84fa04e4dc21fb054e,
     type: 2}
   m_PrefabInternal: {fileID: 915210046}
---- !u!1 &916024374
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 916024375}
-  - component: {fileID: 916024376}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &916024375
+--- !u!4 &916024375 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916024374}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 55.4, y: 6, z: -2.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 540659157}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &916024376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 916024374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/Music/GruberMusic
-  PlayEvent: 1
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 5.2420235
-  OverrideMaxDistance: 7.855207
+  m_CorrespondingSourceObject: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2021765207}
 --- !u!1 &924798128
 GameObject:
   m_ObjectHideFlags: 0
@@ -32374,6 +32316,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 126103252}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: -1.05}
   moveTime: 4
@@ -32899,6 +32843,8 @@ MonoBehaviour:
   - {fileID: 764685361}
   door: {fileID: 214772901}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: -1.05}
   room2CameraPos: {x: 0, y: 0, z: -7.21}
   moveTime: 4
@@ -35979,55 +35925,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6921526ac3a8f544093e2f73bd47b58f, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &1048036458 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1298631260627166, guid: 6921526ac3a8f544093e2f73bd47b58f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1048036457}
---- !u!114 &1048036459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048036458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/generalEnvironment/door_open_EVENT
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 0
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
---- !u!114 &1048036460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048036458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/generalEnvironment/door_close_EVENT
-  PlayEvent: 0
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1048923816
 Prefab:
   m_ObjectHideFlags: 0
@@ -41015,6 +40912,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 154113595}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 4
@@ -45322,6 +45221,8 @@ MonoBehaviour:
   - {fileID: 1674557886}
   door: {fileID: 2003007432}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: -1.05}
   room2CameraPos: {x: 0, y: 0, z: 4.5}
   moveTime: 4
@@ -47865,6 +47766,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 126103251}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 1, z: 0}
   room2CameraPos: {x: 0, y: 8, z: 0}
   moveTime: 4
@@ -48117,6 +48020,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 730445441}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 4
@@ -48801,8 +48706,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!1001 &1415937590
 Prefab:
   m_ObjectHideFlags: 0
@@ -50652,23 +50557,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 4176816487905840, guid: afa7736776431c14791ac785f7ba903d, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
     - target: {fileID: 1082761382119828, guid: afa7736776431c14791ac785f7ba903d, type: 2}
       propertyPath: m_Name
       value: Wall_Door_to_Amys_Room
-      objectReference: {fileID: 0}
-    - target: {fileID: 23328260431982618, guid: afa7736776431c14791ac785f7ba903d,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2de7f4cd3c5375844bfef8a4c416cdec, type: 2}
-    - target: {fileID: 114486384693036008, guid: afa7736776431c14791ac785f7ba903d,
-        type: 2}
-      propertyPath: doorIsLocked
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afa7736776431c14791ac785f7ba903d, type: 2}
@@ -58443,6 +58334,8 @@ MonoBehaviour:
   sharedObjects: []
   door: {fileID: 1414694199}
   playerRoomSwitchSpeed: 2
+  looksLikeShit: 0
+  fadeoutPanel: {fileID: 0}
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 4
@@ -62856,22 +62749,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: c4400d881d22b334e9b462969e809589,
     type: 3}
   m_PrefabInternal: {fileID: 1857053512}
---- !u!1 &1857293195 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1675982175515546, guid: 5028e794fba301a40b86cb0c6ad64be5,
-    type: 2}
-  m_PrefabInternal: {fileID: 633154876}
---- !u!114 &1857293198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1857293195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5116718811ccd40b75b453a83ec549, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1859585863
 GameObject:
   m_ObjectHideFlags: 0
@@ -63015,39 +62892,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 56be6fab6e3fc2b499a511437a905bba,
     type: 3}
   m_PrefabInternal: {fileID: 1860949228}
---- !u!1 &1861323285 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1177057167959474, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
-    type: 2}
-  m_PrefabInternal: {fileID: 2082719196}
---- !u!114 &1861323295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1861323285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 463711b5734044245a8a54d0783a1fcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: fc30769f78f559e42981534bc838bc20, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1019580404}
-        m_MethodName: playAmbientInGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1862918618
 Prefab:
   m_ObjectHideFlags: 0
@@ -64213,8 +64057,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!1 &1911259881
 GameObject:
   m_ObjectHideFlags: 0
@@ -68133,8 +67977,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!1 &2003128261
 GameObject:
   m_ObjectHideFlags: 0
@@ -68868,6 +68712,53 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4246532264887364, guid: 473945b891c397445af209ea60743fcc,
     type: 2}
   m_PrefabInternal: {fileID: 2017834165}
+--- !u!1001 &2021765207
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 540659157}
+    m_Modifications:
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 55.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094857633457774, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114684084850627124, guid: 2c0f256b6f7193c4e8b9e220055a4a2c,
+        type: 2}
+      propertyPath: OverrideMaxDistance
+      value: 15.534481
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &2022841671
 Prefab:
   m_ObjectHideFlags: 0
@@ -69154,6 +69045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ani: {fileID: 666985419}
+  playerMesh: {fileID: 0}
   maxMoveSpeed: 5
   maxCrouchSpeed: 2.5
   jumpPower: 10
@@ -69162,13 +69054,16 @@ MonoBehaviour:
   canStandup: 1
   defaultCollider: {fileID: 548574254}
   crouchCollider: {fileID: 719028915}
-  jumpKey: 332
   runKey: 331
   crouchKey: 333
   interactKey: 330
+  pauseKey: 0
   cameraDummy: {fileID: 2017834166}
   camSmoothSpeed: 0.004
   stage: {fileID: 357395875}
+  pauseEvent: {fileID: 0}
+  resumeEvent: {fileID: 0}
+  walkingThroughDoor: 0
   items: []
 --- !u!54 &2024476429
 Rigidbody:
@@ -71428,12 +71323,12 @@ Prefab:
     - target: {fileID: 114466601018727956, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
         type: 2}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114205735367050730, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
         type: 2}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224812707311738606, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
         type: 2}
@@ -71594,6 +71489,10 @@ Prefab:
         type: 2}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1177057167959474, guid: fe8c3149c71d6684f9a4fb910fa32ee8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c3149c71d6684f9a4fb910fa32ee8, type: 2}
@@ -73061,8 +72960,8 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  CREAK_OPEN: 
-  CREAK_CLOSE: 
+  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
 --- !u!1001 &2121549596
 Prefab:
   m_ObjectHideFlags: 0
@@ -73765,8 +73664,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4905521958247014, guid: 2e820a4ad39fc74429941e18aaf48fda,
     type: 2}
   m_PrefabInternal: {fileID: 2143186559}
---- !u!1 &2147455269 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1249834803813156, guid: afa7736776431c14791ac785f7ba903d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1469935169}

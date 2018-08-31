@@ -236,7 +236,6 @@ GameObject:
   - component: {fileID: 114373316795720938}
   - component: {fileID: 54295062191059642}
   - component: {fileID: 114195278027273402}
-  - component: {fileID: 114347511015532810}
   - component: {fileID: 114106223045588740}
   - component: {fileID: 114123578245502096}
   - component: {fileID: 114617904043294024}
@@ -847,6 +846,7 @@ GameObject:
   - component: {fileID: 4611688780213960}
   - component: {fileID: 95386258125281256}
   - component: {fileID: 114693460131713670}
+  - component: {fileID: 114866345476115766}
   m_Layer: 0
   m_Name: Amy_SoFuckingFinalEND
   m_TagString: Untagged
@@ -1976,7 +1976,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1182613612045028}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 19.81, y: 8.86, z: 9.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4318439041717226}
@@ -2364,30 +2364,6 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114347511015532810
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1182613612045028}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: event:/windsfx
-  PlayEvent: 1
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: volume
-    Value: 0.049
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!114 &114373316795720938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2521,6 +2497,17 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114866345476115766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1675982175515546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5116718811ccd40b75b453a83ec549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136052226973939042
 CapsuleCollider:
   m_ObjectHideFlags: 1

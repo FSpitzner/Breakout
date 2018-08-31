@@ -58,13 +58,9 @@ public class DoorOpener : MonoBehaviour
 
     [Header("Door Creaks")]
 
-    /*public StudioEventEmitter FMOD_EVENT_EMIT_reakOpen;
+    public StudioEventEmitter FMOD_EVENT_EMIT_CreakOpen;
 
-    public StudioEventEmitter FMOD_EVENT_EMIT_reakClose;*/
-
-    public string CREAK_OPEN;
-
-    public string CREAK_CLOSE;
+    public StudioEventEmitter FMOD_EVENT_EMIT_CreakClose;
 
     /*
 
@@ -162,7 +158,7 @@ public class DoorOpener : MonoBehaviour
 
             {    //DOORCREAKING
 
-                RuntimeManager.PlayOneShot(CREAK_OPEN);
+                FMOD_EVENT_EMIT_CreakOpen.Play();
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
 
                 {
@@ -177,56 +173,32 @@ public class DoorOpener : MonoBehaviour
             else
 
             {
-                RuntimeManager.PlayOneShot(CREAK_CLOSE);
+                FMOD_EVENT_EMIT_CreakClose.Play();
 
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-
                 {
-
                     opened = false;
-
                     tweening = false;
-
                 });
             }
-
         }
-
     }
-
-
 
     public void Close(ChangeStage stage)
-
     {
-
         //DOORCREAKING
-
-        RuntimeManager.PlayOneShot(CREAK_CLOSE);
-
+        FMOD_EVENT_EMIT_CreakClose.Play();
         tweening = true;
-
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-
         {
-
             opened = false;
-
             tweening = false;
-
             InformCloser(stage);
-
         });
-
     }
 
-
-
     private void InformCloser(ChangeStage stage)
-
     {
-
         stage.CompleteRoomSwitch();
-
     }
 }

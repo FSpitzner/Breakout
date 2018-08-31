@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{937303a0-d801-408a-ac90-42521e2bd347}">
+        <property name="name">
+            <value>deathVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b36c1cf6-eb1e-44b3-8a41-825a395f1ec1}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{daec508a-3fea-4038-bcbc-d23902a297f8}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{daec508a-3fea-4038-bcbc-d23902a297f8}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

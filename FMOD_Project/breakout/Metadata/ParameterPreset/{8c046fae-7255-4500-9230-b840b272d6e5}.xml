@@ -5,15 +5,21 @@
             <value>amountMentalIllness</value>
         </property>
         <relationship name="folder">
-            <destination>{2cc0e62d-d1a2-4914-95ac-cbff31815172}</destination>
+            <destination>{ea6d550e-1fa1-4cbb-a698-16fac97df4c5}</destination>
         </relationship>
         <relationship name="parameter">
             <destination>{08f14c75-7669-45fc-9755-37687cf89d31}</destination>
         </relationship>
     </object>
     <object class="GameParameter" id="{08f14c75-7669-45fc-9755-37687cf89d31}">
+        <property name="maximum">
+            <value>3</value>
+        </property>
         <property name="initialValue">
             <value>0</value>
+        </property>
+        <property name="seekSpeed">
+            <value>1.5199999809265137</value>
         </property>
     </object>
 </objects>

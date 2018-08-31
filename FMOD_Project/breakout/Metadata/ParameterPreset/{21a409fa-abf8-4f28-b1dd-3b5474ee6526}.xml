@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{21a409fa-abf8-4f28-b1dd-3b5474ee6526}">
+        <property name="name">
+            <value>DreamworldMusicVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{ea6d550e-1fa1-4cbb-a698-16fac97df4c5}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{29ef5026-2e85-4f5a-8a5c-b5833d413231}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{29ef5026-2e85-4f5a-8a5c-b5833d413231}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>
