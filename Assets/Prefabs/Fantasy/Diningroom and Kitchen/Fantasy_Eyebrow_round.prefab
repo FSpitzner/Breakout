@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1926988825055734}
+  m_RootGameObject: {fileID: 1010828278835838}
   m_IsPrefabAsset: 1
---- !u!1 &1926988825055734
+--- !u!1 &1010828278835838
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4111536124324228}
-  - component: {fileID: 137226047648658728}
-  - component: {fileID: 95662776787416988}
-  - component: {fileID: 114900186675865142}
+  - component: {fileID: 4264686049962960}
+  - component: {fileID: 137957929269042132}
+  - component: {fileID: 95247857275366244}
+  - component: {fileID: 114924867580879054}
   m_Layer: 0
   m_Name: Fantasy_Eyebrow_round
   m_TagString: Untagged
@@ -29,26 +29,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4111536124324228
+--- !u!4 &4264686049962960
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926988825055734}
-  m_LocalRotation: {x: 0.0000018099951, y: 0, z: -0, w: 1}
+  m_GameObject: {fileID: 1010828278835838}
+  m_LocalRotation: {x: 0.000001809995, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95662776787416988
+--- !u!95 &95247857275366244
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926988825055734}
+  m_GameObject: {fileID: 1010828278835838}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 40d72f6b00730744fa68c3fba3042c19, type: 3}
   m_Controller: {fileID: 0}
@@ -60,24 +60,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114900186675865142
+--- !u!114 &114924867580879054
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926988825055734}
+  m_GameObject: {fileID: 1010828278835838}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86b586459d8c8d04eab42dc93586353e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
---- !u!137 &137226047648658728
+--- !u!137 &137957929269042132
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1926988825055734}
+  m_GameObject: {fileID: 1010828278835838}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -116,6 +116,6 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: -0.0016389489, y: 0.17174315, z: -0.0000020191073}
-    m_Extent: {x: 1.0271976, y: 0.8201035, z: 0.16890028}
+    m_Center: {x: -0.000016389415, y: 0.0017174312, z: -0.00000002013985}
+    m_Extent: {x: 0.010271977, y: 0.008201035, z: 0.0016890028}
   m_DirtyAABB: 0

@@ -9,19 +9,19 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1443864097369900}
+  m_RootGameObject: {fileID: 1938637435504648}
   m_IsPrefabAsset: 1
---- !u!1 &1443864097369900
+--- !u!1 &1938637435504648
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4865592110320848}
-  - component: {fileID: 137293071883173304}
-  - component: {fileID: 95047930630918810}
-  - component: {fileID: 114052419665036038}
+  - component: {fileID: 4721907164109968}
+  - component: {fileID: 137272389113223812}
+  - component: {fileID: 95852195797213604}
+  - component: {fileID: 114385004133153904}
   m_Layer: 0
   m_Name: Fantasy_Mouth
   m_TagString: Untagged
@@ -29,28 +29,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4865592110320848
+--- !u!4 &4721907164109968
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443864097369900}
-  m_LocalRotation: {x: 0.0000017503904, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1938637435504648}
+  m_LocalRotation: {x: 0.0000017503903, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.006219387, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95047930630918810
+--- !u!95 &95852195797213604
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443864097369900}
+  m_GameObject: {fileID: 1938637435504648}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: d4a1cca94ae30bc40972d9ca262fb85d, type: 3}
+  m_Avatar: {fileID: 9000000, guid: efb47dc24fb26ef44b2e45ca27b89cfe, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -60,24 +60,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114052419665036038
+--- !u!114 &114385004133153904
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443864097369900}
+  m_GameObject: {fileID: 1938637435504648}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86b586459d8c8d04eab42dc93586353e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
---- !u!137 &137293071883173304
+--- !u!137 &137272389113223812
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443864097369900}
+  m_GameObject: {fileID: 1938637435504648}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -114,8 +114,8 @@ SkinnedMeshRenderer:
   m_Mesh: {fileID: 4300000, guid: efb47dc24fb26ef44b2e45ca27b89cfe, type: 3}
   m_Bones: []
   m_BlendShapeWeights: []
-  m_RootBone: {fileID: 4865592110320848}
+  m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0047600865, y: 0.06379846, z: -0.03749779}
-    m_Extent: {x: 1.3024509, y: 0.77332366, z: 0.3202305}
+    m_Center: {x: -0.00007786881, y: -0.0022803158, z: -0.00037497375}
+    m_Extent: {x: 0.013237912, y: 0.0118542705, z: 0.0032023056}
   m_DirtyAABB: 0
