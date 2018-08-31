@@ -31,6 +31,7 @@ public class DoorOpener : MonoBehaviour
 
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakOpen;
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakClose;
+    public StudioEventEmitter FMOD_EVENT_EMIT_Locked;
 
     public bool CheckDoorIsLocked()
     {
@@ -46,6 +47,9 @@ public class DoorOpener : MonoBehaviour
             });
         }
         Debug.Log("Jetzt bin ich schon hier!");
+        bool isLocked = doorIsLocked == false ? false : CheckHasKeys();
+        if (isLocked)
+            FMOD_EVENT_EMIT_Locked.Play();
         return doorIsLocked == false ? false : CheckHasKeys();
     }
 
