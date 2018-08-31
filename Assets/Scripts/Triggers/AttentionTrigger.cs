@@ -15,25 +15,26 @@ public class AttentionTrigger : Trigger {
     
     private void FixedUpdate()
     {
-        if (!thunderPlaying)
+        if (isInside)
         {
-            if (isInside)
+            if (!thunderPlaying)
             {
                 if (timer >= cooldownTimer)
                 {
                     onCooldown = false;
                     timer = 0f;
                 }
-                if (onCooldown)
-                {
-                    timer += Time.deltaTime;
-                }
+
                 else if (player.velocity >= type.maxSpeed)
                 {
                     attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
-
+                    onCooldown = true;
                 }
             }
+        }
+        if (onCooldown)
+        {
+            timer += Time.deltaTime;
         }
     }
 
