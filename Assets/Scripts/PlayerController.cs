@@ -13,8 +13,9 @@ public class PlayerController : MonoBehaviour {
     public Animator ani;
     public Transform playerMesh;
 
-	[Header("Player Statistics")]
+    [Header("Player Statistics")]
 
+    public Vector3 playerPositionAfterStart;
 	public float maxMoveSpeed;
 	public float maxCrouchSpeed;
 	public float jumpPower;
@@ -267,6 +268,7 @@ public class PlayerController : MonoBehaviour {
     public void StartGame()
     {
         gameStarted = true;
+        transform.position = playerPositionAfterStart;
     }
 
     public void CameraOnPosition(bool isOnPos)
@@ -314,5 +316,10 @@ public class PlayerController : MonoBehaviour {
     {
         gameOver = state;
         ani.SetBool("panicing", true);
+    }
+
+    public void WakeUp()
+    {
+        ani.SetBool("StartGame", true);
     }
 }
