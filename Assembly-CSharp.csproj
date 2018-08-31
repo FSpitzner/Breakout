@@ -150,6 +150,7 @@
     <Compile Include="Assets\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\Scripts\UI\UpdatePanel.cs" />
     <Compile Include="Assets\Scripts\Utility\AnimatorBoolSetter.cs" />
+    <Compile Include="Assets\Scripts\Utility\Bedcover.cs" />
     <Compile Include="Assets\Scripts\Utility\CameraPostProEffects.cs" />
     <Compile Include="Assets\Scripts\Utility\ConditionalHideAttribute.cs" />
     <Compile Include="Assets\Scripts\Utility\Constants.cs" />
@@ -170,40 +171,40 @@
     <None Include="Assets\LeanTween\License.txt" />
     <None Include="Assets\Resources\Placeholder for Resources.txt" />
     <Reference Include="com.unity.render-pipelines.core.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.render-pipelines.core.Runtime">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.Runtime.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.render-pipelines.lightweight.Runtime">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Runtime.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.render-pipelines.lightweight.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.lightweight.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.postprocessing.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.postprocessing.Runtime">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.render-pipelines.core.IncludePaths">
-      <HintPath>D:/UnityProjekte/GameDev/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
+      <HintPath>D:/Unity Projects/Breakout/Library/ScriptAssemblies/com.unity.render-pipelines.core.IncludePaths.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -391,9 +392,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="Vuforia.UnityExtensions">
-      <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
@@ -404,10 +402,10 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/XMG/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/fspit/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/XMG/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/fspit/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>

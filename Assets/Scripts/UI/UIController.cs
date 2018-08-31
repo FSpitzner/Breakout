@@ -36,7 +36,7 @@ public class UIController : MonoBehaviour {
 
     public void GameStart()
     {
-        Invoke("Fadeout", 6f);
+        Invoke("Fadeout", 5.5f);
     }
 
     private void SwitchCamera()
