@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Animator")]
     public Animator ani;
-    public Transform playerMesh;
+    public GameObject playerMesh;
 
     [Header("Player Statistics")]
 
