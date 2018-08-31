@@ -15,6 +15,7 @@ public class AttentionTrigger : Trigger {
     private float timer = 0f;
     private bool onCooldown = false;
     public bool thunderPlaying = false;
+    public StudioEventEmitter FMOD_Ev_EMMIT_LOUDCREAK;
     
     private void FixedUpdate()
     {
@@ -35,7 +36,7 @@ public class AttentionTrigger : Trigger {
                 {
                     attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
 
-                    RuntimeManager.PlayOneShot(Constants.LOUDSTEPFLOORCREAK);
+                    FMOD_Ev_EMMIT_LOUDCREAK.Play();
 
                 }
             }
