@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4565,12 +4565,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4176816487905840, guid: afa7736776431c14791ac785f7ba903d,
     type: 2}
   m_PrefabInternal: {fileID: 1469935169}
---- !u!114 &154113595 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114639005650564222, guid: afa7736776431c14791ac785f7ba903d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1469935169}
-  m_Script: {fileID: 11500000, guid: 5e94eaebf33d28848a65b90e3ce1d173, type: 3}
 --- !u!1 &157033737
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,8 +7788,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!4 &218648940 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4112733288355018, guid: 4ebdac4c21af2fe40a98fe4343a8cc56,
@@ -11233,6 +11228,7 @@ MonoBehaviour:
   companionTargetAmy: {fileID: 1019168113}
   activeTarget: {fileID: 0}
   targetVector: {x: 0, y: 0, z: 0}
+  animator: {fileID: 0}
 --- !u!4 &318647114
 Transform:
   m_ObjectHideFlags: 0
@@ -18222,6 +18218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uikeys: {fileID: 0}
+  winEvent: {fileID: 0}
 --- !u!114 &540659160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24542,8 +24539,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!1001 &730907607
 Prefab:
   m_ObjectHideFlags: 0
@@ -40910,7 +40908,7 @@ MonoBehaviour:
   - {fileID: 357395875}
   - {fileID: 911976049}
   sharedObjects: []
-  door: {fileID: 154113595}
+  door: {fileID: 0}
   playerRoomSwitchSpeed: 2
   looksLikeShit: 0
   fadeoutPanel: {fileID: 0}
@@ -48706,8 +48704,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!1001 &1415937590
 Prefab:
   m_ObjectHideFlags: 0
@@ -64057,8 +64056,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!1 &1911259881
 GameObject:
   m_ObjectHideFlags: 0
@@ -67977,8 +67977,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!1 &2003128261
 GameObject:
   m_ObjectHideFlags: 0
@@ -68751,11 +68752,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114684084850627124, guid: 2c0f256b6f7193c4e8b9e220055a4a2c,
-        type: 2}
-      propertyPath: OverrideMaxDistance
-      value: 15.534481
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c0f256b6f7193c4e8b9e220055a4a2c, type: 2}
   m_IsPrefabAsset: 0
@@ -69046,6 +69042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ani: {fileID: 666985419}
   playerMesh: {fileID: 0}
+  playerPositionAfterStart: {x: 0, y: 0, z: 0}
   maxMoveSpeed: 5
   maxCrouchSpeed: 2.5
   jumpPower: 10
@@ -72960,8 +72957,9 @@ MonoBehaviour:
   increaseFear: 0
   fear: {fileID: 0}
   fearAmount: 0
-  FMOD_EVENT_EMIT_reakOpen: {fileID: 0}
-  FMOD_EVENT_EMIT_reakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakOpen: {fileID: 0}
+  FMOD_EVENT_EMIT_CreakClose: {fileID: 0}
+  FMOD_EVENT_EMIT_Locked: {fileID: 0}
 --- !u!1001 &2121549596
 Prefab:
   m_ObjectHideFlags: 0
