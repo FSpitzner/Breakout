@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6624,7 +6624,7 @@ Transform:
   - {fileID: 1840779627}
   - {fileID: 1769343090}
   m_Father: {fileID: 1306740502}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &158098320
 GameObject:
@@ -11362,7 +11362,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &241814818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12863,6 +12863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputModule: {fileID: 273444646}
+  eventSystem: {fileID: 0}
 --- !u!1001 &273784540
 Prefab:
   m_ObjectHideFlags: 0
@@ -17154,7 +17155,7 @@ Transform:
   m_Children:
   - {fileID: 1726636705}
   m_Father: {fileID: 1306740502}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &364255981
 MonoBehaviour:
@@ -43528,7 +43529,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: -1.05}
   room2CameraPos: {x: 0, y: 0, z: -7.21}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &981633177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53878,8 +53879,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 22.02, y: 8.48, z: 4.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2056886712}
+  m_Children: []
   m_Father: {fileID: 157033738}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53912,7 +53912,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1212695627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58533,6 +58533,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 364158310}
+  - {fileID: 2056886712}
   - {fileID: 157033738}
   - {fileID: 364255980}
   m_Father: {fileID: 1461263706}
@@ -59554,7 +59555,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: -1.05}
   room2CameraPos: {x: 0, y: 0, z: 4.5}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1322514316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62917,7 +62918,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1396978558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65995,6 +65996,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4923818726389374, guid: 42b698252b03b034b9d82787459add39,
     type: 2}
   m_PrefabInternal: {fileID: 1457464030}
+--- !u!114 &1457822053 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114057420142313882, guid: 39283087bff0c4448a7ae5402358d2d6,
+    type: 2}
+  m_PrefabInternal: {fileID: 131490441}
+  m_Script: {fileID: 11500000, guid: a4a207f9d4dd24147a7402d7a98d37f9, type: 3}
 --- !u!1001 &1458200097
 Prefab:
   m_ObjectHideFlags: 0
@@ -67502,7 +67509,7 @@ MonoBehaviour:
   room1CameraPos: {x: 1, y: 0, z: 0}
   room2CameraPos: {x: 1, y: 0, z: 0}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1482510687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68102,6 +68109,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 95902246765983900, guid: fe8c3149c71d6684f9a4fb910fa32ee8,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8c3149c71d6684f9a4fb910fa32ee8, type: 2}
@@ -77710,7 +77722,7 @@ MonoBehaviour:
   room1CameraPos: {x: 0, y: 0, z: 1}
   room2CameraPos: {x: 0, y: 0, z: 6.55}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1701472870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83669,7 +83681,7 @@ MonoBehaviour:
   room1CameraPos: {x: 65.5, y: 7.520004, z: 1}
   room2CameraPos: {x: 65.5, y: 1.041, z: -2}
   moveTime: 2
-  dummy: {fileID: 0}
+  dummy: {fileID: 1457822053}
 --- !u!114 &1840779629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94276,19 +94288,19 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2056886712
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2056886711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.63, z: 1.04}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 22.02, y: 6.8499994, z: 5.17}
   m_LocalScale: {x: 2.2, y: 1, z: 2}
   m_Children: []
-  m_Father: {fileID: 1212695625}
-  m_RootOrder: 0
+  m_Father: {fileID: 1306740502}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2056886713
 BoxCollider:

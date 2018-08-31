@@ -28,25 +28,11 @@ public class DoorOpener : MonoBehaviour
     public float fearAmount;
 
     [Header("Door Creaks")]
-<<<<<<< HEAD
 
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakOpen;
 
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakClose;
-
-=======
-    /*public StudioEventEmitter FMOD_EVENT_EMIT_reakOpen;
-    public StudioEventEmitter FMOD_EVENT_EMIT_reakClose;*/
-    public string CREAK_OPEN;
-    public string CREAK_CLOSE;
->>>>>>> 837862c11f1ddb3694e36576db9fc1e7dca53e19
-    /*
-
-	void OnDrawGizmos(){
-		Gizmos.color = Color.blue;
-		Gizmos.DrawWireCube (new Vector3(transform.position.x + targetPosOffset.x, transform.position.y + targetPosOffset.y, transform.position.z + targetPosOffset.z), transform.lossyScale);
-	}
-    */
+ 
 
     public bool CheckDoorIsLocked()
     {
@@ -88,12 +74,8 @@ public class DoorOpener : MonoBehaviour
             tweening = true;
             if (!opened)
             {    //DOORCREAKING
-<<<<<<< HEAD
 
                 FMOD_EVENT_EMIT_CreakOpen.Play();
-=======
-                RuntimeManager.PlayOneShot(CREAK_OPEN);
->>>>>>> 837862c11f1ddb3694e36576db9fc1e7dca53e19
                 LeanTween.rotateLocal(door != null ? door : gameObject, openRotation, openTime).setOnComplete(() =>
                 {
                     opened = true;
@@ -102,12 +84,8 @@ public class DoorOpener : MonoBehaviour
             }
             else
             {
-<<<<<<< HEAD
                 FMOD_EVENT_EMIT_CreakClose.Play();
 
-=======
-                RuntimeManager.PlayOneShot(CREAK_CLOSE);
->>>>>>> 837862c11f1ddb3694e36576db9fc1e7dca53e19
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
                 {
                     opened = false;
