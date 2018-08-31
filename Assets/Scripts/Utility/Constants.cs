@@ -38,6 +38,9 @@ public class Constants{
 
     public static readonly string HEARTSPEED = "heartspeed";
 
+    public static readonly string BACKPACKEVENT = "event:/playerSounds/backpack_EVENT";
+    public static readonly string LOUDSTEPFLOORCREAK = "event:/playerSounds/steps/loudFloorCreak_EVENT";
+
     #endregion
 }
 

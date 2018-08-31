@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{ee1992b6-277d-4aa3-88c4-337fac7a4a74}">
+        <property name="name">
+            <value>GruberMusicVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{2b2beae9-2bb8-4a17-af2f-d092cc4e0b5c}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{7743f08c-5947-4d8c-ac76-a92d270f9720}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{7743f08c-5947-4d8c-ac76-a92d270f9720}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

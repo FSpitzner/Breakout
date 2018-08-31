@@ -5,8 +5,11 @@ using FMOD.Studio;
 using FMODUnity;
 
 public class GruberToSleepingRoom : MonoBehaviour {
-    public string GruberToSleepingroomEventPath;
+    public StudioEventEmitter GruberToSleepingroom;
     public StudioEventEmitter GruberSleepingroomMusic;
+
+    private bool alreadytried = false; 
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,8 +22,12 @@ public class GruberToSleepingRoom : MonoBehaviour {
 
     public void Play()
     {
-        RuntimeManager.PlayOneShot(GruberToSleepingroomEventPath);
-        GruberSleepingroomMusic.Play();
+        if(!alreadytried){
+            GruberToSleepingroom.Play();
+            GruberSleepingroomMusic.Play();
+                alreadytried=true;
+        }
+        
     }
 
 }

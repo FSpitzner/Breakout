@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114684084850627124}
   - component: {fileID: 114082720422685484}
   - component: {fileID: 114796027697018524}
+  - component: {fileID: 114892083549093570}
   m_Layer: 0
   m_Name: GruberSchlafzimmer
   m_TagString: Untagged
@@ -53,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec6ab3e12a2524458d7f48d4868ef80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GruberToSleepingroomEventPath: event:/gruber/gruber_Steps_EVENT
+  GruberToSleepingroom: {fileID: 114892083549093570}
   GruberSleepingroomMusic: {fileID: 114684084850627124}
 --- !u!114 &114684084850627124
 MonoBehaviour:
@@ -108,3 +109,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114892083549093570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1107436529485366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/gruber/gruber_to_Sleepingroom_EVENT
+  PlayEvent: 0
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 6.31
+  OverrideMaxDistance: 45.296738

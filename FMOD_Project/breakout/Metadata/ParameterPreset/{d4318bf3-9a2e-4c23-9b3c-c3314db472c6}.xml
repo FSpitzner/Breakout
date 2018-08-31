@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{d4318bf3-9a2e-4c23-9b3c-c3314db472c6}">
+        <property name="name">
+            <value>loudFloorCreakVol</value>
+        </property>
+        <relationship name="folder">
+            <destination>{b36c1cf6-eb1e-44b3-8a41-825a395f1ec1}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{8bbe9129-d078-478d-9f86-41db32f3f1a4}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{8bbe9129-d078-478d-9f86-41db32f3f1a4}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+    </object>
+</objects>

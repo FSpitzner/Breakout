@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using FMODUnity;
+using FMOD.Studio;
+
 public class AttentionTrigger : Trigger {
 
     public float cooldownTimer = 2f;
@@ -31,6 +34,8 @@ public class AttentionTrigger : Trigger {
                 else if (player.velocity >= type.maxSpeed)
                 {
                     attentionObject.ChangeValueByAmount(type.attentionOnThreshold);
+
+                    RuntimeManager.PlayOneShot(Constants.LOUDSTEPFLOORCREAK);
 
                 }
             }

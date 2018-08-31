@@ -22,11 +22,10 @@ public class playerSounds_control : MonoBehaviour
 
     private bool MenuMusicPlaybackState;
 
-
+    /*
     [Header("Sounds - Event Paths")]
     public string backpackEvent;
-    public string deathEvent;
-    public string sighEvent;
+    */
    /* public string doorCloseEvent;
     public string doorOpenEvent;*/
 
@@ -159,11 +158,7 @@ public class playerSounds_control : MonoBehaviour
 
     public void playBackPack()
     {
-        RuntimeManager.PlayOneShot(backpackEvent);
-    }
-
-    public void playDeath() {
-        RuntimeManager.PlayOneShot(deathEvent);
+        RuntimeManager.PlayOneShot(Constants.BACKPACKEVENT);
     }
 
     public void playSigh() {
