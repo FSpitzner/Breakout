@@ -8,7 +8,7 @@
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 49152, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000000598F2A38 isAsync 1 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000000006DB28318 isAsync 1 updatePeriod 0.02
 [LOG] Thread::initThread                       : Init FMOD Studio update thread. Priority: 0, Stack Size: 65536, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
@@ -44,647 +44,647 @@
 [LOG] SystemI::createSound                     : filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Priority: 1, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0000000021708758 : node = 000000000BDF2830
-[LOG] SystemI::createSound                     : add node to async list : head = 000000004A068198.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021708758
+[LOG] SystemI::createSound                     : setdata soundi = 000000002191B8E8 : node = 000000006C0AF890
+[LOG] SystemI::createSound                     : add node to async list : head = 000000006D70F9C8.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002191B8E8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF2948
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AF9A8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000021706FB8 : node = 000000000BDF2050
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 0
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002191BA98 : node = 000000006C0AE240
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 0
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000021707678 : node = 000000000BDF1480
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002191BC48 : node = 000000006C0AEF60
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 1
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000021707828 : node = 000000000BDF1B10
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 2
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002191BDF8 : node = 000000006C0B0070
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 2
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000004A11D058 : node = 000000000BDF0A00
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 3
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192F9A8 : node = 000000006C0AF0B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 3
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000004A11D3B8 : node = 000000000BDF26E0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 4
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192F498 : node = 000000006C0AF350
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 4
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000004A11D208 : node = 000000000BDF21A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000021930218 : node = 000000006C0AE780
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 5
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 000000004A11D718 : node = 000000000BDF0CA0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 6
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192FD08 : node = 000000006C0AEE10
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 6
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192F648 : node = 000000006C0AFF20
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D36418 : node = 000000000BDF2440
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 7
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 7
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D35F08 : node = 000000000BDF0B50
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 8
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192F7F8 : node = 000000006C0AF9E0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 8
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D36AD8 : node = 000000000BDF11E0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 9
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192FEB8 : node = 000000006C0AF5F0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 9
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D365C8 : node = 000000000BDF0F40
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 10
+[LOG] SystemI::createSound                     :     setdata soundi = 0000000021930068 : node = 000000006D85CC00
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 10
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D360B8 : node = 000000000BDF22F0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 11
+[LOG] SystemI::createSound                     :     setdata soundi = 000000002192FB58 : node = 000000006D85C570
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 11
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D36268 : node = 000000000BDF1330
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 12
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC6C68 : node = 000000006D85CD50
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 12
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D36778 : node = 000000000BDF1090
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 13
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC6908 : node = 000000006D85DBC0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 13
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC6E18 : node = 000000006D85D680
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 14
 [LOG] Thread::initThread                       :     Init FMOD file thread. Priority: 1, Stack Size: 16384, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D36928 : node = 000000000BDF1720
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 14
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D4018 : node = 000000000BDF1870
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 15
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC6FC8 : node = 000000006D85CFF0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 15
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D41C8 : node = 000000000BDF1C60
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 16
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021708758
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021706FB8
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC7178 : node = 000000006D85D290
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 16
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002191B8E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002191BA98
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF2168
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AE358
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D3B08 : node = 000000000BDF1DB0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 16
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC7328 : node = 000000006D85DA70
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 16
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D2F38 : node = 000000000BDF1F00
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 17
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC74D8 : node = 000000006D85DD10
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 17
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D37A8 : node = 000000000BDF2590
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 18
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC7688 : node = 000000006D85C420
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 18
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D4378 : node = 0000000066F08550
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 19
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DAC6AB8 : node = 000000006D85D140
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 19
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D2A28 : node = 0000000066F08400
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 20
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18BD08 : node = 000000006D85D3E0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 20
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D2D88 : node = 0000000066F07C20
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 21
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18BB58 : node = 000000006D85D7D0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 21
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D2BD8 : node = 0000000066F071A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 22
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18B2E8 : node = 000000006D85DE60
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 22
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/wind_window.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D3958 : node = 0000000066F07440
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 23
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021706FB8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021707678
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18B498 : node = 000000006D85C030
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 23
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002191BA98
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002191BC48
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1598
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AF078
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Menu.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18B648 : node = 000000006D85C6C0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 23
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Menu.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18C068 : node = 000000006D85C810
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 24
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18B9A8 : node = 000000006D85C960
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 25
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18B7F8 : node = 0000000021985180
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 26
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000005F18BEB8 : node = 0000000021983890
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 27
+[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DEEC508 : node = 0000000021983C80
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 28
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002191BC48
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002191BDF8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0B0188
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
 [LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/GruberSleep.bank : mode 02010082
 [LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D30E8 : node = 0000000066F086A0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 23
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021707678
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021707828
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1C28
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Menu.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D3298 : node = 0000000066F082B0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 23
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Menu.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D35F8 : node = 0000000066F072F0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 24
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D2878 : node = 0000000066F076E0
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 25
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 00000000670D3448 : node = 0000000066F08D30
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 26
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/windsfx.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D29E38 : node = 0000000066F07830
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 27
-[LOG] SystemI::createSound                     :     filename = FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000066D2A198 : node = 0000000066F07050
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000004A068198.  list count = 28
-[LOG] SoundI::getSubSound                      :     sound 0000000021708758.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     sound 0000000021707678.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     sound 0000000021706FB8.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021707828
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004A11D058
+[LOG] SystemI::createSound                     :     setdata soundi = 000000006DEEC358 : node = 0000000021984460
+[LOG] SystemI::createSound                     :     add node to async list : head = 000000006D70F9C8.  list count = 28
+[LOG] SoundI::getSubSound                      :     sound 000000002191B8E8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 000000002191BC48.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 000000002191BA98.  Subsound index 0 / 1
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002191BDF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192F9A8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF0B18
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AF1C8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004A11D058
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004A11D3B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192F9A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192F498
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF27F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AF468
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004A11D3B8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004A11D208
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192F498
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021930218
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF22B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AE898
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004A11D208
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000004A11D718
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021930218
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192FD08
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF0DB8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AEF28
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000004A11D718
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D36418
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192FD08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192F648
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF2558
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0B0038
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D36418
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D35F08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192F648
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192F7F8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF0C68
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AFAF8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D35F08
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D36AD8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192F7F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192FEB8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF12F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006C0AF708
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D36AD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D365C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192FEB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000021930068
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1058
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85CD18
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D365C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D360B8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000021930068
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000002192FB58
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF2408
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85C688
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D360B8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D36268
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000002192FB58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC6C68
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1448
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85CE68
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D36268
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D36778
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC6C68
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC6908
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF11A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85DCD8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D36778
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D36928
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC6908
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC6E18
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1838
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D798
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D36928
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D4018
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC6E18
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC6FC8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1988
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D108
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D4018
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D41C8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC6FC8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC7178
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1D78
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D3A8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D41C8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D3B08
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC7178
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC7328
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF1EC8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85DB88
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D3B08
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D2F38
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC7328
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC74D8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF2018
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85DE28
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D2F38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D37A8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC74D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC7688
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000000BDF26A8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85C538
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D41C8)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066724708)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D29FE8)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D36778)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB62D8)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D2A348)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D36268)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB6478)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D29778)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D35F08)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB5C58)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D2AA08)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000004A11D208)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066A0B588)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D2A858)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000004A11D3B8)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066A0B3E8)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D29928)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021707828)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066A0B248)
-[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D26C8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D4018)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (00000000667250C8)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D2A4F8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D36928)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB6618)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D29268)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D360B8)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB5F98)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D29AD8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D36418)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB6138)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D2AD68)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000004A11D718)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB5AB8)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D29C88)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000004A11D058)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066A0B728)
-[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D2A6A8)
-[LOG] SoundI::getSubSound                      :     sound 0000000066D36AD8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     sound 00000000670D3B08.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     sound 0000000066D365C8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      :     sound 00000000670D2F38.  Subsound index 0 / 1
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D37A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D4378
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC7688
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DAC6AB8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F08668
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D258
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D4378
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D2A28
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DAC7178)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70D4B8)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C644078)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DAC6908)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70CC98)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C644C48)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DAC6C68)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70D998)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C644A98)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000002192F7F8)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70CAF8)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021927108)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021930218)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70FA18)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C63F938)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000002192F498)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70D318)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C63F0C8)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000002191BDF8)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70C958)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DBFBA48)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DAC7688)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70EB78)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C6443D8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DAC6FC8)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70CFD8)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C6448E8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DAC6E18)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70CE38)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C644738)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000002192FB58)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70F058)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C644DF8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000002192F648)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70E1B8)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (00000000219272B8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000002192FD08)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70C7B8)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C63F788)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000002192F9A8)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70C478)
+[LOG] SoundI::release                          :         103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C63F5D8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DAC6AB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18BD08
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
+[LOG] SoundI::getSubSound                      :     sound 000000002192FEB8.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D4F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SoundI::getSubSound                      :     sound 000000006DAC7328.  Subsound index 0 / 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SoundI::getSubSound                      :     sound 0000000021930068.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      :     sound 000000006DAC74D8.  Subsound index 0 / 1
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DAC6AB8)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70E018)
+[LOG] SoundI::release                          :         381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C0A28E8)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18BD08
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18BB58
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85D8E8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18BB58
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18B2E8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F08518
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85DF78
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D2A28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D2D88
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18B2E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18B498
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F07D38
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85C148
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D2D88
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D2BD8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F072B8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D2BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D3958
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/wind_window.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1626848
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 1856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F07558
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='381823__plantmonkey__storm-doris-comes-down-the-chimney', format=2, channels=2, frequency=48000, lengthbytes=1625312, lengthpcm=8222790, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.149933.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D3958
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D30E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/GruberSleep.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2179648
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3168
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F087B8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='frametraxx_About-You', format=2, channels=2, frequency=48000, lengthbytes=2178080, lengthpcm=8604107, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.973297.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D30E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D3298
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18B498
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18B648
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Menu.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1239328
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3552
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F083C8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85C7D8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='inGame_Menu_B', format=2, channels=2, frequency=48000, lengthbytes=627872, lengthpcm=2183181, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D3298
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D35F8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18B648
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18C068
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Menu.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 1239328
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3552
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F07408
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85C928
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='inGame_Menu_A', format=2, channels=2, frequency=48000, lengthbytes=610560, lengthpcm=2182737, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.986023.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D35F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D2878
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18C068
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18B9A8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/windsfx.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 13386048
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10400
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F077F8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000006D85CA78
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 8000
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='131148__julien-nicolas__severalwind', format=2, channels=2, frequency=48000, lengthbytes=5187456, lengthpcm=21583872, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.279327.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D2878
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000670D3448
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18B9A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18B7F8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/windsfx.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 13386048
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10400
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F08E48
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000021985298
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='195193__pimfeijen__largewoodenship', format=2, channels=2, frequency=48000, lengthbytes=7441472, lengthpcm=28801567, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.980377.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000670D3448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D29E38
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18B7F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000005F18BEB8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/windsfx.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 13386048
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 10400
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F07948
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000219839A8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='windsfx', format=2, channels=2, frequency=48000, lengthbytes=747840, lengthpcm=3767808, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.997284.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D29E38
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000066D2A198
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000005F18BEB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DEEC508
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/Rain_Ambient.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 970656
 [LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 4672
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000066F07168
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000021983D98
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='103652__palegolas__rain-on-roofwindow-distant-traffic', format=2, channels=2, frequency=48000, lengthbytes=969888, lengthpcm=3688907, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.018829.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000066D2A198
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D3958)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB5C58)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006710CE68)
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D2D88)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB5AB8)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006710D6D8)
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D4378)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB5F98)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006710D528)
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021706FB8)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000059749588)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D3CB8)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D2BD8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB62D8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006710C7A8)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D2A28)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB6138)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006710DA38)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D37A8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066724A48)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006710CCB8)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (0000000021707678)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (00000000597498C8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D3E68)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (0000000021708758)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000059749728)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D35D58)
-[LOG] SoundI::getSubSound                      : sound 00000000670D30E8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000670D3298.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000670D35F8.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000670D2878.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 00000000670D3448.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000066D29E38.  Subsound index 0 / 1
-[LOG] SoundI::getSubSound                      : sound 0000000066D2A198.  Subsound index 0 / 1
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D2A198)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066724568)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006710CB08)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D36AD8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066DB5DF8)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D295C8)
-[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (00000000670D3B08)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066724F28)
-[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000066D290B8)
-[LOG] SoundI::release                          : windsfx (0000000066D29E38)
-[LOG] SoundI::release                          :     windsfx (0000000066724708)
-[LOG] SoundI::release                          :     windsfx (000000006710C958)
-[LOG] SoundI::release                          : 195193__pimfeijen__largewoodenship (00000000670D3448)
-[LOG] SoundI::release                          :     195193__pimfeijen__largewoodenship (00000000667250C8)
-[LOG] SoundI::release                          :     195193__pimfeijen__largewoodenship (000000006710D378)
-[LOG] SoundI::release                          : 131148__julien-nicolas__severalwind (00000000670D2878)
-[LOG] SoundI::release                          :     131148__julien-nicolas__severalwind (00000000667248A8)
-[LOG] SoundI::release                          :     131148__julien-nicolas__severalwind (000000006710D1C8)
-[LOG] SoundI::release                          : inGame_Menu_A (00000000670D35F8)
-[LOG] SoundI::release                          :     inGame_Menu_A (0000000066724BE8)
-[LOG] SoundI::release                          :     inGame_Menu_A (000000006710D018)
-[LOG] SoundI::release                          : inGame_Menu_B (00000000670D3298)
-[LOG] SoundI::release                          :     inGame_Menu_B (0000000066DB6618)
-[LOG] SoundI::release                          :     inGame_Menu_B (000000006710D888)
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (00000000670D2F38)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066725268)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D29418)
-[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D365C8)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066DB5918)
-[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000066D2ABB8)
-[LOG] SoundI::release                          : frametraxx_About-You (00000000670D30E8)
-[LOG] SoundI::release                          :     frametraxx_About-You (0000000066DB6478)
-[LOG] SoundI::release                          :     frametraxx_About-You (000000006710C5F8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DEEC508
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000006DEEC358
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD_Project\breakout\Build\Desktop/GruberSleep.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 232
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 2179648
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3168
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000021984578
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='frametraxx_About-You', format=2, channels=2, frequency=48000, lengthbytes=2178080, lengthpcm=8604107, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.973297.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000006DEEC358
+[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (000000005F18B498)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70EEB8)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C644C48)
+[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (000000005F18BB58)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70F538)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C6443D8)
+[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (000000002191BA98)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70BDF8)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DBFB6E8)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000005F18B2E8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70C958)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C6448E8)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000005F18BD08)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70C478)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C644738)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000002191BC48)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70E698)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DBFB898)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000002191B8E8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70C2D8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DBFBBF8)
+[LOG] SoundI::getSubSound                      : sound 000000005F18B648.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000005F18C068.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000005F18B9A8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000005F18B7F8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000005F18BEB8.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000006DEEC508.  Subsound index 0 / 1
+[LOG] SoundI::getSubSound                      : sound 000000006DEEC358.  Subsound index 0 / 1
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DEEC508)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70DCD8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C88B708)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000002192FEB8)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70E838)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (0000000021926F58)
+[LOG] SoundI::release                          : 103652__palegolas__rain-on-roofwindow-distant-traffic (000000006DAC7328)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006D70D658)
+[LOG] SoundI::release                          :     103652__palegolas__rain-on-roofwindow-distant-traffic (000000006C644228)
+[LOG] SoundI::release                          : windsfx (000000005F18BEB8)
+[LOG] SoundI::release                          :     windsfx (000000006D70C7B8)
+[LOG] SoundI::release                          :     windsfx (00000000219272B8)
+[LOG] SoundI::release                          : 195193__pimfeijen__largewoodenship (000000005F18B7F8)
+[LOG] SoundI::release                          :     195193__pimfeijen__largewoodenship (000000006D70DB38)
+[LOG] SoundI::release                          :     195193__pimfeijen__largewoodenship (0000000021927108)
+[LOG] SoundI::release                          : 131148__julien-nicolas__severalwind (000000005F18B9A8)
+[LOG] SoundI::release                          :     131148__julien-nicolas__severalwind (000000006D70F6D8)
+[LOG] SoundI::release                          :     131148__julien-nicolas__severalwind (000000006C644078)
+[LOG] SoundI::release                          : inGame_Menu_A (000000005F18C068)
+[LOG] SoundI::release                          :     inGame_Menu_A (000000006D70D998)
+[LOG] SoundI::release                          :     inGame_Menu_A (000000006C644DF8)
+[LOG] SoundI::release                          : inGame_Menu_B (000000005F18B648)
+[LOG] SoundI::release                          :     inGame_Menu_B (000000006D70D318)
+[LOG] SoundI::release                          :     inGame_Menu_B (000000006C644A98)
+[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006DAC74D8)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70D7F8)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006C644588)
+[LOG] SoundI::release                          : 381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021930068)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (000000006D70ED18)
+[LOG] SoundI::release                          :     381823__plantmonkey__storm-doris-comes-down-the-chimney (0000000021927468)
+[LOG] SoundI::release                          : frametraxx_About-You (000000006DEEC358)
+[LOG] SoundI::release                          :     frametraxx_About-You (000000006D70DE78)
+[LOG] SoundI::release                          :     frametraxx_About-You (000000006C88BC18)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
