@@ -52,6 +52,7 @@ public class Fear : ScriptableObject {
     public void SetFearTo(float amount)
     {
         fear = amount;
+        CheckFearAmount();
     }
 
     private void CheckFearAmount()

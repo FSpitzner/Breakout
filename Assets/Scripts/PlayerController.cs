@@ -272,6 +272,7 @@ public class PlayerController : MonoBehaviour {
         transform.position = playerPositionAfterStart;
         defaultCollider.enabled = true;
         gravity.ChangeGravity();
+        transform.eulerAngles = new Vector3(0f,0f,0f);
     }
 
     public void CameraOnPosition(bool isOnPos)

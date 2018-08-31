@@ -25,7 +25,7 @@ public class DoorOpener : MonoBehaviour
     [ConditionalHide("increaseFear", true)]
     public Fear fear;
     [ConditionalHide("increaseFear", true)]
-    public float fearAmount;
+    public float fearValue;
 
     [Header("Door Creaks")]
 
@@ -67,7 +67,7 @@ public class DoorOpener : MonoBehaviour
         if (!tweening)
         {
             if (increaseFear)
-                fear.IncreaseFear(fearAmount);
+                fear.SetFearTo(fearValue);
             //opened: true= open --> door closes; false=closed --> door opens
             tweening = true;
             if (!opened)
