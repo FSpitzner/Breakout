@@ -180,53 +180,29 @@ public class DoorOpener : MonoBehaviour
                 RuntimeManager.PlayOneShot(CREAK_CLOSE);
 
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-
                 {
-
                     opened = false;
-
                     tweening = false;
-
                 });
             }
-
         }
-
     }
-
-
 
     public void Close(ChangeStage stage)
-
     {
-
         //DOORCREAKING
-
         RuntimeManager.PlayOneShot(CREAK_CLOSE);
-
         tweening = true;
-
         LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
-
         {
-
             opened = false;
-
             tweening = false;
-
             InformCloser(stage);
-
         });
-
     }
 
-
-
     private void InformCloser(ChangeStage stage)
-
     {
-
         stage.CompleteRoomSwitch();
-
     }
 }
