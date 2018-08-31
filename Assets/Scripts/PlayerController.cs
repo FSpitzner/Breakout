@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Player Statistics")]
 
+    public GravityControl gravity;
     public Vector3 playerPositionAfterStart;
 	public float maxMoveSpeed;
 	public float maxCrouchSpeed;
@@ -269,6 +270,9 @@ public class PlayerController : MonoBehaviour {
     {
         gameStarted = true;
         transform.position = playerPositionAfterStart;
+        defaultCollider.enabled = true;
+        gravity.ChangeGravity();
+        transform.eulerAngles = new Vector3(0f,0f,0f);
     }
 
     public void CameraOnPosition(bool isOnPos)

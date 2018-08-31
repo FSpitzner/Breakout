@@ -10,6 +10,8 @@ public class Attention : ScriptableObject {
     public void ChangeValueByAmount(float amount)
     {
         value += amount;
+        if (value < 0)
+            value = 0;
         CheckThreshold();
     }
 
