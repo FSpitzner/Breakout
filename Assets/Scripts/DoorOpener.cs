@@ -30,9 +30,7 @@ public class DoorOpener : MonoBehaviour
     [Header("Door Creaks")]
 
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakOpen;
-
     public StudioEventEmitter FMOD_EVENT_EMIT_CreakClose;
- 
 
     public bool CheckDoorIsLocked()
     {
@@ -85,7 +83,6 @@ public class DoorOpener : MonoBehaviour
             else
             {
                 FMOD_EVENT_EMIT_CreakClose.Play();
-
                 LeanTween.rotateLocal(door != null ? door : gameObject, defaultRotation, openTime).setOnComplete(() =>
                 {
                     opened = false;
